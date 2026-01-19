@@ -1,0 +1,8 @@
+{
+    "turboConsoleLog.delimiterInsideMessage": "",
+    "turboConsoleLog.insertEnclosingClass": false,
+    "turboConsoleLog.insertEnclosingFunction": false,
+    "turboConsoleLog.isTurboTelemetryEnabled": false,
+    "turboConsoleLog.logMessagePrefix": "",
+    "turboConsoleLog.logMessageSuffix": ""
+}
