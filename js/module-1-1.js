@@ -26,23 +26,23 @@
 
 //?
 
-const atTheOldToad = {
-  potions: [
-    { name: "Speed potion", price: 460 },
-    { name: "Stone skin", price: 520 },
-  ],
-  getPotions() {
-    return this.potions;
-  },
-  addPotion(newPotion) {
-    this.potions.push(newPotion);
-  },
-    getTotalPrice() {
-        let total = 0;
-    for (let i = 0; i < potions.price; i++)
-      total += i;
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     this.potions.push(newPotion);
+//   },
+//     getTotalPrice() {
+//         let total = 0;
+//     for (let i = 0; i < potions.price; i++)
+//       total += i;
   
-  },
+//   },
     
-};
-console.log(total);
+// };
+// console.log(total);
