@@ -507,131 +507,221 @@ const { jsx, jsxs } = require("react/jsx-runtime");
  
 //?  Напишіть функцію, яка приймає один параметр animal.Використовуючи switch, поверніть "Ссавець", "Птах", "Риба", або "Рептилія" в залежності від введеної тварини.Наприклад, "Кішка", "Собака", "Кінь" - "Ссавець", "Голуб", "Орлан", "Горобець" - "Птах", "Лосось", "Тунець", "Тріска" - "Риба", "Ящірка", "Черепаха", "Змія" - "Рептилія".
 
+// const fooAnimal = (animal) => {
+//     switch (animal) {
+//         case 'Кішка':
+//         case 'Собака':
+//         case 'Кінь': return 'Ссавець';
+//         case 'Голуб':
+//         case 'Орлан':
+//         case 'Горобець': return 'Птах';
+//         case 'Лосось':
+//         case 'Тунець':
+//         case 'Тріска': return 'Риба';
+//         case 'Ящірка':
+//         case 'Черепаха':
+//         case 'Змія': return 'Рептилія';
+//     }
+// }
 
-;
+
+
 //! ===========================================================
 
-// Задача-47
+//? Задача-47
 
-// Напишіть функцію, яка приймає один параметр weather. Використовуючи switch, поверніть "Сонячно", "Хмарно", "Дощ", або "Сніг" в залежності від введеного типу погоди. Наприклад, "Sunny" - "Сонячно", "Cloudy" - "Хмарно", "Rainy" - "Дощ", "Snowy" - "Сніг".
+//? Напишіть функцію, яка приймає один параметр weather. Використовуючи switch, поверніть "Сонячно", "Хмарно", "Дощ", або "Сніг" в залежності від введеного типу погоди. Наприклад, "Sunny" - "Сонячно", "Cloudy" - "Хмарно", "Rainy" - "Дощ", "Snowy" - "Сніг".
 
+// const fooWeather = (weather) => {
+//     switch (weather) {
+//         case 'Sunny': return 'Сонячно';
+//         case 'Cloudy': return 'Хмарно';
+//         case 'Rainy': return 'Дощ';
+//         case 'Snowy': return 'Сніг';
+//     }
+// }
 
+//! ===========================================================
 
+//? Задача-48
 
-// Задача-48
-// Напишіть функцію, яка приймає один параметр mood. Використовуючи switch, поверніть "Щасливий", "Сумний", "Злий", або "Здивований" в залежності від введеного настрою. Наприклад, "Happy" - "Щасливий", "Sad" - "Сумний", "Angry" - "Злий", "Surprised" - "Здивований".
+//? Напишіть функцію, яка приймає один параметр mood. Використовуючи switch, поверніть "Щасливий", "Сумний", "Злий", або "Здивований" в залежності від введеного настрою. Наприклад, "Happy" - "Щасливий", "Sad" - "Сумний", "Angry" - "Злий", "Surprised" - "Здивований".
 
-// Задача-49
-// Напишіть функцію, яка приймає один параметр month. Використовуючи switch, поверніть назву сезону ("Весна", "Літо", "Осінь", "Зима") в залежності від місяця. Наприклад, "Березень", "Квітень", "Травень" - "Весна", "Червень", "Липень", "Серпень" - "Літо", "Вересень", "Жовтень", "Листопад" - "Осінь", "Грудень", "Січень", "Лютий" - "Зима".
+// const fooMood = (mood) => {
+//     switch (mood) {
+//         case 'Happy': return 'Щасливий';
+//         case 'Sad': return 'Сумний';
+//         case 'Angry': return 'Злий';
+//         case 'Surprised': return 'Здивований';
+//     }
+// }
 
-// Задача-50
-// Напишіть функцію, яка приймає один параметр color. Використовуючи switch, поверніть "Теплий колір" або "Холодний колір" в залежності від кольору. Наприклад, "Red", "Orange", "Yellow" - "Теплий колір", "Blue", "Green", "Purple" - "Холодний колір".
+//! ===========================================================
 
-// Задача-51
-// Напишіть функцію, яка приймає один параметр continent. Використовуючи switch, поверніть назву континенту або "Невідомий континент" в залежності від введеного значення. Наприклад, "Africa", "Europe", "Asia", "North America", "South America", "Antarctica", "Australia" - відомі континенти, інші випадки - "Невідомий континент".
+//? Задача-49
 
-// Task 1
-// Яким буде результат виразів?
+//? Напишіть функцію, яка приймає один параметр month. Використовуючи switch, поверніть назву сезону ("Весна", "Літо", "Осінь", "Зима") в залежності від місяця. Наприклад, "Березень", "Квітень", "Травень" - "Весна", "Червень", "Липень", "Серпень" - "Літо", "Вересень", "Жовтень", "Листопад" - "Осінь", "Грудень", "Січень", "Лютий" - "Зима".
 
-// console.log(true && 3);
+// const fooMonth = (month) => {
+//     switch (month) {
+//         case 'Березень':
+//         case 'Квітень':
+//         case 'Травень': return 'Весна';
+//         case 'Червень':
+//         case 'Липень':
+//         case 'Серпень': return 'Літо';
+//         case 'Вересень':
+//         case 'Жовтень':
+//         case 'Листопад': return 'Осінь';
+//         case 'Грудень':
+//         case 'Січень':
+//         case 'Лютий': return 'Зима';
+            
+//     }
+// }
 
-// console.log(false && 3);
+//! ===========================================================
 
-// console.log(true && 4 && 'kiwi');
+//? Задача-50
 
-// console.log(true && 0 && 'kiwi');
+//? Напишіть функцію, яка приймає один параметр color. Використовуючи switch, поверніть "Теплий колір" або "Холодний колір" в залежності від кольору. Наприклад, "Red", "Orange", "Yellow" - "Теплий колір", "Blue", "Green", "Purple" - "Холодний колір".
 
-// console.log(true || 3);
+// const fooColor = (color) => {
+//     switch (color) {
+//         case 'Red':
+//         case 'Orange':
+//         case 'Yellow': return "Теплий колір";
+//              case 'Blue':
+//              case 'Green':
+//              case 'Purple': return "Холодний колір";
+//     }
+// }
 
-// console.log(true || 3 || 4);
+//! ===========================================================
 
-// console.log(true || false || 7);
+//? Задача-51
 
-// console.log(null || 2 || undefined);
+//? Напишіть функцію, яка приймає один параметр continent. Використовуючи switch, поверніть назву континенту або "Невідомий континент" в залежності від введеного значення. Наприклад, "Africa", "Europe", "Asia", "North America", "South America", "Antarctica", "Australia" - відомі континенти, інші випадки - "Невідомий континент".
 
-// console.log((1 && null && 2) > 0);
+const fooContinent = (continent) => {
+    switch (continent) {
+        case 'Africa':
+        case 'Europe':
+        case 'Asia':
+        case 'North America':
+        case 'South America':
+        case 'Antarctica':
+        case 'Australia': return continent;
+        default: return "Невідомий континент";
+    }
+}
 
-// console.log(null || (2 && 3) || 4);
-// console.log(1 && 5);
-// console.log(5 && 1);
-// console.log(0 && 2);
-// console.log(2 && 0);
-// console.log('' && 'Mango');
-// console.log('Mango' && '');
-// console.log('Mango' && 'Poly');
-// console.log('Poly' && 'Mango');
-// console.log(true || false);
-// console.log(false || true);
-// console.log(true || true);
+//! ===========================================================
 
-// console.log(3 || false);
-// console.log(false || 3);
-// console.log(3 || true);
-// console.log(true || 3);
-// console.log(!true);
-// console.log(!false);
-// console.log(!3);
-// console.log(!'Mango');
-// console.log(!0);
-// console.log(!'');
+//? Task 1
+
+//? Яким буде результат виразів?
+
+// console.log(true && 3); //3
+
+// console.log(false && 3); // false
+
+// console.log(true && 4 && 'kiwi'); //'kiwi'
+
+// console.log(true && 0 && 'kiwi'); //0
+
+// console.log(true || 3); //true
+
+// console.log(true || 3 || 4); //true
+
+// console.log(true || false || 7); //true
+
+// console.log(null || 2 || undefined); //2
+
+// console.log((1 && null && 2) > 0); //false
+
+// console.log(null || (2 && 3) || 4); //3
+// console.log(1 && 5); //5
+// console.log(5 && 1); //1
+// console.log(0 && 2); //0
+// console.log(2 && 0); //0
+// console.log('' && 'Mango');  //''
+// console.log('Mango' && ''); //''
+// console.log('Mango' && 'Poly'); //'Poly'
+// console.log('Poly' && 'Mango');  //'Mango'
+// console.log(true || false); // true
+// console.log(false || true); //true
+// console.log(true || true); //true
+
+// console.log(3 || false); //3
+// console.log(false || 3);  //3
+// console.log(3 || true); //3
+// console.log(true || 3); //true
+// console.log(!true); //false
+// console.log(!false); //true
+// console.log(!3); //false
+// console.log(!'Mango'); //false
+// console.log(!0); //true
+// console.log(!''); //true
 
 // const isOnline = true;
 // const isNotOnline = !isOnline;
 
-// console.log(true && false);
-// console.log(false && true);
-// console.log(true && true);
-// console.log(false && false);
+// console.log(true && false); //false
+// console.log(false && true); //false
+// console.log(true && true); //true
+// console.log(false && false); //false
 
-// console.log(true || false);
-// console.log(false || true);
-// console.log(true || true);
-// console.log(false || false);
+// console.log(true || false); //true
+// console.log(false || true); //true
+// console.log(true || true); //true
+// console.log(false || false); //false
 
-// console.log(!true);
-// console.log(!false);
-// console.log(!!true);
-// console.log(!!false);
+// console.log(!true); //false
+// console.log(!false); //true
+// console.log(!!true); //true
+// console.log(!!false); //false
 
-// console.log(1 === 1 && 2 === 2);
-// console.log(1 === 2 && 2 === 2);
-// console.log(1 === 1 || 2 === 2);
-// console.log(1 === 2 || 2 === 2);
+// console.log(1 === 1 && 2 === 2); //true
+// console.log(1 === 2 && 2 === 2); //false
+// console.log(1 === 1 || 2 === 2); //true
+// console.log(1 === 2 || 2 === 2); //true
 
-// console.log(1 > 2 && 2 < 3);
-// console.log(1 < 2 && 2 < 3);
-// console.log(1 > 2 || 2 < 3);
-// console.log(1 < 2 || 2 < 3);
+// console.log(1 > 2 && 2 < 3); //false
+// console.log(1 < 2 && 2 < 3); //true
+// console.log(1 > 2 || 2 < 3); //true
+// console.log(1 < 2 || 2 < 3); //true
 
-// console.log(0 && 3);
-// console.log(3 && 0);
-// console.log(0 || 3);
-// console.log(3 || 0);
+// console.log(0 && 3); //0
+// console.log(3 && 0); //0
+// console.log(0 || 3); //3
+// console.log(3 || 0); //3
 
-// console.log('' || 'apple');
-// console.log('orange' || '');
-// console.log('' && 'banana');
-// console.log('grape' && '');
+// console.log('' || 'apple'); //'apple'
+// console.log('orange' || ''); //'orange'
+// console.log('' && 'banana'); //''
+// console.log('grape' && ''); // ''
 
-// console.log(0 || false);
-// console.log(false || 0);
-// console.log(1 && 'cherry');
-// console.log('banana' && 1);
-// console.log(null && 'pear');
-// console.log('peach' && undefined);
-// console.log(undefined || 'plum');
-// console.log('melon' || null);
-// console.log(undefined && false);
-// console.log(true || 'watermelon');
-// console.log('watermelon' || true);
-// console.log(false && 'pineapple');
-// console.log('pineapple' && false);
-// console.log(NaN || 'kiwi');
-// console.log('kiwi' || NaN);
-// console.log(NaN && 'mango');
-// console.log('mango' && NaN);
-// console.log(Infinity || 'apricot');
-// console.log('apricot' || Infinity);
-// console.log(Infinity && 'blueberry');
-// console.log('blueberry' && Infinity);
-// console.log(null || undefined);
+// console.log(0 || false); //false
+// console.log(false || 0); //0
+// console.log(1 && 'cherry'); // 'cherry'
+// console.log('banana' && 1); //1
+// console.log(null && 'pear');// null
+// console.log('peach' && undefined); //undefined
+// console.log(undefined || 'plum');  //'plum'
+// console.log('melon' || null); //'melon'
+// console.log(undefined && false); //undefined
+// console.log(undefined && false); //undefined
+// console.log(true || 'watermelon'); //true
+// console.log('watermelon' || true); //'watermelon'
+// console.log(false && 'pineapple'); //false
+// console.log('pineapple' && false); //false
+// console.log(NaN || 'kiwi'); //'kiwi'
+// console.log('kiwi' || NaN); //'kiwi'
+// console.log(NaN && 'mango'); //NaN
+// console.log('mango' && NaN); //NaN
+// console.log(Infinity || 'apricot'); //Infinity
+// console.log('apricot' || Infinity); //'apricot'
+// console.log(Infinity && 'blueberry'); //'blueberry'
+// console.log('blueberry' && Infinity); //Infinity
+// console.log(null || undefined);  //undefined
