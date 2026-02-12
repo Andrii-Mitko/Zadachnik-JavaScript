@@ -1,6 +1,5 @@
 //! ===========================================================
 
-const { jsx, jsxs } = require("react/jsx-runtime");
 
 //? Задача - 1
 
@@ -603,18 +602,18 @@ const { jsx, jsxs } = require("react/jsx-runtime");
 
 //? Напишіть функцію, яка приймає один параметр continent. Використовуючи switch, поверніть назву континенту або "Невідомий континент" в залежності від введеного значення. Наприклад, "Africa", "Europe", "Asia", "North America", "South America", "Antarctica", "Australia" - відомі континенти, інші випадки - "Невідомий континент".
 
-const fooContinent = (continent) => {
-    switch (continent) {
-        case 'Africa':
-        case 'Europe':
-        case 'Asia':
-        case 'North America':
-        case 'South America':
-        case 'Antarctica':
-        case 'Australia': return continent;
-        default: return "Невідомий континент";
-    }
-}
+// const fooContinent = (continent) => {
+//     switch (continent) {
+//         case 'Africa':
+//         case 'Europe':
+//         case 'Asia':
+//         case 'North America':
+//         case 'South America':
+//         case 'Antarctica':
+//         case 'Australia': return continent;
+//         default: return "Невідомий континент";
+//     }
+// }
 
 //! ===========================================================
 
