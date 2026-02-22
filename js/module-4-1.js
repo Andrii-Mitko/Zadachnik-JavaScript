@@ -366,67 +366,78 @@
 
 //? Створіть об'єкт toDoList, який зберігатиме список задач та надаватиме методи для додавання нових завдань, позначки задачі як виконаної та виведення списку завдань.
 
-const toDoList = {
+// const toDoList = {
 
-    listTask: [],
-    add(task) {
-        this.listTask.push(task);
+//     listTask: [],
+//     add(task) {
+//         this.listTask.push(task);
       
-    },
-    retTask() {
-        return this.listTask;
-    },
-    setTask(task) {
-        for (const item of this.listTask) {
-            item.task === task ? item.codition = true : null;
-        }
-    },
-}
-toDoList.add({ task: 25, codition: false });
-console.log(toDoList.retTask());
-toDoList.setTask(25);
-console.log(toDoList.retTask());
+//     },
+//     retTask() {
+//         return this.listTask;
+//     },
+//     setTask(task) {
+//         for (const item of this.listTask) {
+//             item.task === task ? item.codition = true : null;
+//         }
+//    },
+// }
+// toDoList.add({ task: 25, codition: false });
+// console.log(toDoList.retTask());
+// toDoList.setTask(25);
+// console.log(toDoList.retTask());
 
-//! =========================================================
+//todo =========================================================
 
-// Створіть об'єкт bankAccount, який представлятиме банківський рахунок із методами для депозиту, зняття коштів та перевірки балансу. Врахуйте обробку можливих помилок (наприклад, недостатньо коштів).
 
-const bankAccount = {
-    balans: 0,
-    dep(cash) {
-        this.balans += cash;
-    },
-    kr(cash) {
-        if (this.balans >= cash) {
-            this.balans -= cash;
-        } else {
-            console.log('Недостатньо коштів');
-            }
-    },
-    per() {
-    console.log(this.balans);
-},
-};
-bankAccount.dep(180);
-bankAccount.kr(150);
-bankAccount.per();
+
+//? Створіть об'єкт bankAccount, який представлятиме банківський рахунок із методами для депозиту, зняття коштів та перевірки балансу. Врахуйте обробку можливих помилок (наприклад, недостатньо коштів).
+
+// const bankAccount = {
+//     balans: 0,
+//     dep(cash) {
+//         this.balans += cash;
+//     },
+//     kr(cash) {
+//         if (this.balans >= cash) {
+//             this.balans -= cash;
+//         } else {
+//             console.log('Недостатньо коштів');
+//             }
+//     },
+//     per() {
+//     console.log(this.balans);
+// },
+// };
+// bankAccount.dep(180);
+// bankAccount.kr(150);
+// bankAccount.per();
 
 //! =========================================================
 
 // Створіть об'єкт libraryCatalog, який зберігатиме список книг у бібліотеці та надаватиме методи для додавання нових книг, пошуку книг за автором та ISBN, а також виведення списку всіх книг.
 
-const libraryCatalog = {
-    books: [],
-    add(book) {
-        this.books.push(book);
-    },
-    sourch(str) {
-        for (const book of this.books) {
-            book.aftor === str || book.ISBN === str ? console.log(book) : null;
-}
-    }
-}
-libraryCatalog.add({aftor: 'pushkin', ISBN: '25'})
+// const libraryCatalog = {
+//     books: [],
+//     add(book) {
+//         this.books.push(book);
+//     },
+//     sourch(str) {
+//         for (const book of this.books) {
+//             book.aftor === str || book.ISBN === str ? console.log(book) : null;
+// }
+//     },
+
+//     vse() {
+//         console.log(this.books);
+//     }
+// }
+// libraryCatalog.add({ aftor: 'pushkin', ISBN: '25' });
+// libraryCatalog.add({ aftor: 'pushkin', ISBN: '50' });
+// libraryCatalog.add({ aftor: 'pupkin', ISBN: '40' });
+// libraryCatalog.sourch('pushkin');
+// libraryCatalog.vse();
+
 //! =========================================================
 
 // Створіть об'єкт temperatureConverter, який матиме методи для конвертації температур між градусами Цельсія та Фаренгейта.
