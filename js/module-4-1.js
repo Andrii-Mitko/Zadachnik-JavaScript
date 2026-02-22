@@ -164,7 +164,7 @@
 // const fooAccepts = (objX) => {
 //     objX.address = 'Mariupol';
 // }
-// fooAccepts(person); 
+// fooAccepts(person);
 // console.log(person);
 
 // //*3
@@ -175,7 +175,7 @@
 //     obj3.age = age3;
 //     return obj3
 // }
-// foo3(person, 51); 
+// foo3(person, 51);
 // console.log(person);
 
 // //*4
@@ -184,7 +184,7 @@
 // const foo4 = (obj4) => {
 //     delete obj4.age;
 // }
-// foo4(person); 
+// foo4(person);
 // console.log(person);
 
 // //*5
@@ -310,35 +310,124 @@
 // }
 // console.log(foo15(arr15));
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
 //! =========================================================
 
 // ЗАДАЧІ №2
 
-// Створіть об'єкт contactBook, який зберігатиме список контактів та надаватиме методи для додавання, видалення та пошуку контактів.
+//! =========================================================
 
-// Створіть об'єкт rectangle, який представлятиме прямокутник з методами для обчислення його площі та периметра. Об'єкт повинен приймати довжини двох сторін під час створення.
+//? 1
+//? Створіть об'єкт contactBook, який зберігатиме список контактів та надаватиме методи для додавання, видалення та пошуку контактів.
 
-// Створіть об'єкт toDoList, який зберігатиме список задач та надаватиме методи для додавання нових завдань, позначки задачі як виконаної та виведення списку завдань.
+// const contactBook = {
+//     contacts: [],
+
+//     // Додати контакт
+//     add(contact) {
+//         this.contacts.push(contact);
+//     },
+
+//     // Видалити контакт по імені
+//     remove(name) {
+//         this.contacts = this.contacts.filter(c => c.name !== name);
+//     },
+
+//     // Показати всі контакти
+//     list() {
+//         return this.contacts;
+//     },
+
+//     // Знайти контакт по імені
+//     findByName(name) {
+//         return this.contacts.filter(c => c.name === name);
+//     }
+// };
+
+//! =========================================================
+
+//? 2
+//? Створіть об'єкт rectangle, який представлятиме прямокутник з методами для обчислення його площі та периметра. Об'єкт повинен приймати довжини двох сторін під час створення.
+
+// const rectangle = {
+//      d: 5,
+//     h: 10,
+//      pl() {
+//         return this.d * this.h
+//     },
+//     per() {
+//         return (this.d + this.h) * 2;
+//     },
+// }
+// console.log(`площa = ${rectangle.pl()}, периметр = ${rectangle.per()}`);
+
+//! =========================================================
+
+//? 2
+
+//? Створіть об'єкт toDoList, який зберігатиме список задач та надаватиме методи для додавання нових завдань, позначки задачі як виконаної та виведення списку завдань.
+
+const toDoList = {
+
+    listTask: [],
+    add(task) {
+        this.listTask.push(task);
+      
+    },
+    retTask() {
+        return this.listTask;
+    },
+    setTask(task) {
+        for (const item of this.listTask) {
+            item.task === task ? item.codition = true : null;
+        }
+    },
+}
+toDoList.add({ task: 25, codition: false });
+console.log(toDoList.retTask());
+toDoList.setTask(25);
+console.log(toDoList.retTask());
+
+//! =========================================================
 
 // Створіть об'єкт bankAccount, який представлятиме банківський рахунок із методами для депозиту, зняття коштів та перевірки балансу. Врахуйте обробку можливих помилок (наприклад, недостатньо коштів).
 
+const bankAccount = {
+    balans: 0,
+    dep(cash) {
+        this.balans += cash;
+    },
+    kr(cash) {
+        if (this.balans >= cash) {
+            this.balans -= cash;
+        } else {
+            console.log('Недостатньо коштів');
+            }
+    },
+    per() {
+    console.log(this.balans);
+},
+};
+bankAccount.dep(180);
+bankAccount.kr(150);
+bankAccount.per();
+
+//! =========================================================
+
 // Створіть об'єкт libraryCatalog, який зберігатиме список книг у бібліотеці та надаватиме методи для додавання нових книг, пошуку книг за автором та ISBN, а також виведення списку всіх книг.
+
+const libraryCatalog = {
+    books: [],
+    add(book) {
+        this.books.push(book);
+    },
+    sourch(str) {
+        for (const book of this.books) {
+            book.aftor === str || book.ISBN === str ? console.log(book) : null;
+}
+    }
+}
+libraryCatalog.add({aftor: 'pushkin', ISBN: '25'})
+//! =========================================================
 
 // Створіть об'єкт temperatureConverter, який матиме методи для конвертації температур між градусами Цельсія та Фаренгейта.
 
