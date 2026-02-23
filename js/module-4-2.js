@@ -136,6 +136,20 @@
 
 // Банківський рахунок: Створіть об'єкт account, який міститиме інформацію про банківський рахунок користувача, таку як ім'я, баланс та історія транзакцій. Додайте методи для додавання та витрати коштів, а також для виведення історії транзакцій.
 
+// // TASK№10
+// function A() {
+//   this.name = 'Function A';
+//   return {
+//     name: 'Returned Object',
+//     getThis: function () {
+//       console.log(this.name);
+//     },
+//   };
+// }
+
+// const result = new A();
+// result.getThis();
+
 
 
 
@@ -278,16 +292,3 @@
 // //!======================================================
 
 // //!======================================================
-// // TASK№10
-// function A() {
-//   this.name = 'Function A';
-//   return {
-//     name: 'Returned Object',
-//     getThis: function () {
-//       console.log(this.name);
-//     },
-//   };
-// }
-
-// const result = new A();
-// result.getThis();
