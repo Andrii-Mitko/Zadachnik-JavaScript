@@ -949,21 +949,87 @@ console.log(foo2(heroes));
 
 //! ===========================================================
 
-// ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких eyeColor дорівнює 'Blue'.
+//? 3
+//? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких eyeColor дорівнює 'Blue'.
 
-// ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких hairColor дорівнює 'Black'.
+const foo3 = (heroes) => {
+ return heroes.filter(hero => hero.appearance.eyeColor === 'Blue');
+}
+console.log(foo3(heroes));
 
-// ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких race дорівнює 'Human'.
+//! ===========================================================
+
+//? 4
+//? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких hairColor дорівнює 'Black'.
+
+const foo4 = (heroes) => {
+  heroes.filter(hero => hero.appearance.hairColor === 'Black');
+}
+console.log(foo3(heroes));
+
+//! ===========================================================
+//? 5
+//? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких race дорівнює 'Human'.
+
+const foo5 = (heroes) => {
+  return heroes.filter(hero => hero.appearance.race === 'Human');
+};
+console.log(foo5(heroes));
+
+//! ===========================================================
 
 // ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких publisher дорівнює 'Marvel Comics'.
 
-// ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких powerstats.power більше ніж 80.
+const foo6 = (heroes) => {
+  return heroes.filter(hero => hero.biography.publisher === 'Marvel Comics');
+};
+console.log(foo6(heroes));
 
-// ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких powerstats.intelligence менше ніж 50.
+//! ===========================================================
 
-// ; Напиши функцію, яка приймає масив героїв та повертає героя з name рівним 'Doctor Strange'.
+//? 7
+//? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких powerstats.power більше ніж 80.
 
-// ; Напиши функцію, яка приймає масив героїв та повертає героя з максимальним значенням powerstats.strength.
+const foo7 = (heroes) => {
+  return heroes.filter(hero => hero.powerstats.power > 80);
+};
+console.log(foo7(heroes));
+
+//! ===========================================================
+
+//? 8
+//? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких powerstats.intelligence менше ніж 50.
+
+const foo8 = (heroes) => {
+  return heroes.filter(hero => hero.powerstats.intelligence < 50);
+};
+console.log(foo8(heroes));
+
+//! ===========================================================
+
+//? 9
+//? ; Напиши функцію, яка приймає масив героїв та повертає героя з name рівним 'Doctor Strange'.
+
+const foo9 = (heroes) => {
+  return heroes.find(hero => hero.name === 'Doctor Strange');
+}
+console.log(foo9(heroes));
+
+//! ===========================================================
+
+//? 10
+//? ; Напиши функцію, яка приймає масив героїв та повертає героя з максимальним значенням powerstats.strength.
+
+const foo10 = (heroes) => {
+  let heroMax = heroes[0].powerstats.strength;
+  heroes.map(hero => {
+    hero.powerstats.strength > heroMax ? heroMax = hero.powerstats.strength : null;
+    return  heroMax;
+});
+}
+console.log(foo10(heroes));
+
+//! ===========================================================
 
 // ; Напиши функцію, яка приймає масив героїв та повертає героя з мінімальним значенням powerstats.speed.
 
