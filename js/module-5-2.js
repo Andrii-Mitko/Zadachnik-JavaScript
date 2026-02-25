@@ -1021,21 +1021,53 @@ console.log(foo9(heroes));
 //? ; Напиши функцію, яка приймає масив героїв та повертає героя з максимальним значенням powerstats.strength.
 
 const foo10 = (heroes) => {
-  let heroMax = heroes[0].powerstats.strength;
-  heroes.map(hero => {
-    hero.powerstats.strength > heroMax ? heroMax = hero.powerstats.strength : null;
-    return  heroMax;
-});
+let  maxHero = heroes[0];
+for (const hero of heroes) {
+  if (hero.powerstats.strength > maxHero.powerstats.strength) {
+    maxHero = hero;
+  }
+}
+return maxHero;
 }
 console.log(foo10(heroes));
 
 //! ===========================================================
 
-// ; Напиши функцію, яка приймає масив героїв та повертає героя з мінімальним значенням powerstats.speed.
+//? 11
 
-// ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких appearance.weight[1] менше 75 кг.
+//? ; Напиши функцію, яка приймає масив героїв та повертає героя з мінімальним значенням powerstats.speed.
 
-// ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких appearance.height[1] більше 180 см.
+const foo11 = (heroes) => {
+let  maxHero = heroes[0];
+for (const hero of heroes) {
+  if (hero.powerstats.speed < maxHero.powerstats.speed) {
+    maxHero = hero;
+  }
+}
+return maxHero;
+}
+console.log(foo11(heroes));
+
+//! ===========================================================
+
+//? 12
+
+//? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких appearance.weight[1] менше 75 кг.
+
+const foo12 = (heroes) => {
+  return heroes.filter(hero => parseInt(hero.appearance.weight[1], 10) < 75);
+}
+console.log(foo12(heroes));
+
+//! ===========================================================
+
+//? 13
+
+//? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких appearance.height[1] більше 180 см.
+
+
+
+//! ===========================================================
 
 // ; Напиши функцію, яка приймає масив героїв та повертає масив назв biography.firstAppearance усіх героїв.
 
