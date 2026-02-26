@@ -1065,17 +1065,55 @@ console.log(foo12(heroes));
 
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких appearance.height[1] більше 180 см.
 
-
+const foo13 = (heroes) => {
+ return heroes.filter(hero => parseInt(hero.appearance.height[1], 10) > 180);
+}
+console.log(foo13(heroes));
 
 //! ===========================================================
 
-// ; Напиши функцію, яка приймає масив героїв та повертає масив назв biography.firstAppearance усіх героїв.
+//? 14
 
-// ; Напиши функцію, яка приймає масив героїв та повертає масив назв work.occupation усіх героїв.
+//? ; Напиши функцію, яка приймає масив героїв та повертає масив назв biography.firstAppearance усіх героїв.
 
-// ; Напиши функцію, яка приймає масив героїв та сортує його за зростанням powerstats.intelligence.
+const foo14 = (heroes) => {
+  return heroes.map(hero => hero.biography.firstAppearance);
+}
+console.log(foo14(heroes));
 
-// ; Напиши функцію, яка приймає масив героїв та сортує його за спаданням powerstats.power.
+//! ===========================================================
+
+//? 15
+
+//? ; Напиши функцію, яка приймає масив героїв та повертає масив назв work.occupation усіх героїв.
+
+const foo15 = (heroes) => {
+  return heroes.map(hero => hero.work.occupation);
+};
+console.log(foo15(heroes));
+
+//! ===========================================================
+
+//? 16
+
+//? ; Напиши функцію, яка приймає масив героїв та сортує його за зростанням powerstats.intelligence.
+
+const foo16 = (heroes) => {
+  return heroes.toSorted((a, b) => a.powerstats.intelligence - b.powerstats.intelligence);
+}
+console.log(foo16(heroes));
+
+//! ===========================================================
+
+//? 17
+//? ; Напиши функцію, яка приймає масив героїв та сортує його за спаданням powerstats.power.
+
+const foo17 = (heroes) => {
+return heroes.toSorted((a, b) => b.powerstats.power - a.powerstats.power);
+}
+console.log(foo17(heroes));
+
+//! ===========================================================
 
 // ; Напиши функцію, яка приймає масив героїв та сортує його за алфавітом по name.
 
