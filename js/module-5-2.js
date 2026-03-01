@@ -926,110 +926,110 @@
 //? 1
 //? Напиши функцію, яка приймає масив героїв та повертає масив імен усіх героїв.
 
-const foo1 = (heroes) => {
-    return heroes.map(hero => hero.biography.fullName);
-}
-console.log(foo1(heroes));
+// const foo1 = (heroes) => {
+//     return heroes.map(hero => hero.biography.fullName);
+// }
+// console.log(foo1(heroes));
 
 //! ===========================================================
 
 //? 2
 //? Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких gender дорівнює 'Male'.
 
-const foo2 = (heroes) => {
-    const genderMale = [];
-    for (const hero of heroes) {
-        if (hero.appearance.gender === 'Male') {
-            genderMale.push(hero);
-        }
-    }
-    return genderMale;
-}
-console.log(foo2(heroes));
+// const foo2 = (heroes) => {
+//     const genderMale = [];
+//     for (const hero of heroes) {
+//         if (hero.appearance.gender === 'Male') {
+//             genderMale.push(hero);
+//         }
+//     }
+//     return genderMale;
+// }
+// console.log(foo2(heroes));
 
 //! ===========================================================
 
 //? 3
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких eyeColor дорівнює 'Blue'.
 
-const foo3 = (heroes) => {
- return heroes.filter(hero => hero.appearance.eyeColor === 'Blue');
-}
-console.log(foo3(heroes));
+// const foo3 = (heroes) => {
+//  return heroes.filter(hero => hero.appearance.eyeColor === 'Blue');
+// }
+// console.log(foo3(heroes));
 
 //! ===========================================================
 
 //? 4
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких hairColor дорівнює 'Black'.
 
-const foo4 = (heroes) => {
-  heroes.filter(hero => hero.appearance.hairColor === 'Black');
-}
-console.log(foo3(heroes));
+// const foo4 = (heroes) => {
+//   heroes.filter(hero => hero.appearance.hairColor === 'Black');
+// }
+// console.log(foo3(heroes));
 
 //! ===========================================================
 //? 5
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких race дорівнює 'Human'.
 
-const foo5 = (heroes) => {
-  return heroes.filter(hero => hero.appearance.race === 'Human');
-};
-console.log(foo5(heroes));
+// const foo5 = (heroes) => {
+//   return heroes.filter(hero => hero.appearance.race === 'Human');
+// };
+// console.log(foo5(heroes));
 
 //! ===========================================================
 
-// ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких publisher дорівнює 'Marvel Comics'.
+//? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких publisher дорівнює 'Marvel Comics'.
 
-const foo6 = (heroes) => {
-  return heroes.filter(hero => hero.biography.publisher === 'Marvel Comics');
-};
-console.log(foo6(heroes));
+// const foo6 = (heroes) => {
+//   return heroes.filter(hero => hero.biography.publisher === 'Marvel Comics');
+// };
+// console.log(foo6(heroes));
 
 //! ===========================================================
 
 //? 7
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких powerstats.power більше ніж 80.
 
-const foo7 = (heroes) => {
-  return heroes.filter(hero => hero.powerstats.power > 80);
-};
-console.log(foo7(heroes));
+// const foo7 = (heroes) => {
+//   return heroes.filter(hero => hero.powerstats.power > 80);
+// };
+// console.log(foo7(heroes));
 
 //! ===========================================================
 
 //? 8
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких powerstats.intelligence менше ніж 50.
 
-const foo8 = (heroes) => {
-  return heroes.filter(hero => hero.powerstats.intelligence < 50);
-};
-console.log(foo8(heroes));
+// const foo8 = (heroes) => {
+//   return heroes.filter(hero => hero.powerstats.intelligence < 50);
+// };
+// console.log(foo8(heroes));
 
 //! ===========================================================
 
 //? 9
 //? ; Напиши функцію, яка приймає масив героїв та повертає героя з name рівним 'Doctor Strange'.
 
-const foo9 = (heroes) => {
-  return heroes.find(hero => hero.name === 'Doctor Strange');
-}
-console.log(foo9(heroes));
+// const foo9 = (heroes) => {
+//   return heroes.find(hero => hero.name === 'Doctor Strange');
+// }
+// console.log(foo9(heroes));
 
 //! ===========================================================
 
 //? 10
 //? ; Напиши функцію, яка приймає масив героїв та повертає героя з максимальним значенням powerstats.strength.
 
-const foo10 = (heroes) => {
-let  maxHero = heroes[0];
-for (const hero of heroes) {
-  if (hero.powerstats.strength > maxHero.powerstats.strength) {
-    maxHero = hero;
-  }
-}
-return maxHero;
-}
-console.log(foo10(heroes));
+// const foo10 = (heroes) => {
+// let  maxHero = heroes[0];
+// for (const hero of heroes) {
+//   if (hero.powerstats.strength > maxHero.powerstats.strength) {
+//     maxHero = hero;
+//   }
+// }
+// return maxHero;
+// }
+// console.log(foo10(heroes));
 
 //! ===========================================================
 
@@ -1037,16 +1037,16 @@ console.log(foo10(heroes));
 
 //? ; Напиши функцію, яка приймає масив героїв та повертає героя з мінімальним значенням powerstats.speed.
 
-const foo11 = (heroes) => {
-let  maxHero = heroes[0];
-for (const hero of heroes) {
-  if (hero.powerstats.speed < maxHero.powerstats.speed) {
-    maxHero = hero;
-  }
-}
-return maxHero;
-}
-console.log(foo11(heroes));
+// const foo11 = (heroes) => {
+// let  maxHero = heroes[0];
+// for (const hero of heroes) {
+//   if (hero.powerstats.speed < maxHero.powerstats.speed) {
+//     maxHero = hero;
+//   }
+// }
+// return maxHero;
+// }
+// console.log(foo11(heroes));
 
 //! ===========================================================
 
@@ -1054,10 +1054,10 @@ console.log(foo11(heroes));
 
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких appearance.weight[1] менше 75 кг.
 
-const foo12 = (heroes) => {
-  return heroes.filter(hero => parseInt(hero.appearance.weight[1], 10) < 75);
-}
-console.log(foo12(heroes));
+// const foo12 = (heroes) => {
+//   return heroes.filter(hero => parseInt(hero.appearance.weight[1], 10) < 75);
+// }
+// console.log(foo12(heroes));
 
 //! ===========================================================
 
@@ -1065,10 +1065,10 @@ console.log(foo12(heroes));
 
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких appearance.height[1] більше 180 см.
 
-const foo13 = (heroes) => {
- return heroes.filter(hero => parseInt(hero.appearance.height[1], 10) > 180);
-}
-console.log(foo13(heroes));
+// const foo13 = (heroes) => {
+//  return heroes.filter(hero => parseInt(hero.appearance.height[1], 10) > 180);
+// }
+// console.log(foo13(heroes));
 
 //! ===========================================================
 
@@ -1076,10 +1076,10 @@ console.log(foo13(heroes));
 
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив назв biography.firstAppearance усіх героїв.
 
-const foo14 = (heroes) => {
-  return heroes.map(hero => hero.biography.firstAppearance);
-}
-console.log(foo14(heroes));
+// const foo14 = (heroes) => {
+//   return heroes.map(hero => hero.biography.firstAppearance);
+// }
+// console.log(foo14(heroes));
 
 //! ===========================================================
 
@@ -1087,10 +1087,10 @@ console.log(foo14(heroes));
 
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив назв work.occupation усіх героїв.
 
-const foo15 = (heroes) => {
-  return heroes.map(hero => hero.work.occupation);
-};
-console.log(foo15(heroes));
+// const foo15 = (heroes) => {
+//   return heroes.map(hero => hero.work.occupation);
+// };
+// console.log(foo15(heroes));
 
 //! ===========================================================
 
@@ -1098,36 +1098,36 @@ console.log(foo15(heroes));
 
 //? ; Напиши функцію, яка приймає масив героїв та сортує його за зростанням powerstats.intelligence.
 
-const foo16 = (heroes) => {
-  return heroes.toSorted((a, b) => a.powerstats.intelligence - b.powerstats.intelligence);
-}
-console.log(foo16(heroes));
+// const foo16 = (heroes) => {
+//   return heroes.toSorted((a, b) => a.powerstats.intelligence - b.powerstats.intelligence);
+// }
+// console.log(foo16(heroes));
 
 //! ===========================================================
 
 //? 17
 //? ; Напиши функцію, яка приймає масив героїв та сортує його за спаданням powerstats.power.
 
-const foo17 = (heroes) => {
-return heroes.toSorted((a, b) => b.powerstats.power - a.powerstats.power);
-}
-console.log(foo17(heroes));
+// const foo17 = (heroes) => {
+// return heroes.toSorted((a, b) => b.powerstats.power - a.powerstats.power);
+// }
+// console.log(foo17(heroes));
 
 //! ===========================================================
 
 //? 18
 //? ; Напиши функцію, яка приймає масив героїв та сортує його за алфавітом по name.
 
-const foo18 = (heroes) => heroes.toSorted((a, b) => a.name.localeCompare(b.name));
-console.log(foo18(heroes));
+// const foo18 = (heroes) => heroes.toSorted((a, b) => a.name.localeCompare(b.name));
+// console.log(foo18(heroes));
 
 //! ===========================================================
 
 //? 19
 //? ; Напиши функцію, яка приймає масив героїв та перевіряє, чи є хоча б один герой з alignment рівним 'bad'.
 
-const foo19 = (heroes) => heroes.find(hero => hero.biography.alignment === 'bad');
-console.log(foo19(heroes));
+// const foo19 = (heroes) => heroes.find(hero => hero.biography.alignment === 'bad');
+// console.log(foo19(heroes));
 
 //! ===========================================================
 
@@ -1135,126 +1135,126 @@ console.log(foo19(heroes));
 
 //? ; Напиши функцію, яка приймає масив героїв та перевіряє, чи всі герої мають alignment рівним 'good'.
 
-const foo20 = (heroes) => {
-  return heroes.every(hero => hero.biography.alignment === 'good');
-}
-console.log(foo20(heroes));
+// const foo20 = (heroes) => {
+//   return heroes.every(hero => hero.biography.alignment === 'good');
+// }
+// console.log(foo20(heroes));
 
 //! ===========================================================
 
 //? 21
 //? ; Напиши функцію, яка приймає масив героїв та перевіряє, чи є хоча б один герой з powerstats.intelligence рівним 100.
 
-const foo21 = (heroes) => {
-  return heroes.some(hero => hero.powerstats.intelligence === 100);
-};
-console.log(foo21(heroes));
+// const foo21 = (heroes) => {
+//   return heroes.some(hero => hero.powerstats.intelligence === 100);
+// };
+// console.log(foo21(heroes));
 
 //! ===========================================================
 
 //? 22
 //? ; Напиши функцію, яка приймає масив героїв та перевіряє, чи всі герої мають race, відмінний від null.
 
-const foo22 = (heroes) => {
-  return heroes.every(hero => hero.appearance.race !== null);
-};
-console.log(foo22(heroes));
+// const foo22 = (heroes) => {
+//   return heroes.every(hero => hero.appearance.race !== null);
+// };
+// console.log(foo22(heroes));
 
 //! ===========================================================
 
 //? 23
 //? ; Напиши функцію, яка приймає масив героїв та перевіряє, чи є хоча б один герой вагою більше ніж 150 кг.
 
-const foo23 = (heroes) => {
-  return heroes.some(hero => parseInt(hero.appearance.weight[1]) > 150);
-}
-console.log(foo23(heroes));
+// const foo23 = (heroes) => {
+//   return heroes.some(hero => parseInt(hero.appearance.weight[1]) > 150);
+// }
+// console.log(foo23(heroes));
 
 //! ===========================================================
 
 //? 24
 //? ; Напиши функцію, яка приймає масив героїв та повертає індекс героя з id рівним 226.
 
-const foo24 = (heroes) => {
-    return heroes.findIndex(hero => hero.id === 226);
-}
-console.log(foo24(heroes));
+// const foo24 = (heroes) => {
+//     return heroes.findIndex(hero => hero.id === 226);
+// }
+// console.log(foo24(heroes));
 
 //! ===========================================================
 
 //? 25
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив довжин масиву aliases кожного героя.
 
-const foo25 = (heroes) => {
-  return heroes.map(hero => hero.biography.aliases.length);
-}
-console.log(foo25(heroes));
+// const foo25 = (heroes) => {
+//   return heroes.map(hero => hero.biography.aliases.length);
+// }
+// console.log(foo25(heroes));
 
 //! ===========================================================
 
 //? 26
 //? ; Напиши функцію, яка приймає масив героїв та повертає героя, у якого найбільше aliases.
 
-const foo26 = (heroes) => {
-  let heroMaxAliases = heroes[0];
-  for (let i = 1; i < heroes.length; i++) {
-    if (heroes[i].biography.aliases.length > heroMaxAliases.biography.aliases.length) {
-      heroMaxAliases = heroes[i];
-    };
-  };
-  return heroMaxAliases;
-};
-console.log(foo26(heroes));
+// const foo26 = (heroes) => {
+//   let heroMaxAliases = heroes[0];
+//   for (let i = 1; i < heroes.length; i++) {
+//     if (heroes[i].biography.aliases.length > heroMaxAliases.biography.aliases.length) {
+//       heroMaxAliases = heroes[i];
+//     };
+//   };
+//   return heroMaxAliases;
+// };
+// console.log(foo26(heroes));
 
 //! ===========================================================
 
 //? 27
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких кількість aliases більше ніж 3.
 
-const foo27 = (heroes) => {
-  return heroes.filter(hero => hero.biography.aliases.length > 3);
-}
-console.log(foo27(heroes));
+// const foo27 = (heroes) => {
+//   return heroes.filter(hero => hero.biography.aliases.length > 3);
+// }
+// console.log(foo27(heroes));
 
 //! ===========================================================
 
 //? 28
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких в полі work.occupation значення дорівнює "-".
 
-const foo28 = (heroes) => {
-  return heroes.filter(hero => hero.work.occupation === "-");
-};
-console.log(foo28(heroes));
+// const foo28 = (heroes) => {
+//   return heroes.filter(hero => hero.work.occupation === "-");
+// };
+// console.log(foo28(heroes));
 
 //! ===========================================================
 
 //? 29
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, які мають у groupAffiliation згадку про 'Avengers'.
 
-const foo29 = (heroes) => {
-  return heroes.filter(hero => hero.connections.groupAffiliation !== '-') 
-}
-console.log(foo29(heroes));
+// const foo29 = (heroes) => {
+//   return heroes.filter(hero => hero.connections.groupAffiliation !== '-') 
+// }
+// console.log(foo29(heroes));
 
 //! ===========================================================
 //? 30
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив, де кожен елемент — рядок виду: "NAME has POWER power".
 
-const foo30 = (heroes) => {
-  const arr30 = [];
-  let name = '';
-  let power = 0;
-  for (const hero of heroes) {
-    name = hero.name;
-    power = hero.powerstats.power;
-    arr30.push(`${name} has ${power} power`)
-  };
-  return arr30;
-};
-console.log(foo30(heroes));
+// const foo30 = (heroes) => {
+//   const arr30 = [];
+//   let name = '';
+//   let power = 0;
+//   for (const hero of heroes) {
+//     name = hero.name;
+//     power = hero.powerstats.power;
+//     arr30.push(`${name} has ${power} power`)
+//   };
+//   return arr30;
+// };
+// console.log(foo30(heroes));
 
-const foo30a = (heroes) => heroes.map(hero => `${hero.name} has ${hero.powerstats.power} power`);
-console.log(foo30a(heroes));
+// const foo30a = (heroes) => heroes.map(hero => `${hero.name} has ${hero.powerstats.power} power`);
+// console.log(foo30a(heroes));
 
 //! ===========================================================
 
@@ -1271,57 +1271,57 @@ console.log(foo30a(heroes));
 //? 33
 //? ; Напиши функцію, яка повертає масив імен супергероїв, у яких powerstats.strength більше 80. Відсортуй результат за зменшенням сили (strength).
 
-const foo33 = (heroes) => {
-  return heroes
-    .filter(hero => hero.powerstats.strength > 80)
-    .toSorted((a, b) => b.powerstats.strength - a.powerstats.strength)
-    .map(hero => hero.name);
-};
-console.log(foo33(heroes));
+// const foo33 = (heroes) => {
+//   return heroes
+//     .filter(hero => hero.powerstats.strength > 80)
+//     .toSorted((a, b) => b.powerstats.strength - a.powerstats.strength)
+//     .map(hero => hero.name);
+// };
+// console.log(foo33(heroes));
 
 //! ===========================================================
 
 //? 34
 //? ; Напиши функцію, яка повертає масив імен супергероїв, у яких race === "Human" та intelligence більше 70. Результат має бути відсортований за зростанням intelligence.
 
-const foo34 = (heroes) => {
-  return heroes
-    .filter(hero => hero.appearance.race === "Human" && hero.powerstats.intelligence > 70)
-    .toSorted((a, b) => a.powerstats.intelligence - b.powerstats.intelligence)
-  .map(hero => hero.name)
-}
-console.log(foo34(heroes));
+// const foo34 = (heroes) => {
+//   return heroes
+//     .filter(hero => hero.appearance.race === "Human" && hero.powerstats.intelligence > 70)
+//     .toSorted((a, b) => a.powerstats.intelligence - b.powerstats.intelligence)
+//   .map(hero => hero.name)
+// }
+// console.log(foo34(heroes));
 
 //! ===========================================================
 
 //? 35
 //? ; Напиши функцію, яка повертає масив об'єктів типу { name, publisher }, але лише для героїв, у яких alignment === 'good' і intelligence більше 60. Відсортуй масив за ім'ям.
 
-const foo35 = (heroes) => {
-  return heroes
-    .filter(hero => hero.biography.alignment === 'good' && hero.powerstats.intelligence > 60)
-    .toSorted((a, b) => a.name.localeCompare(b.name))
-    .map(hero => ({ name: hero.name, publisher: hero.biography.publisher }));
-}
-console.log(foo35(heroes));
+// const foo35 = (heroes) => {
+//   return heroes
+//     .filter(hero => hero.biography.alignment === 'good' && hero.powerstats.intelligence > 60)
+//     .toSorted((a, b) => a.name.localeCompare(b.name))
+//     .map(hero => ({ name: hero.name, publisher: hero.biography.publisher }));
+// }
+// console.log(foo35(heroes));
 
 //! ===========================================================
 
 //? 36
 //? ; Напиши функцію, яка повертає масив назв першої появи (firstAppearance) лише унікальних коміксів, де вперше з'явились герої з publisher === 'Marvel Comics' та powerstats.speed більше 60. Результат відсортуй алфавітно.
 
-const foo36 = (heroes) => {
-  const arr36 = heroes
-    .filter(hero => hero.biography.publisher === 'Marvel Comics' && hero.powerstats.speed > 60)
-    .map(hero => hero.biography.firstAppearance)
-    .filter(first => first);
-  const unique = [];
-  for (const item of arr36) {
-    if (!unique.includes(item)) unique.push(item);
-  };
-  return unique.toSorted((a, b) => a.localeCompare(b));
-};
-console.log(foo36(heroes));
+// const foo36 = (heroes) => {
+//   const arr36 = heroes
+//     .filter(hero => hero.biography.publisher === 'Marvel Comics' && hero.powerstats.speed > 60)
+//     .map(hero => hero.biography.firstAppearance)
+//     .filter(first => first);
+//   const unique = [];
+//   for (const item of arr36) {
+//     if (!unique.includes(item)) unique.push(item);
+//   };
+//   return unique.toSorted((a, b) => a.localeCompare(b));
+// };
+// console.log(foo36(heroes));
 
 //! ===========================================================
 
