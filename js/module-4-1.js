@@ -538,6 +538,39 @@
 //? next() - метод, що перемикає на наступну пісню.
 //? previous() - метод, що перемикає на попередню пісню.
 
+// const musicPlayer = {
+//   songs: [],
+//   currentSong: 0,
+//   isPlaying: false,
+
+//   addSong(song) {
+//     this.songs.push(song);
+//   },
+
+//   play() {
+//     if (!this.songs.length) return console.log("Список пісень порожній");
+//     this.isPlaying = true;
+//     console.log(`▶️ Грає: ${this.songs[this.currentSong]}`);
+//   },
+//  pause() {
+//     if (!this.isPlaying) return console.log("Плеєр вже на паузі");
+//     this.isPlaying = false;
+//     console.log("⏸ Пауза");
+//   },
+
+//   next() {
+//     if (!this.songs.length) return;
+//     this.currentSong = (this.currentSong + 1) % this.songs.length;
+//     this.play();
+//   },
+
+//   previous() {
+//     if (!this.songs.length) return;
+//     this.currentSong =
+//       (this.currentSong - 1 + this.songs.length) % this.songs.length;
+//     this.play();
+//   }
+// };
 
 //! =========================================================
 
@@ -550,6 +583,24 @@
 //? ucFirst(str) - метод, що приймає рядок та повертає цей же рядок, зробивши його першу літеру заголовною.
 //? ucWords(str) - метод, що приймає рядок та робить заголовною першу літеру кожного слова цього рядка.
 
+// const myString = {
+//   reverse(str) {
+//     return str.split("").reverse().join("");
+//   },
+
+//   ucFirst(str) {
+//     if (!str) return str;
+//     return str[0].toUpperCase() + str.slice(1);
+//   },
+
+//   ucWords(str) {
+//     return str
+//       .split(" ")
+//       .map(word => word[0].toUpperCase() + word.slice(1))
+//       .join(" ");
+//   }
+// };
+
 //! =========================================================
 
 //? Створіть об'єкт validator, який перевірятиме рядки. Наприклад, у нього буде метод isEmail, що параметром приймає рядок і перевіряє, чи є він коректним емейлом чи ні. Якщо є – повертає true, якщо не є – то false. Крім того, об'єкт буде мати такі методи: метод isDomain для перевірки домену, метод isDate для перевірки дати і метод isPhone для перевірки телефону.
@@ -561,6 +612,32 @@
 //? isDomain(str) - метод, що приймає рядок та перевіряє, чи є він коректним доменом. Повертає true або false.
 //? isDate(str) - метод, що приймає рядок та перевіряє, чи є він коректною датою. Повертає true або false.
 //? isPhone(str) - метод, що приймає рядок та перевіряє, чи є він коректним номером телефону. Повертає true або false.
+
+// const validator = {
+//   isEmail(str) {
+//     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     return regex.test(str);    //перевіряє, чи є він коректним емейлом
+//   },
+//   isDomain(str) {
+//     const regex = /^(?!-)[a-z0-9-]+(?<!-)\.[a-z]{2,}$/i;
+//     return regex.test(str);    //перевіряє, чи є він коректним доменом
+//   },
+//   isDate(str) {
+//     const regex = /^\d{4}-\d{2}-\d{2}$/;
+//     if (!regex.test(str)) return false;
+//     const [y, m, d] = str.split("-").map(Number);
+//     const date = new Date(y, m - 1, d);
+//     return (
+//       date.getFullYear() === y &&
+//       date.getMonth() === m - 1 &&
+//       date.getDate() === d       //перевіряє, чи є він коректною датою
+//     );
+//   },
+//   isPhone(str) {
+//     const regex = /^\+?\d{10,15}$/;
+//     return regex.test(str);    //перевіряє, чи є він коректним номером телефону
+//   }
+// };
 
 //! =========================================================
 
