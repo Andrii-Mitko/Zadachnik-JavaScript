@@ -1325,7 +1325,22 @@
 
 //! ===========================================================
 
-// ; Напиши функцію, яка повертає масив { name, aliasesCount } — кількість псевдонімів для кожного героя, де aliasesCount > 3. Відсортуй результат за спаданням кількості псевдонімів.
+//? 37
+//? ; Напиши функцію, яка повертає масив { name, aliasesCount } — кількість псевдонімів для кожного героя, де aliasesCount > 3. Відсортуй результат за спаданням кількості псевдонімів.
+
+const foo37 = (heroes) => { 
+  const newHeroes = heroes
+  .filter(hero => hero.biography.aliases.length > 3)
+  .toSorted((a, b) => b.biography.aliases.length - a.biography.aliases.length);
+   const newHeroes2 = [];
+  newHeroes.map(hero2 => newHeroes2.push({
+    name: hero2.name, 
+    aliasesCount: hero2.biography.aliases.length}));
+  return newHeroes2 
+}
+console.log(foo37(heroes));
+
+//! ===========================================================
 
 // ; Напиши функцію, яка повертає масив імен героїв, чия вага (у kg) менша за 80 кг та сила (strength) більше 60. Результат відсортуй за зростанням ваги.
 

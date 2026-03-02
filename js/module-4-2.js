@@ -477,26 +477,51 @@ console.log(obj30.convertToMinutes());
 //? - додати гроші на рахунок
 //? - зняти гроші з рахунка
 
-const sistemControl = {
-    listUser: [],
-    listRax: [],
-    addListUser(userId, FIO, password) {
-        return this.listUser.push({ userId, FIO, password });
-    },
-    removeListUser(FIO, userId) {
-        this.listUser = this.listUser.filter(user =>
-            user.FIO !== FIO || user.userId !== userId);
-    },
-    addListRax(userId, accountNumber, value) {
-        return this.listRax.push({ userId, accountNumber, value });
-    },
+// const sistemControl = {
+//   listUser: [],
+//   listRax: [],
 
-};
+//   addListUser(userId, FIO, password) {
+//     this.listUser.push({ userId, FIO, password });
+//   },
+
+//   removeListUser(FIO, userId) {
+//     this.listUser = this.listUser.filter(
+//       user => user.FIO !== FIO || user.userId !== userId
+//     );
+//   },
+
+//   addListRax(userId, accountNumber, value = 0) {
+//     this.listRax.push({ userId, accountNumber, value });
+//   },
+
+//   removeListRax(accountNumber, userId) {
+//     this.listRax = this.listRax.filter(
+//       acc => acc.accountNumber !== accountNumber || acc.userId !== userId
+//     );
+//   },
+
+//   addValue(accountNumber, sum) {
+//     const acc = this.listRax.find(a => a.accountNumber === accountNumber);
+//     if (!acc) return "Рахунок не знайдено";
+//     acc.value += sum;
+//     return acc.value;
+//   },
+
+//   takeValue(accountNumber, sum) {
+//     const acc = this.listRax.find(a => a.accountNumber === accountNumber);
+//     if (!acc) return "Рахунок не знайдено";
+//     if (acc.value < sum) return "Недостатньо коштів";
+//     acc.value -= sum;
+//     return acc.value;
+//   }
+// };
 
 
 //! =============================================
 
-// Менеджер завдань: Створіть функцію яка створює та повертає обьект завдання. Об'єкт task, який буде містити властивості Name, deadline, priority та done. Додайте методи для відмітки завдання як виконаного та для виведення інформаціїпро завдання.
+//? 32
+//? Менеджер завдань: Створіть функцію яка створює та повертає обьект завдання. Об'єкт task, який буде містити властивості Name, deadline, priority та done. Додайте методи для відмітки завдання як виконаного та для виведення інформаціїпро завдання.
 
 // Каталог товарів: Створіть каталог товарів, де кожен товар буде об'єктом з властивостями назва, ціна та кількість. Додайте методи для додавання товару, видалення товару та підрахунку загальної вартості.
 
