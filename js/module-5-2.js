@@ -1232,7 +1232,7 @@
 //? ; Напиши функцію, яка приймає масив героїв та повертає масив героїв, які мають у groupAffiliation згадку про 'Avengers'.
 
 // const foo29 = (heroes) => {
-//   return heroes.filter(hero => hero.connections.groupAffiliation !== '-') 
+//   return heroes.filter(hero => hero.connections.groupAffiliation !== '-')
 // }
 // console.log(foo29(heroes));
 
@@ -1328,56 +1328,363 @@
 //? 37
 //? ; Напиши функцію, яка повертає масив { name, aliasesCount } — кількість псевдонімів для кожного героя, де aliasesCount > 3. Відсортуй результат за спаданням кількості псевдонімів.
 
-const foo37 = (heroes) => { 
-  const newHeroes = heroes
-  .filter(hero => hero.biography.aliases.length > 3)
-  .toSorted((a, b) => b.biography.aliases.length - a.biography.aliases.length);
-   const newHeroes2 = [];
-  newHeroes.map(hero2 => newHeroes2.push({
-    name: hero2.name, 
-    aliasesCount: hero2.biography.aliases.length}));
-  return newHeroes2 
-}
-console.log(foo37(heroes));
+// const foo37 = (heroes) => {
+//   const newHeroes = heroes
+//   .filter(hero => hero.biography.aliases.length > 3)
+//   .toSorted((a, b) => b.biography.aliases.length - a.biography.aliases.length);
+//    const newHeroes2 = [];
+//   newHeroes.map(hero2 => newHeroes2.push({
+//     name: hero2.name,
+//     aliasesCount: hero2.biography.aliases.length}));
+//   return newHeroes2
+// }
+// console.log(foo37(heroes));
 
 //! ===========================================================
 
-// ; Напиши функцію, яка повертає масив імен героїв, чия вага (у kg) менша за 80 кг та сила (strength) більше 60. Результат відсортуй за зростанням ваги.
+//? 38
+//? ; Напиши функцію, яка повертає масив імен героїв, чия вага (у kg) менша за 80 кг та сила (strength) більше 60. Результат відсортуй за зростанням ваги.
 
-// ; Напиши функцію, яка повертає масив з імен та довжиною рядка occupation для кожного героя. Відфільтруй лише тих, у кого occupation довше ніж 10 символів. Відсортуй результат за довжиною occupation.
+// const foo38 = (heroes) => {
+//   return heroes
+//     .filter(hero => parseInt(hero.appearance.weight[1], 10) < 80 && hero.powerstats.strength > 60)
+//     .toSorted((a, b) => parseInt(a.appearance.weight[1], 10) - parseInt(b.appearance.weight[1], 10))
+//     .map(hero => hero.name);
+// }
+// console.log(foo38(heroes));
 
-// ; Напиши функцію, яка повертає масив імен героїв, які входять до складу груп (groupAffiliation містить не порожній рядок), та мають alignment === 'good'. Відсортуй результат за алфавітом.
+//! ===========================================================
+
+//? 39
+//? ; Напиши функцію, яка повертає масив з імен та довжиною рядка occupation для кожного героя. Відфільтруй лише тих, у кого occupation довше ніж 10 символів. Відсортуй результат за довжиною occupation.
+
+// const foo39 = (heroes) => {
+//   return heroes
+//     .filter(hero => hero.work.occupation.length > 10)
+//     .toSorted((a, b) => a.work.occupation.length - b.work.occupation.length)
+//     .map(hero => ({
+//       name: hero.name,
+//        occupationLength: hero.work.occupation.length
+//     }));
+// };
+// console.log(foo39(heroes));
+
+//! ===========================================================
+
+//? 40
+//? ; Напиши функцію, яка повертає масив імен героїв, які входять до складу груп (groupAffiliation містить не порожній рядок), та мають alignment === 'good'. Відсортуй результат за алфавітом.
+
+// const foo40 = (heroes) => {
+//   return heroes
+//     .filter(hero => hero.connections.groupAffiliation !== '' && hero.biography.alignment === 'good')
+//     .toSorted((a, b) => a.name.localeCompare(b.name))
+//     .map(hero => hero.name);
+// }
+// console.log(foo40(heroes));
+
+//! ===========================================================
+
+//!  Books
+
+//! ===========================================================
 
 
 
+ const books = [
+   {
+     title: 'To Kill a Mockingbird',
+     author: 'Harper Lee',
+     year: 1960,
+     genre: 'Fiction',
+     price: 10.99,
+     rating: 4.9,
+   },
+   {
+     title: '1984',
+     author: 'George Orwell',
+     year: 1949,
+     genre: 'Dystopian',
+     price: 8.99,
+     rating: 4.8,
+   },
+   {
+     title: 'The Great Gatsby',
+     author: 'F. Scott Fitzgerald',
+     year: 1925,
+     genre: 'Classic',
+     price: 7.99,
+     rating: 4.7,
+   },
+   {
+     title: 'The Catcher in the Rye',
+     author: 'J.D. Salinger',
+     year: 1951,
+     genre: 'Fiction',
+     price: 6.99,
+     rating: 4.6,
+   },
+   {
+     title: 'Pride and Prejudice',
+     author: 'Jane Austen',
+     year: 1813,
+     genre: 'Romance',
+     price: 5.99,
+     rating: 4.9,
+   },
+   {
+     title: 'The Hobbit',
+     author: 'J.R.R. Tolkien',
+     year: 1937,
+     genre: 'Fantasy',
+     price: 12.99,
+     rating: 4.8,
+   },
+   {
+     title: 'Moby Dick',
+     author: 'Herman Melville',
+     year: 1851,
+     genre: 'Adventure',
+     price: 9.99,
+     rating: 4.5,
+   },
+   {
+     title: 'War and Peace',
+     author: 'Leo Tolstoy',
+     year: 1869,
+     genre: 'Historical',
+     price: 14.99,
+     rating: 4.9,
+   },
+   {
+     title: 'Crime and Punishment',
+     author: 'Fyodor Dostoevsky',
+     year: 1866,
+     genre: 'Philosophical',
+     price: 11.99,
+     rating: 4.8,
+   },
+   {
+     title: 'The Brothers Karamazov',
+     author: 'Fyodor Dostoevsky',
+     year: 1880,
+     genre: 'Philosophical',
+     price: 13.99,
+     rating: 4.9,
+   },
+   {
+     title: 'Brave New World',
+     author: 'Aldous Huxley',
+     year: 1932,
+     genre: 'Dystopian',
+     price: 9.99,
+     rating: 4.7,
+   },
+   {
+     title: 'Jane Eyre',
+     author: 'Charlotte Brontë',
+     year: 1847,
+     genre: 'Romance',
+     price: 7.99,
+     rating: 4.8,
+   },
+   {
+     title: 'Wuthering Heights',
+     author: 'Emily Brontë',
+     year: 1847,
+     genre: 'Romance',
+     price: 8.99,
+     rating: 4.7,
+   },
+   {
+     title: 'The Picture of Dorian Gray',
+     author: 'Oscar Wilde',
+     year: 1890,
+     genre: 'Gothic',
+     price: 6.99,
+     rating: 4.6,
+   },
+   {
+     title: 'Frankenstein',
+     author: 'Mary Shelley',
+     year: 1818,
+     genre: 'Science Fiction',
+     price: 7.99,
+     rating: 4.7,
+   },
+   {
+     title: 'Dracula',
+     author: 'Bram Stoker',
+     year: 1897,
+     genre: 'Horror',
+     price: 6.99,
+     rating: 4.5,
+   },
+   {
+     title: 'The Odyssey',
+     author: 'Homer',
+     year: -800,
+     genre: 'Epic',
+     price: 10.99,
+     rating: 4.9,
+   },
+   {
+     title: 'The Iliad',
+     author: 'Homer',
+     year: -750,
+     genre: 'Epic',
+     price: 9.99,
+     rating: 4.8,
+   },
+   {
+     title: 'Les Misérables',
+     author: 'Victor Hugo',
+     year: 1862,
+     genre: 'Historical',
+     price: 11.99,
+     rating: 4.9,
+   },
+   {
+     title: 'The Count of Monte Cristo',
+     author: 'Alexandre Dumas',
+     year: 1844,
+     genre: 'Adventure',
+     price: 12.99,
+     rating: 4.9,
+   },
+   {
+     title: 'The Grapes of Wrath',
+     author: 'John Steinbeck',
+     year: 1939,
+     genre: 'Fiction',
+     price: 8.99,
+     rating: 4.7,
+   },
+   {
+     title: 'Of Mice and Men',
+     author: 'John Steinbeck',
+     year: 1937,
+     genre: 'Fiction',
+     price: 7.99,
+     rating: 4.6,
+   },
+   {
+     title: 'A Tale of Two Cities',
+     author: 'Charles Dickens',
+     year: 1859,
+     genre: 'Historical',
+     price: 9.99,
+     rating: 4.8,
+   },
+   {
+     title: 'Great Expectations',
+     author: 'Charles Dickens',
+     year: 1861,
+     genre: 'Fiction',
+     price: 8.99,
+     rating: 4.7,
+   },
+   {
+     title: 'The Secret Garden',
+     author: 'Frances Hodgson Burnett',
+     year: 1911,
+     genre: 'Children',
+     price: 6.99,
+     rating: 4.7,
+   },
+   {
+     title: 'Little Women',
+     author: 'Louisa May Alcott',
+     year: 1868,
+     genre: 'Fiction',
+     price: 7.99,
+     rating: 4.8,
+   },
+   {
+     title: 'Anna Karenina',
+     author: 'Leo Tolstoy',
+     year: 1877,
+     genre: 'Romance',
+     price: 10.99,
+     rating: 4.9,
+   },
+   {
+     title: 'The Adventures of Sherlock Holmes',
+     author: 'Arthur Conan Doyle',
+     year: 1892,
+     genre: 'Mystery',
+     price: 9.99,
+     rating: 4.8,
+   },
+   {
+     title: 'The Lord of the Rings',
+     author: 'J.R.R. Tolkien',
+     year: 1954,
+     genre: 'Fantasy',
+     price: 20.99,
+     rating: 4.9,
+   },
+   {
+     title: "Harry Potter and the Sorcerer's Stone",
+     author: 'J.K. Rowling',
+     year: 2001,
+     genre: 'Fantasy',
+     price: 10.99,
+     rating: 4.8,
+   },
+ ];
 
+//! ===========================================================
 
+//? 1
+//?  Знайти всі книги жанру 'Fantasy'.
 
+// const foo1 = (books) => {
+//   return books.filter(book => book.genre === 'Fantasy');
+// }
+// console.log(foo1(books));
 
+//! ===========================================================
 
+//? 2
+//?  Знайти всі книги, видані після 2000 року.
 
+// const foo2 = (books) => {
+//   return books.filter(book => book.year > 2000);
+// }
+// console.log(foo2(books));
 
+//! ===========================================================
 
+//? 3
+//?  Знайти всі книги, автором яких є 'Fyodor Dostoevsky'.
 
+// const foo3 = (books) => {
+//   return books.filter(book => book.author === 'Fyodor Dostoevsky');
+// }
+// console.log(foo3(books));
 
+//! ===========================================================
 
+//? 4
+//?  Знайти всі книги з ціною меншою ніж 10 доларів.
 
+// const foo4 = (books) => books.filter(book => book.price < 10);
+// console.log(foo4(books));
 
-//  Books
+//! ===========================================================
 
+//? 5
+//? ; Знайти всі книги з рейтингом 4.8 і вище.
 
-//  Знайти всі книги жанру 'Fantasy'.
+// const foo5 = (books) => books.filter(book => book.rating >= 4.8);
+// console.log(foo5(books));
 
+//! ===========================================================
 
-//  Знайти всі книги, видані після 2000 року.
-
-
-//  Знайти всі книги, автором яких є 'Fyodor Dostoevsky'.
-
-
-// ; Знайти всі книги з ціною меншою ніж 10 доларів.
-// ; Знайти всі книги з рейтингом 4.8 і вище.
 // ; Знайти всі книги жанру 'Romance' та з ціною меншою ніж 8 доларів.
+
+//! ===========================================================
+
 // ; Знайти всі книги, видані до 1900 року.
 // ; Знайти всі книги, що містять слово 'and' у назві.
 // ; Знайти всі книги, автором яких є 'J.R.R. Tolkien'.
@@ -1451,259 +1758,6 @@ console.log(foo37(heroes));
 // ; Отримати всі книги, що містять слово 'and' у назві, відсортувати їх за роком видання від найдавнішого до найновішого та вивести останню книгу.
 // ; Отримати всі книги, автором яких є 'J.R.R. Tolkien', відсортувати їх за рейтингом від найвищого до найнижчого та вивести середній рейтинг.
 // ; Отримати всі книги жанру 'Historical' з рейтингом вище 4.7, відсортувати їх за роком видання від найдавнішого до найновішого та вивести останні 3 книги.
-
-
-
-
-
-
-
-
-
-// ; const books = [
-// ;   {
-// ;     title: 'To Kill a Mockingbird',
-// ;     author: 'Harper Lee',
-// ;     year: 1960,
-// ;     genre: 'Fiction',
-// ;     price: 10.99,
-// ;     rating: 4.9,
-// ;   },
-// ;   {
-// ;     title: '1984',
-// ;     author: 'George Orwell',
-// ;     year: 1949,
-// ;     genre: 'Dystopian',
-// ;     price: 8.99,
-// ;     rating: 4.8,
-// ;   },
-// ;   {
-// ;     title: 'The Great Gatsby',
-// ;     author: 'F. Scott Fitzgerald',
-// ;     year: 1925,
-// ;     genre: 'Classic',
-// ;     price: 7.99,
-// ;     rating: 4.7,
-// ;   },
-// ;   {
-// ;     title: 'The Catcher in the Rye',
-// ;     author: 'J.D. Salinger',
-// ;     year: 1951,
-// ;     genre: 'Fiction',
-// ;     price: 6.99,
-// ;     rating: 4.6,
-// ;   },
-// ;   {
-// ;     title: 'Pride and Prejudice',
-// ;     author: 'Jane Austen',
-// ;     year: 1813,
-// ;     genre: 'Romance',
-// ;     price: 5.99,
-// ;     rating: 4.9,
-// ;   },
-// ;   {
-// ;     title: 'The Hobbit',
-// ;     author: 'J.R.R. Tolkien',
-// ;     year: 1937,
-// ;     genre: 'Fantasy',
-// ;     price: 12.99,
-// ;     rating: 4.8,
-// ;   },
-// ;   {
-// ;     title: 'Moby Dick',
-// ;     author: 'Herman Melville',
-// ;     year: 1851,
-// ;     genre: 'Adventure',
-// ;     price: 9.99,
-// ;     rating: 4.5,
-// ;   },
-// ;   {
-// ;     title: 'War and Peace',
-// ;     author: 'Leo Tolstoy',
-// ;     year: 1869,
-// ;     genre: 'Historical',
-// ;     price: 14.99,
-// ;     rating: 4.9,
-// ;   },
-// ;   {
-// ;     title: 'Crime and Punishment',
-// ;     author: 'Fyodor Dostoevsky',
-// ;     year: 1866,
-// ;     genre: 'Philosophical',
-// ;     price: 11.99,
-// ;     rating: 4.8,
-// ;   },
-// ;   {
-// ;     title: 'The Brothers Karamazov',
-// ;     author: 'Fyodor Dostoevsky',
-// ;     year: 1880,
-// ;     genre: 'Philosophical',
-// ;     price: 13.99,
-// ;     rating: 4.9,
-// ;   },
-// ;   {
-// ;     title: 'Brave New World',
-// ;     author: 'Aldous Huxley',
-// ;     year: 1932,
-// ;     genre: 'Dystopian',
-// ;     price: 9.99,
-// ;     rating: 4.7,
-// ;   },
-// ;   {
-// ;     title: 'Jane Eyre',
-// ;     author: 'Charlotte Brontë',
-// ;     year: 1847,
-// ;     genre: 'Romance',
-// ;     price: 7.99,
-// ;     rating: 4.8,
-// ;   },
-// ;   {
-// ;     title: 'Wuthering Heights',
-// ;     author: 'Emily Brontë',
-// ;     year: 1847,
-// ;     genre: 'Romance',
-// ;     price: 8.99,
-// ;     rating: 4.7,
-// ;   },
-// ;   {
-// ;     title: 'The Picture of Dorian Gray',
-// ;     author: 'Oscar Wilde',
-// ;     year: 1890,
-// ;     genre: 'Gothic',
-// ;     price: 6.99,
-// ;     rating: 4.6,
-// ;   },
-// ;   {
-// ;     title: 'Frankenstein',
-// ;     author: 'Mary Shelley',
-// ;     year: 1818,
-// ;     genre: 'Science Fiction',
-// ;     price: 7.99,
-// ;     rating: 4.7,
-// ;   },
-// ;   {
-// ;     title: 'Dracula',
-// ;     author: 'Bram Stoker',
-// ;     year: 1897,
-// ;     genre: 'Horror',
-// ;     price: 6.99,
-// ;     rating: 4.5,
-// ;   },
-// ;   {
-// ;     title: 'The Odyssey',
-// ;     author: 'Homer',
-// ;     year: -800,
-// ;     genre: 'Epic',
-// ;     price: 10.99,
-// ;     rating: 4.9,
-// ;   },
-// ;   {
-// ;     title: 'The Iliad',
-// ;     author: 'Homer',
-// ;     year: -750,
-// ;     genre: 'Epic',
-// ;     price: 9.99,
-// ;     rating: 4.8,
-// ;   },
-// ;   {
-// ;     title: 'Les Misérables',
-// ;     author: 'Victor Hugo',
-// ;     year: 1862,
-// ;     genre: 'Historical',
-// ;     price: 11.99,
-// ;     rating: 4.9,
-// ;   },
-// ;   {
-// ;     title: 'The Count of Monte Cristo',
-// ;     author: 'Alexandre Dumas',
-// ;     year: 1844,
-// ;     genre: 'Adventure',
-// ;     price: 12.99,
-// ;     rating: 4.9,
-// ;   },
-// ;   {
-// ;     title: 'The Grapes of Wrath',
-// ;     author: 'John Steinbeck',
-// ;     year: 1939,
-// ;     genre: 'Fiction',
-// ;     price: 8.99,
-// ;     rating: 4.7,
-// ;   },
-// ;   {
-// ;     title: 'Of Mice and Men',
-// ;     author: 'John Steinbeck',
-// ;     year: 1937,
-// ;     genre: 'Fiction',
-// ;     price: 7.99,
-// ;     rating: 4.6,
-// ;   },
-// ;   {
-// ;     title: 'A Tale of Two Cities',
-// ;     author: 'Charles Dickens',
-// ;     year: 1859,
-// ;     genre: 'Historical',
-// ;     price: 9.99,
-// ;     rating: 4.8,
-// ;   },
-// ;   {
-// ;     title: 'Great Expectations',
-// ;     author: 'Charles Dickens',
-// ;     year: 1861,
-// ;     genre: 'Fiction',
-// ;     price: 8.99,
-// ;     rating: 4.7,
-// ;   },
-// ;   {
-// ;     title: 'The Secret Garden',
-// ;     author: 'Frances Hodgson Burnett',
-// ;     year: 1911,
-// ;     genre: 'Children',
-// ;     price: 6.99,
-// ;     rating: 4.7,
-// ;   },
-// ;   {
-// ;     title: 'Little Women',
-// ;     author: 'Louisa May Alcott',
-// ;     year: 1868,
-// ;     genre: 'Fiction',
-// ;     price: 7.99,
-// ;     rating: 4.8,
-// ;   },
-// ;   {
-// ;     title: 'Anna Karenina',
-// ;     author: 'Leo Tolstoy',
-// ;     year: 1877,
-// ;     genre: 'Romance',
-// ;     price: 10.99,
-// ;     rating: 4.9,
-// ;   },
-// ;   {
-// ;     title: 'The Adventures of Sherlock Holmes',
-// ;     author: 'Arthur Conan Doyle',
-// ;     year: 1892,
-// ;     genre: 'Mystery',
-// ;     price: 9.99,
-// ;     rating: 4.8,
-// ;   },
-// ;   {
-// ;     title: 'The Lord of the Rings',
-// ;     author: 'J.R.R. Tolkien',
-// ;     year: 1954,
-// ;     genre: 'Fantasy',
-// ;     price: 20.99,
-// ;     rating: 4.9,
-// ;   },
-// ;   {
-// ;     title: "Harry Potter and the Sorcerer's Stone",
-// ;     author: 'J.K. Rowling',
-// ;     year: 1997,
-// ;     genre: 'Fantasy',
-// ;     price: 10.99,
-// ;     rating: 4.8,
-// ;   },
-// ; ];
-
-
 
 
 

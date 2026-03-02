@@ -453,14 +453,14 @@
 //? 30. Завдання:
 //? Створи об'єкт із властивостями hours (число), minutes (число). Додай метод convertToMinutes, який повертає загальну кількість хвилин.
 
-const obj30 = {
-    hours: 2,
-    minutes: 25,
-    convertToMinutes() {
-        return this.hours * 60 + this.minutes;
-    },
-};
-console.log(obj30.convertToMinutes());
+// const obj30 = {
+//     hours: 2,
+//     minutes: 25,
+//     convertToMinutes() {
+//         return this.hours * 60 + this.minutes;
+//     },
+// };
+// console.log(obj30.convertToMinutes());
 
 //! =============================================
 
