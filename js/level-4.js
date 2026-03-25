@@ -788,10 +788,3 @@ if (i !== N[N.length -1]) N.push(i);
 // console.log(users);
 
 
-//! arr2 = [...new Set([...arr2, ...arr1])];
-//! Добавить в arr2 только уникальные элементы из arr1
-
-
-
-//! let random = null;
-//! random - переменная для хранения прошлого числа
