@@ -706,14 +706,18 @@
 //? №6
 //? Сделайте функцию, которая заполнит массив N случайными числами из заданного промежутка так, чтобы в массиве не было подряд двух одинаковых чисел.
 
-const fooNum = (num1, num2, length) => {
-    rand = Math.floor(Math.random() * (max - min + 1)) + min;
-    const N = [];
-    for (let i = num1; i <= num2; i++) {
-if (i !== N[N.length -1]) N.push(i);
-    }
-    return N;
-}
+// const fooNum = (min, max, length) => {
+//     const arr = [];
+//     while (arr.length < length) {
+//         const rand = Math.floor(Math.random() * (max - min + 1)) + min;
+
+//         if (rand !== arr[arr.length - 1]) {
+//             arr.push(rand);
+//         }
+//     }
+//     return arr;
+// };
+// console.log(fooNum(1, 5, 10));
 
 //! =============================================
 
