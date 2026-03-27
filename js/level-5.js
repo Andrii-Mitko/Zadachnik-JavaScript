@@ -1,7 +1,3 @@
-//! =============================================
-
-//; Уровень 5.1 задачника JavaScript
-
 const main = document.querySelector('main');
 main.style.cssText = 'display: flex; justify-content: center; flex-direction: column; align-items: center;';
 const title = document.querySelector('h1')
@@ -12,11 +8,15 @@ const title = document.querySelector('h1')
     const inputSecond = document.createElement('input');
     inputSecond.style.cssText = 'margin: 10px; padding: 5px;';
     const btn = document.createElement('button')
-    btn.style.cssText = " padding: 10px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer;";
+    btn.style.cssText = " padding: 10px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer; margin: 10px;";
     btn.textContent = 'Результат';
     const pText = document.createElement('p');
     pText.style.cssText = 'margin: 15px; padding: 10px;';
     div.append(inputFirst, inputSecond, btn, pText);
+
+//! =============================================
+
+//; Уровень 5.1 задачника JavaScript
 
 //! =============================================
 
@@ -87,34 +87,117 @@ const title = document.querySelector('h1')
 
 //! =============================================
 
-// №4
+//? №4
+//? Даны абзацы с числами. Сделайте так, чтобы по клику на любой абзац его значение возводилось в квадрат.
 
-// Даны абзацы с числами. Сделайте так, чтобы по клику на любой абзац его значение возводилось в квадрат.
+// title.textContent = 'Піднесення до квадрата';
+// const pText1 = document.createElement('p');
+// const pText2 = document.createElement('p');
+// const pText3 = document.createElement('p');
+// const pText4 = document.createElement('p');
+// pText1.style.cssText = 'margin: 15px; padding: 10px;';
+// pText2.style.cssText = 'margin: 15px; padding: 10px;';
+// pText3.style.cssText = 'margin: 15px; padding: 10px;';
+// pText4.style.cssText = 'margin: 15px; padding: 10px;';
+// const div2 = document.createElement('div');
+// div.append(div2);
+// div2.style.cssText = 'display: flex; flex-direction: row; ';
+// div2.append(pText1, pText2, pText3, pText4);
+// pText1.textContent = 2;
+// pText2.textContent = 3;
+// pText3.textContent = 4;
+// pText4.textContent = 5;
+// inputFirst.remove();
+// inputSecond.remove();
+// btn.remove();
+ 
+// div2.addEventListener('click', e => {
+//     e.preventDefault();
+//     if (e.target.tagName === 'P') {
+//         const num = Number(e.target.textContent)
+//         e.target.textContent = num * num;
+//     };
+// });
 
-// №5
+//! =============================================
 
-// Даны инпуты, в которые вводятся числа.Сделайте так, чтобы по потери фокуса в любом инпуте его значение возводилось в квадрат.
+//? №5
+//? Даны инпуты, в которые вводятся числа.Сделайте так, чтобы по потери фокуса в любом инпуте его значение возводилось в квадрат.
 
+// title.textContent = 'Піднесення до квадрата через втрату фокусу'
+// btn.remove();
 
+// div.addEventListener('focusout', e => {
+//     e.preventDefault();
+//    if (e.target.tagName === 'INPUT') {
+//         const num = Number(e.target.value)
+//        e.target.value = num * num;
+  
+//     };
+// });
 
-// Уровень 5.2 задачника JavaScript
-// №1
+//! =============================================
 
-// Дан абзац и кнопка. По нажатию на кнопку найдите сумму чисел от 1 до 100 и запишите результат в абзац.
+//; Уровень 5.2 задачника JavaScript
 
-// №2
+//! =============================================
 
-// Дана кнопка и два инпута. В инпуты вводятся числа. По нажатию на кнопку найдите сумму введенных чисел.
+//? №1
+//? Дан абзац и кнопка. По нажатию на кнопку найдите сумму чисел от 1 до 100 и запишите результат в абзац.
 
-// №3
+// title.textContent = 'Cума чисел від 1 до 100';
+// inputFirst.remove();
+// inputSecond.remove();
+// btn.addEventListener('click', e => {
+//     let sum = 0;
+//     for (let i = 1; i <= 100; i++) {
+//         sum += i;
+//     };
+//     pText.textContent = sum;
+// });
 
-// Даны абзацы, кнопка и див. По нажатию на кнопку найдите количество абзацев и выведите это значение в див.
+//! =============================================
 
-// №4
+//? №2
+//? Дана кнопка и два инпута. В инпуты вводятся числа. По нажатию на кнопку найдите сумму введенных чисел.
 
-// Дана кнопка и инпут.В инпут вводится строка.По нажатию на кнопку определите, сколько символов в введенной строке.
+// title.textContent = 'СУМА';
+// btn.addEventListener('click', (e) => {
+//   const num1 = Number(inputFirst.value);
+//   const num2 = Number(inputSecond.value);
+//   if (isNaN(num1) || isNaN(num2)) {
+//     pText.textContent = 'Введите числа';
+//     return;
+//   }
+//   pText.textContent = num1 + num2;
+//    inputFirst.value = '';
+//   inputSecond.value = '';
+// });
 
+//! =============================================
 
+//? №3
+//? Даны абзацы, кнопка и див. По нажатию на кнопку найдите количество абзацев и выведите это значение в див.
+
+//  title.textContent = 'Кількість абзаців у div'
+//  btn.addEventListener('click', e => {
+//     const pArr = document.querySelectorAll('p');
+//     div.textContent = pArr.length;
+// })
+
+//! =============================================
+
+//? №4
+//? Дана кнопка и инпут.В инпут вводится строка.По нажатию на кнопку определите, сколько символов в введенной строке.
+
+// title.textContent = 'Кількість символів у введеному рядку';
+// inputFirst.remove();
+// btn.addEventListener('click', () => {
+//     pText.textContent = inputSecond.value.length;
+//     inputSecond.value = '';
+// });
+
+//! =============================================
 
 // Уровень 5.3 задачника JavaScript
 // №1
