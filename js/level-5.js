@@ -1,15 +1,91 @@
-// Уровень 5.1 задачника JavaScript
-// №1
+//! =============================================
 
-// Даны два инпута, абзац и кнопка. В инпуты вводятся числа. По нажатию на кнопку выведите в абзац сумму этих чисел.
+//; Уровень 5.1 задачника JavaScript
 
-// №2
+const main = document.querySelector('main');
+main.style.cssText = 'display: flex; justify-content: center; flex-direction: column; align-items: center;';
+const title = document.querySelector('h1')
+ const div = document.querySelector('.div');
+    div.style.cssText = 'display: flex; flex-direction: column;';
+    const inputFirst = document.createElement('input');
+    inputFirst.style.cssText = 'margin: 10px; padding: 5px; ';
+    const inputSecond = document.createElement('input');
+    inputSecond.style.cssText = 'margin: 10px; padding: 5px;';
+    const btn = document.createElement('button')
+    btn.style.cssText = " padding: 10px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer;";
+    btn.textContent = 'Результат';
+    const pText = document.createElement('p');
+    pText.style.cssText = 'margin: 15px; padding: 10px;';
+    div.append(inputFirst, inputSecond, btn, pText);
 
-// Дан абзац с числом и кнопка. По нажатию на кнопку возведите текст абзаца в квадрат.
+//! =============================================
 
-// №3
+//? №1
+//? Даны два инпута, абзац и кнопка. В инпуты вводятся числа. По нажатию на кнопку выведите в абзац сумму этих чисел.
 
-// Дан абзацы с числами, абзац и кнопка. По нажатию на кнопку найдите сумму значений абзацев и запишите ее в абзац.
+// title.textContent = 'СУМА';
+// btn.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   const num1 = inputFirst.value;
+// const num2 = inputSecond.value;
+//   if (isNaN(num1) || isNaN(num2)) {
+//     pText.textContent = 'Введите числа';
+//     return;
+//   }
+//   pText.textContent = Number(num1) + Number(num2);
+//    inputFirst.value = '';
+//   inputSecond.value = '';
+// });
+   
+//! =============================================
+
+//? №2
+//? Дан абзац с числом и кнопка. По нажатию на кнопку возведите текст абзаца в квадрат.
+
+// title.textContent = 'В Другу Степень';
+// inputFirst.remove();
+// btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     const num = inputSecond.value;
+//     if (isNaN(num)) {
+//         pText.textContent = 'Це не число!';
+//         return;
+//     }
+//     pText.textContent = num**2;
+//     inputSecond.value = '';
+// });
+
+
+//! =============================================
+
+//? №3
+//? Дан абзацы с числами, абзац и кнопка. По нажатию на кнопку найдите сумму значений абзацев и запишите ее в абзац.
+
+// const pText1 = document.createElement('p');
+// const pText2 = document.createElement('p');
+// const pText3 = document.createElement('p');
+// const pText4 = document.createElement('p');
+// pText1.style.cssText = 'margin: 15px; padding: 10px;';
+// pText2.style.cssText = 'margin: 15px; padding: 10px;';
+// pText3.style.cssText = 'margin: 15px; padding: 10px;';
+// pText4.style.cssText = 'margin: 15px; padding: 10px;';
+// const div2 = document.createElement('div');
+// div.append(div2);
+// div2.style.cssText = 'display: flex; flex-direction: row; ';
+// div2.append(pText1, pText2, pText3, pText4);
+// pText1.textContent = 10;
+// pText2.textContent = 20;
+// pText3.textContent = 30;
+// pText4.textContent = 40;
+// inputFirst.remove();
+// inputSecond.remove();
+
+// btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     pText.textContent = Number(pText1.textContent) + Number(pText2.textContent) + Number(pText3.textContent) + Number(pText4.textContent);
+// });
+
+//! =============================================
 
 // №4
 
