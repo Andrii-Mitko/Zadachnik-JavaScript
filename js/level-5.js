@@ -651,78 +651,299 @@ const title = document.querySelector('h1')
 
 //! =============================================
 
-// №2
+//? №2
+//? Даны теги li с числами и кнопка. По нажатию на кнопку увеличьте все числа в тегах li на единицу.
 
-// Даны теги li с числами и кнопка. По нажатию на кнопку увеличьте все числа в тегах li на единицу.
+// title.textContent = 'Збільшення на одиницю';
+// inputFirst.remove();
+// inputSecond.remove();
+// const list = document.createElement('ul');
+// div.append(list);
+// list.innerHTML = `
+//     <li>1</li>
+//     <li>2</li>
+//     <li>3</li>
+//     <li>4</li>
+//     <li>5</li>`;
+//         btn.addEventListener('click', () => {
+//             const items = document.querySelectorAll('li');
+//             items.forEach(n => n.textContent ++);
+//     });
 
-// №3
+//! =============================================
 
-// Дан инпут, абзац и кнопка. В инпут вводится число. По нажатию на кнопку получите массив делителей числа и выведите их в абзац через запятую.
+//? №3
+//? Дан инпут, абзац и кнопка. В инпут вводится число. По нажатию на кнопку получите массив делителей числа и выведите их в абзац через запятую.
 
-// №4
+// title.textContent = 'Отримати масив дільників числа';
+// inputFirst.remove();
+//     btn.addEventListener('click', () => {
+//         const num = Number(inputSecond.value);
+//         if (isNaN(num)) {
+//             pText.textContent = 'Некоректне число';
+//         } else {
+//             const arr = [];
+//             for (let i = 1; i <= num; i++) {
+//                 if (num % i === 0) {
+//                     arr.push(i);
+//                 }
+//             }
+//             const result = arr.join(', ')
+//             pText.textContent = result;
+//         }
+//         inputSecond.value = '';
+// });
 
-// Даны абзацы с текстом. Сделайте так, чтобы по нажатию на любой абзац его текст переворачивался.
+//! =============================================
 
-// №5
+//? №4
+//? Даны абзацы с текстом. Сделайте так, чтобы по нажатию на любой абзац его текст переворачивался.
 
-// В инпут вводится число из 6 - ти цифр.По нажатию на кнопку проверьте, равна ли сумма первых трех цифр сумме вторых трех цифр.
+// title.textContent = 'Текст перевертається';
+// div.innerHTML = `<p>script</p>
+//     <p>type</p>
+//     <p>module</p>
+//     <p>class</p>
+//     <p>color</p>`
+// const texts = div.querySelectorAll('p');
+//     div.addEventListener('click', e => {
+//         if (e.target.tagName === 'P') {
+//             e.target.textContent = e.target.textContent.split('').reverse().join('');
+//     }
+// });
+
+//! =============================================
+
+//? №5
+//? В инпут вводится число из 6 - ти цифр.По нажатию на кнопку проверьте, равна ли сумма первых трех цифр сумме вторых трех цифр.
+
+// title.textContent = 'Перевірка, чи дорівнює сума перших трьох цифр сумі других трьох цифр';
+// inputFirst.remove();
+// const text = document.querySelector('p');
+// text.textContent = 'Введіть число, що складається з 6 цифр';
+//     btn.addEventListener('click', () => {
+//         const num = inputSecond.value;
+//         if (isNaN(+num) || num.length !== 6) {
+//              pText.textContent = 'Некоректне число';
+//         } else {
+//             const num1 = num.slice(0, 3).split('').reduce((acc1, n1) => acc1 + +n1, 0);
+//             const num2 = num.slice(3).split('').reduce((acc2, n2) => acc2 + +n2, 0);
+//         pText.textContent = num1 === num2 ? 'число дорівнює' : 'число НЕ дорівнює';
+//         };
+//         inputSecond.value = '';
+//         });
+
+//! =============================================
+
+//; Уровень 5.8 задачника JavaScript
+
+//! =============================================
+
+//? №1
+//? Даны инпуты. В них вводятся числа. Сделайте так, чтобы при потери фокуса в любом из инпутов в нем появлялся квадрат введенного в него числа.
+
+// title.textContent = 'Квадрат числа при втраті фокусу';
+// btn.remove();
+//     div.addEventListener('focusout', e => {
+//         if (e.target.tagName === 'INPUT') {
+//             const num = +e.target.value;
+//             if (isNaN(num)) {
+//                  pText.textContent = 'Некоректне число';
+//             } else {
+//                 pText.textContent = '';
+//                 e.target.value = num**2;
+//             }
+//         }
+// });
+ 
+
+//! =============================================
+
+//? №2
+//? Дан массив, кнопка и инпут. Сделайте так, чтобы по клику на кнопку в инпут выводился случайный элемент массива.
+
+// title.textContent = 'Випадковий елемент масиву';
+// inputFirst.remove();
+// pText.textContent = 'Сделайте так чтобы по клику на кнопку в инпут выводился случайный элемент массива';
+//     btn.addEventListener('click', () => {
+//         const arr = pText.textContent.split(' ');
+//         const index = Math.floor(Math.random() * arr.length);
+//         inputSecond.value = arr[index];
+// });
 
 
+//! =============================================
+
+//? №3
+//? Дан инпут и абзац. В него через запятую вводятся числа. По потери фокуса найдите сумму введенных чисел и выведите ее в абзац.
+
+// title.textContent = 'Через кому вводяться числа. Сума чисел.';
+// inputFirst.remove();
+// btn.remove();
+//     inputSecond.addEventListener('blur', () => {
+//         const arrTotal = inputSecond.value;
+//         const arr = arrTotal.split(',').filter(n => !isNaN(+n));
+//         pText.textContent = arr.reduce((acc, n) => acc + +n, 0)
+// });
+
+//! =============================================
+
+//? №4
+//? Даны два инпута и кнопка. В инпуты вводятся числа. По нажатию на кнопку получите массив общих делителей этих чисел и выведите его в консоль.
+
+// title.textContent = 'Спільні дільники чисел';
+//     btn.addEventListener('click', () => {
+//         const num1 = +inputFirst.value;
+//         const num2 = +inputSecond.value;
+//         if (isNaN(num1) || isNaN(num2)) {
+//             pText.textContent = 'Некоректне число';
+//         } else {
+//             const num1Arr = [];
+//             for (let i = 1; i <= num1; i++) {
+//                 if (num1 % i === 0) {
+//                     num1Arr.push(i);
+//                 }
+//             };
+//             const num2Arr = [];
+//             for (let j = 1; j <= num2; j++) {
+//                 if (num2 % j === 0) {
+//                     num2Arr.push(j);
+//                 }
+//             }
+//             console.log(num1Arr.filter(n => num2Arr.includes(n)));
+//         };
+//         inputFirst.value = '';
+//         inputSecond.value = '';
+// });
+
+//! =============================================
+
+//? №5
+//? Дан инпут и кнопка. В инпут через запятую вводятся числа. По нажатию на кнопку проверьте, есть ли среди введенных число 13.
+
+// title.textContent = 'Число 13';
+// inputFirst.remove();
+// btn.addEventListener('click', () => {
+//     const arr = inputSecond.value
+//         .split(',')
+//         .map(n => n.trim())       // прибираємо пробіли
+//         .filter(n => n !== '' && !isNaN(+n))  // залишаємо тільки числа
+
+//     pText.textContent = arr.includes('13') ? 'Є число 13' : 'Нема числа 13';
+//     inputSecond.value = '';
+// });
+
+//! =============================================
+
+//? №6
+//? Дан инпут и кнопка.В него вводится число из шести цифр.По клику на кнопку проверьте, что число представляет собой счастливый билет, то есть сумма первых трех цифр равна сумме вторых трех цифр.
+
+// title.textContent = 'Cчастливый билет';
+// inputFirst.remove();
+// const text = document.querySelector('p');
+// text.textContent = 'Введіть число, що складається з 6 цифр';
+//     btn.addEventListener('click', () => {
+//         const num = inputSecond.value;
+//         if (isNaN(+num) || num.length !== 6) {
+//              pText.textContent = 'Некоректне число';
+//         } else {
+//             const num1 = num.slice(0, 3).split('').reduce((acc1, n1) => acc1 + +n1, 0);
+//             const num2 = num.slice(3).split('').reduce((acc2, n2) => acc2 + +n2, 0);
+//         pText.textContent = num1 === num2 ? 'Cчастливый билет' : 'Програш';
+//         };
+//         inputSecond.value = '';
+//         });
 
 
-// Уровень 5.8 задачника JavaScript
-// №1
+//! =============================================
 
-// Даны инпуты. В них вводятся числа. Сделайте так, чтобы при потери фокуса в любом из инпутов в нем появлялся квадрат введенного в него числа.
+//; Уровень 5.9 задачника JavaScript
 
-// №2
+//! ============================================
 
-// Дан массив, кнопка и инпут. Сделайте так, чтобы по клику на кнопку в инпут выводился случайный элемент массива.
+//? №1
+//? Дан массив с числами, кнопка и инпут. По нажатию на кнопку запишите в инпут все числа из массива, разделив их запятыми.
 
-// №3
+// title.textContent = 'Числа з масива';
+// inputFirst.remove();
+// pText.textContent = [1, 5, 6, 7, 6, 7];
+// btn.addEventListener('click', () => {
+//     inputSecond.value = pText.textContent;
+// });
 
-// Дан инпут и абзац. В него через запятую вводятся числа. По потери фокуса найдите сумму введенных чисел и выведите ее в абзац.
+//! ============================================
 
-// №4
+//? №2
+//? Даны абзацы с текстом. Сделайте так, чтобы по нажатию на любой абзац его текст красился в красный цвет.
 
-// Даны два инпута и кнопка. В инпуты вводятся числа. По нажатию на кнопку получите массив общих делителей этих чисел и выведите его в консоль.
+// title.textContent = 'Червоний текст';
+// div.innerHTML = `<p class="redt">script</p>
+//     <p class="redt">type</p>
+//     <p class="redt">module</p>
+//     <p class="redt">class</p>
+//     <p class="redt">color</p>`;
+// const textRed = document.querySelectorAll('.redt');
+// div.append(...textRed);
+//     div.addEventListener('click', e => {
+//         if (e.target.tagName === 'P') {
+//             e.target.style.color = 'red';
+//         };
+// });
 
-// №5
+//! ============================================
 
-// Дан инпут и кнопка. В инпут через запятую вводятся числа. По нажатию на кнопку проверьте, есть ли среди введенных число 13.
+//? №3
+//? Дан инпут. В него вводится число. Если введено нечетное число, то покрасьте границу инпута в красный цвет, а если четное - то в зеленый.
 
-// №6
+// title.textContent = "Парне / непарне число";
+// inputFirst.remove();
+// btn.remove();
+// inputSecond.style.border = '1px solid black';
+//     inputSecond.addEventListener('change', e => {
+//         const num = +inputSecond.value;
+//         if (isNaN(num)) {
+//             pText.textContent = 'Некоректне число';
+//             inputSecond.style.border = '2px solid black';
+//         } else {
+//             pText.textContent = '';
+//             +num % 2 === 0 ? inputSecond.style.border = '2px solid green' : inputSecond.style.border = '2px solid red';
+//         }
+// });
 
-// Дан инпут и кнопка.В него вводится число из шести цифр.По клику на кнопку проверьте, что число представляет собой счастливый билет, то есть сумма первых трех цифр равна сумме вторых трех цифр.
+//! ============================================
+
+//? №4
+//? В инпут вводится дата в формате 2025-12-31. По потери фокуса сделайте так, чтобы в инпуте стала дата в формате 35.12.2025.
+
+// title.textContent = "Дата";
+// inputFirst.remove();
+// btn.remove();
+//     inputSecond.addEventListener('blur', () => {
+//         const date = new Date(inputSecond.value);
+//         if ((isNaN(date.getTime()))) {
+//             inputSecond.value = '';
+//             pText.textContent = 'Це не дата';
+//         } else {
+//             pText.textContent = '';
+//             const arr = [];
+//             arr.push(date.getDate());
+//             arr.push(String(date.getMonth() + 1).padStart(2, '0'));
+//             arr.push(date.getFullYear());
+//             inputSecond.value = arr.join('.')
+//         };
+// });
 
 
+//! ============================================
+
+//? №5
+//? Дан пустой список ul и текстареа.В него вводится текст со знаками препинания.По потери фокуса запишите каждое предложение из текста в свой тег li.
+
+div.innerHTML = `<textarea placeholder="Введіть текст тут..."></textarea>
+      <ul></ul>`;
 
 
-// Уровень 5.9 задачника JavaScript
-// №1
-
-// Дан массив с числами, кнопка и инпут. По нажатию на кнопку запишите в инпут все числа из массива, разделив их запятыми.
-
-// №2
-
-// Даны абзацы с текстом. Сделайте так, чтобы по нажатию на любой абзац его текст красился в красный цвет.
-
-// №3
-
-// Дан инпут. В него вводится число. Если введено нечетное число, то покрасьте границу инпута в красный цвет, а если четное - то в зеленый.
-
-// №4
-
-// В инпут вводится дата в формате 2025-12-31. По потери фокуса сделайте так, чтобы в инпуте стала дата в формате 35.12.2025.
-
-// №5
-
-// Дан пустой список ul и текстареа.В него вводится текст со знаками препинания.По потери фокуса запишите каждое предложение из текста в свой тег li.
-
-
-
-
-
+//! ============================================
 
 // Уровень 5.10 задачника JavaScript
 // №1
