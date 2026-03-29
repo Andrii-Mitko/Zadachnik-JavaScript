@@ -939,33 +939,139 @@ const title = document.querySelector('h1')
 //? №5
 //? Дан пустой список ul и текстареа.В него вводится текст со знаками препинания.По потери фокуса запишите каждое предложение из текста в свой тег li.
 
-div.innerHTML = `<textarea placeholder="Введіть текст тут..."></textarea>
-      <ul></ul>`;
+// title.textContent = 'Список';
+// div.innerHTML = `<textarea placeholder="Введіть текст тут..."></textarea>
+//       <ul class="list"></ul>`;
+// const textarea = document.querySelector('textarea');
+// const list = document.querySelector('.list');
+//  textarea.addEventListener('blur', () => {
+//     const str = textarea.value;
+    
+//     const sentences = str
+//         .split(/[.!?]+/)            // разделяем по ., ! или ?
+//         .map(s => s.trim())         // убираем пробелы
+//         .filter(s => s.length > 0); // убираем пустые строки
 
+//     list.innerHTML = sentences.map(s => `<li>${s}</li>`).join('');
+// });
 
 //! ============================================
 
 // Уровень 5.10 задачника JavaScript
-// №1
 
-// Дан инпут. В него вводится число. Если введено нечетное число, то покрасьте границу инпута в красный цвет, а если четное - то в зеленый.
+//! ============================================
 
-// №2
+//? №1
+//? Дан инпут. В него вводится число. Если введено нечетное число, то покрасьте границу инпута в красный цвет, а если четное - то в зеленый.
 
-// Дан массив с числами и кнопка. По нажатию на кнопку добавьте в массив случайное число и выведите массив в консоль.
+// title.textContent = "Парне / непарне число";
+// inputFirst.remove();
+// btn.remove();
+// inputSecond.style.border = '1px solid black';
+//     inputSecond.addEventListener('change', e => {
+//         const num = +inputSecond.value;
+//         if (isNaN(num)) {
+//             pText.textContent = 'Некоректне число';
+//             inputSecond.style.border = '2px solid black';
+//         } else {
+//             pText.textContent = '';
+//             num % 2 === 0 ? inputSecond.style.border = '2px solid green' : inputSecond.style.border = '2px solid red';
+//         }
+// });
 
-// №3
+//! ============================================
 
-// Дан массив с названиями цвета. Даны абзацы с текстом. Сделайте так, чтобы по нажатию на любой абзац его текст красился в случайный цвет из массива.
+//? №2
+//? Дан массив с числами и кнопка. По нажатию на кнопку добавьте в массив случайное число и выведите массив в консоль.
 
-// №4
+// title.textContent = 'Додавання випадкового числа у масив';
+// inputFirst.remove();
+// inputSecond.remove();
+// const arr = [10, 20, 30];
+// pText.textContent = arr.join(', ')
+// btn.addEventListener('click', () => {
+//     const randomNumber = Math.floor(Math.random() * 1000) + 1;
+//     arr.push(randomNumber);
+//         console.log(arr);
+// });
 
-// Дан массив с числами, кнопка и абзац. Сделайте так, чтобы по клику на кнопку в инпут через запятую выводились четные числа из этого массива.
+//! ============================================
 
-// №5
+//? №3
+//? Дан массив с названиями цвета. Даны абзацы с текстом. Сделайте так, чтобы по нажатию на любой абзац его текст красился в случайный цвет из массива.
 
-// Дана кнопка и див. По нажатию на кнопку выведите, сколько дней осталось до Нового Года.
+// title.textContent = 'Зміна кольору';
+// div.innerHTML = `<p class="color">red</p>
+//       <p class="color">green</p>
+//       <p class="color">black</p>
+//       <p class="color">orange</p>
+//       <p class="color">yellow</p>
+//       <p class="color">purple</p>
+//       <p class="color">pink</p>
+//       <p class="color">brown</p>
+//       <p class="color">cyan</p>
+//       <p class="color">magenta</p>`;
+// const arr = ['red', 'green', 'black', 'orange', 'yellow', 'purple', 'pink', 'brown', 'cyan', 'magenta'];
+// div.addEventListener('click', (e) => {
+//     const randomNumber = Math.floor(Math.random() * arr.length);
+//     if (e.target.tagName === 'P') {
+//         e.target.style.color = arr[randomNumber];
+//     };
+// });
 
-// №6
+//! ============================================
 
-// Дана кнопка и ul. По клику на кнопку выведите список всех годов за сто лет назад и вперед.
+//? №4
+//? Дан массив с числами, кнопка и абзац. Сделайте так, чтобы по клику на кнопку в инпут через запятую выводились четные числа из этого массива.
+
+// title.textContent = 'Парні числа';
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// pText.textContent = arr.join(', ');
+// inputSecond.remove();
+// btn.addEventListener('click', () => {
+//     const parn = arr.filter(n => n % 2 === 0);
+//     inputFirst.value = parn.join(', ');
+// });
+
+
+//! ============================================
+
+//? №5
+//? Дана кнопка и див. По нажатию на кнопку выведите, сколько дней осталось до Нового Года.
+
+// title.textContent = 'Залишилося до Нового року';
+// inputFirst.remove();
+// inputSecond.remove();
+// const today = new Date();
+// btn.addEventListener('click', () => {
+//     const year = today.getFullYear();
+//     const newYear = new Date(`January 1, ${year + 1}`); // следующий Новый Год
+//     const diffTime = newYear - new Date();               // разница в миллисекундах
+//     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); // в днях
+
+//     div.textContent = `До Нового року залишилося ${diffDays} днів`;
+// });
+
+//! ============================================
+
+//? №6
+//? Дана кнопка и ul. По клику на кнопку выведите список всех годов за сто лет назад и вперед.
+
+// title.textContent = 'Сто років';
+// inputFirst.remove();
+// inputSecond.remove();
+// const ul = document.createElement('ul');
+// div.append(ul);
+// btn.addEventListener('click', () => {
+//     const date = new Date();
+//     const year = date.getFullYear();
+//     let list = '';
+
+//     for (let i = year - 100; i <= year + 100; i++) {
+//         list += `<li>${i}</li>`;
+//     }
+
+//     ul.innerHTML = list;
+// });
+
+//! ============================================
