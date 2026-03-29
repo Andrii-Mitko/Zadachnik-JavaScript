@@ -3,21 +3,21 @@
 
 
 
-const main = document.querySelector('main');
-main.style.cssText = 'display: flex; justify-content: center; flex-direction: column; align-items: center;';
-const title = document.querySelector('h1')
- const div = document.querySelector('.div');
-    div.style.cssText = 'display: flex; flex-direction: column;';
-    const inputFirst = document.createElement('input');
-    inputFirst.style.cssText = 'margin: 10px; padding: 5px; ';
-    const inputSecond = document.createElement('input');
-    inputSecond.style.cssText = 'margin: 10px; padding: 5px;';
-    const btn = document.createElement('button')
-    btn.style.cssText = " padding: 10px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer; margin: 10px;";
-    btn.textContent = 'Результат';
-    const pText = document.createElement('p');
-    pText.style.cssText = 'margin: 15px; padding: 10px;';
-    div.append(inputFirst, inputSecond, btn, pText);
+// const main = document.querySelector('main');
+// main.style.cssText = 'display: flex; justify-content: center; flex-direction: column; align-items: center;';
+// const title = document.querySelector('h1')
+//  const div = document.querySelector('.div');
+//     div.style.cssText = 'display: flex; flex-direction: column;';
+//     const inputFirst = document.createElement('input');
+//     inputFirst.style.cssText = 'margin: 10px; padding: 5px; ';
+//     const inputSecond = document.createElement('input');
+//     inputSecond.style.cssText = 'margin: 10px; padding: 5px;';
+//     const btn = document.createElement('button')
+//     btn.style.cssText = " padding: 10px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer; margin: 10px;";
+//     btn.textContent = 'Результат';
+//     const pText = document.createElement('p');
+//     pText.style.cssText = 'margin: 15px; padding: 10px;';
+//     div.append(inputFirst, inputSecond, btn, pText);
 
 //! =============================================
 

@@ -1,7 +1,35 @@
-// Уровень 6.1 задачника JavaScript
-// №1
 
+//; "ЦЕЙ КОД  ДО ВСІХ ЗАВДАНЬ 6 РІВНЯ"
+
+
+const main = document.querySelector('main');
+main.style.cssText = 'display: flex; justify-content: center; flex-direction: column; align-items: center;';
+
+const title = document.querySelector('h1')
+
+ const div = document.querySelector('.div');
+    div.style.cssText = 'display: flex; flex-direction: column;';
+
+
+const button = document.createElement('button');
+button.textContent = 'Натисни тут';
+button.style.cssText = " padding: 10px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer; margin: 10px;";
+
+const list = document.createElement('ul');
+list.style.cssText = "display: flex;   flex-wrap: wrap;   gap: 5px;   list-style: none;   padding: 0; margin: 10px;";
+ 
+main.append(title, div, button, list);
+
+//! =============================================
+
+//; Уровень 6.1 задачника JavaScript
+
+//! =============================================
+
+// №1
 // Дана кнопка, пустой список ul и массив. По клику на кнопку заполните список элементами этого массива.
+
+
 
 // №2
 
