@@ -17,13 +17,13 @@ btn.textContent = 'Натисни тут';
 btn.style.cssText = " padding: 10px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer; margin: 10px;";
 
 const text = document.createElement('p');
-text.style.cssText = 'margin: 15px; padding: 10px;';
+text.style.cssText = 'margin: 15px;';
 
 
 const list = document.createElement('ul');
 list.style.cssText = "display: flex;   flex-wrap: wrap;   gap: 5px;   list-style: none;   padding: 0;";
 
-main.append(title, div, btn, list);
+main.append(title, div, btn, text, list);
 
 const item = document.createElement('li');
 item.style.cssText = 'padding: 5px 10px;';
@@ -134,7 +134,7 @@ list.append(item)
 
 
 // btn.addEventListener('click', (e) => {
-//     const randomNumber = Math.floor(Math.random() * list.children.length); 
+//     const randomNumber = Math.floor(Math.random() * list.children.length);
 //    list.children[randomNumber].remove();
 // });
  
@@ -147,33 +147,33 @@ list.append(item)
 //? №1
 //? По клику на кнопку создайте HTML таблицу с заданной шириной и высотой.
 
-title.textContent = 'Таблиця';
-btn.addEventListener('click', () => {
-    const rows = 4;      // высота (кол-во строк)
-    const cols = 5;      // ширина (кол-во колонок)
+// title.textContent = 'Таблиця с заданой шириной и висотой';
+// btn.addEventListener('click', () => {
+//     const rows = 4;      // высота (кол-во строк)
+//     const cols = 5;      // ширина (кол-во колонок)
 
-    const table = document.createElement('table');
-    table.style.borderCollapse = 'collapse';
+//     const table = document.createElement('table');
+//     table.style.borderCollapse = 'collapse';
 
-    for (let i = 0; i < rows; i++) {
-        const tr = document.createElement('tr');
+//     for (let i = 0; i < rows; i++) {
+//         const tr = document.createElement('tr');
 
-        for (let j = 0; j < cols; j++) {
-            const td = document.createElement('td');
-            td.textContent = `${i + 1}-${j + 1}`;
-            td.style.border = '1px solid black';
-            td.style.padding = '5px';
-            td.style.width = '50px';
-            td.style.height = '50px';
+//         for (let j = 0; j < cols; j++) {
+//             const td = document.createElement('td');
+//             td.textContent = `${i + 1}-${j + 1}`;
+//             td.style.border = '1px solid black';
+//             td.style.padding = '5px';
+//             td.style.width = '50px';
+//             td.style.height = '50px';
 
-            tr.append(td);
-        }
+//             tr.append(td);
+//         }
 
-        table.append(tr);
-    }
+//         table.append(tr);
+//     }
 
-    div.append(table);
-});
+//     div.append(table);
+// });
 
 //! =============================================
 
@@ -181,59 +181,159 @@ btn.addEventListener('click', () => {
 //? №2
 //? По клику на кнопку создайте HTML таблицу с заданной шириной и высотой так, чтобы в ячейках стояли их порядковые номера.
 
-title.textContent = 'Таблиця';
-btn.addEventListener('click', () => {
-    const rows = 4;      // высота (кол-во строк)
-    const cols = 5;      // ширина (кол-во колонок)
+// title.textContent = 'Таблиця / Щоб в ячейках стояли їх порядкові номера';
+// btn.addEventListener('click', () => {
+//     const rows = 4;      // высота (кол-во строк)
+//     const cols = 5;      // ширина (кол-во колонок)
 
-    const table = document.createElement('table');
-    table.style.borderCollapse = 'collapse';
+//     const table = document.createElement('table');
+//     table.style.borderCollapse = 'collapse';
+//     let num = 1;
+//     for (let i = 0; i < rows; i++) {
+//         const tr = document.createElement('tr');
+        
+//         for (let j = 0; j < cols; j++) {
+//             const td = document.createElement('td');
+//             td.textContent = `${num++}`;
+//             td.style.border = '1px solid black';
+//             td.style.padding = '5px';
+//             td.style.width = '50px';
+//             td.style.height = '50px';
 
-    for (let i = 0; i < rows; i++) {
-        const tr = document.createElement('tr');
+//             tr.append(td);
+//         }
 
-        for (let j = 0; j < cols; j++) {
-            const td = document.createElement('td');
-            td.textContent = `${i + 1}`;
-            td.style.border = '1px solid black';
-            td.style.padding = '5px';
-            td.style.width = '50px';
-            td.style.height = '50px';
+//         table.append(tr);
+//     };
 
-            tr.append(td);
-        }
-
-        table.append(tr);
-    }
-
-    div.append(table);
-});
+//     div.append(table);
+// });
 
 //! =============================================
 
-// №3
+//? №3
+//? По клику на кнопку создайте HTML таблицу с заданной шириной и высотой так, чтобы в ячейках стояли номера их рядов и колонок.
 
-// По клику на кнопку создайте HTML таблицу с заданной шириной и высотой так, чтобы в ячейках стояли номера их рядов и колонок.
+// title.textContent = 'Таблиця / Щоб стояли номера їх рядків и колонок';
+// btn.addEventListener('click', () => {
+//     const rows = 4;      // высота (кол-во строк)
+//     const cols = 5;      // ширина (кол-во колонок)
 
-// №4
+//     const table = document.createElement('table');
+//     table.style.borderCollapse = 'collapse';
+   
+//     for (let i = 0; i < rows; i++) {
+//         const tr = document.createElement('tr');
+        
+//         for (let j = 0; j < cols; j++) {
+//             const td = document.createElement('td');
+//             td.textContent = `${i + 1} - ${j + 1}`;
+//             td.style.border = '1px solid black';
+//             td.style.padding = '5px';
+//             td.style.width = '50px';
+//             td.style.height = '50px';
 
-// Дан массив:
+//             tr.append(td);
+//         }
 
-// [
-// 	[1, 2, 3],
+//         table.append(tr);
+//     };
+
+//     div.append(table);
+// });
+
+//! =============================================
+
+//? №4
+//? Дан массив:
+//? [
+//? 	[1, 2, 3],
+//? 	[4, 5, 6],
+//? 	[7, 8, 9],
+//? ]
+//? По нажатию на кнопку создайте таблицу, заполненную данными из этого массива.
+
+// title.textContent = 'Таблиця, заповнена даними з масиву';
+// const arrArr = [
+//     [1, 2, 3],
 // 	[4, 5, 6],
 // 	[7, 8, 9],
-// ]
-// По нажатию на кнопку создайте таблицу, заполненную данными из этого массива.
+// ];
+// btn.addEventListener('click', () => {
 
+//             const table = document.createElement('table');
+//             table.style.borderCollapse = 'collapse';
+//              for (let i = 0; i < arrArr.length; i++) {
+//                 const tr = document.createElement('tr');
+        
+//              for (let j = 0; j < arrArr[i].length; j++) {
+//                     const td = document.createElement('td');
+//                     td.textContent = arrArr[i][j];
+//                     td.style.border = '1px solid black';
+//                     td.style.padding = '5px';
+//                     td.style.width = '50px';
+//                     td.style.height = '50px';
 
+//                     tr.append(td);
+//                 }
 
+//                 table.append(tr);
+//             };
 
+//             div.append(table);
+// });
 
-// Уровень 6.3 задачника JavaScript
-// №1
+//! =============================================
 
-// Дан абзац и кнопка. Пусть первое нажатие на кнопку красит абзац в красный цвет, а второе нажатие в зеленый.
+//? №3
+//? По клику на кнопку создайте HTML таблицу с заданной шириной и высотой так, чтобы в ячейках стояли номера их рядов и колонок.
+
+// title.textContent = 'Таблиця / Щоб стояли номера їх рядків и колонок';
+// btn.addEventListener('click', () => {
+//     const rows = 4;      // высота (кол-во строк)
+//     const cols = 5;      // ширина (кол-во колонок)
+
+//     const table = document.createElement('table');
+//     table.style.borderCollapse = 'collapse';
+   
+//     for (let i = 0; i < rows; i++) {
+//         const tr = document.createElement('tr');
+        
+//         for (let j = 0; j < cols; j++) {
+//             const td = document.createElement('td');
+//             td.textContent = `${i + 1} - ${j + 1}`;
+//             td.style.border = '1px solid black';
+//             td.style.padding = '5px';
+//             td.style.width = '50px';
+//             td.style.height = '50px';
+
+//             tr.append(td);
+//         }
+
+//         table.append(tr);
+//     };
+
+//     div.append(table);
+// });
+
+//! =============================================
+
+//; Уровень 6.3 задачника JavaScript
+
+//! =============================================
+
+//? №1
+//? Дан абзац и кнопка. Пусть первое нажатие на кнопку красит абзац в красный цвет, а второе нажатие в зеленый.
+
+// title.textContent = 'Пофарбує абзац';
+// text.textContent = 'Дан абзац и кнопка.';
+// text.style.color = 'black';
+// btn.addEventListener('click', () => {
+  
+//     text.style.color !== 'red' ? text.style.color = 'red' : text.style.color = 'green';
+// });
+
+//! =============================================
 
 // №2
 
