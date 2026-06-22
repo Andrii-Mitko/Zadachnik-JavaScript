@@ -345,7 +345,7 @@ list.append(item)
 
 // №4
 
-// Дан абзац с числом и кнопка. По нажатию на кнопку пусть число из абзаца каждую секунду увеличивается на единицу.
+// There are more than 20 characters with translation, please reduce the translation content.
 
 // №5
 
