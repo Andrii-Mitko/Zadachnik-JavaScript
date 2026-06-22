@@ -335,9 +335,23 @@ list.append(item)
 
 //! =============================================
 
-// №2
+//? №2
+//? Дан список ul. По клику на любую li добавьте ей в конец ее порядковый номер в списке, но только один раз.
 
-// Дан список ul. По клику на любую li добавьте ей в конец ее порядковый номер в списке, но только один раз.
+title.textContent = 'Порядковий номер у списку';
+const arr = ['item', 'title', 'list'];
+list.innerHTML = arr.map(item => `<li>${item}</li>`);
+
+list.addEventListener('click', (e) => {
+  if (e.target.tagName === 'LI' && !e.target.dataset.done) {
+    const index = [...list.children].indexOf(e.target) + 1;
+
+    e.target.textContent += ` ${index}`;
+    e.target.dataset.done = 'true';
+  }
+});
+
+//! =============================================
 
 // №3
 
