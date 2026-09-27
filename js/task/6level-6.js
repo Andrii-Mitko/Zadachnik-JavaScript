@@ -1,34 +1,29 @@
-
 //; "ЦЕЙ КОД  ДО ВСІХ ЗАВДАНЬ 6 РІВНЯ"
 
+// const main = document.querySelector('main');
+// main.style.cssText = 'display: flex; justify-content: center; flex-direction: column; align-items: center;';
 
+// const title = document.querySelector('h1')
 
-const main = document.querySelector('main');
-main.style.cssText = 'display: flex; justify-content: center; flex-direction: column; align-items: center;';
+//  const div = document.querySelector('.div');
+//     div.style.cssText = 'display: flex; flex-direction: column;';
 
-const title = document.querySelector('h1')
+// const btn = document.createElement('button');
+// btn.textContent = 'Натисни тут';
+// btn.style.cssText = " padding: 10px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer; margin: 10px;";
 
- const div = document.querySelector('.div');
-    div.style.cssText = 'display: flex; flex-direction: column;';
+// const text = document.createElement('p');
+// text.style.cssText = 'margin: 15px;';
 
+// const list = document.createElement('ul');
+// list.style.cssText = "display: flex;   flex-wrap: wrap;   gap: 5px;   list-style: none;   padding: 0;";
 
-const btn = document.createElement('button');
-btn.textContent = 'Натисни тут';
-btn.style.cssText = " padding: 10px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer; margin: 10px;";
+// main.append(title, div, btn, text, list);
 
-const text = document.createElement('p');
-text.style.cssText = 'margin: 15px;';
+// const item = document.createElement('li');
+// item.style.cssText = 'padding: 5px 10px;';
+// list.append(item)
 
-
-const list = document.createElement('ul');
-list.style.cssText = "display: flex;   flex-wrap: wrap;   gap: 5px;   list-style: none;   padding: 0;";
-
-main.append(title, div, btn, text, list);
-
-const item = document.createElement('li');
-item.style.cssText = 'padding: 5px 10px;';
-list.append(item)
- 
 //! =============================================
 
 //; Уровень 6.1 задачника JavaScript
@@ -38,106 +33,31 @@ list.append(item)
 //? №1
 //? Дана кнопка, пустой список ul и массив. По клику на кнопку заполните список элементами этого массива.
 
-// title.textContent = 'Список елементів масиву';
-// const arr = [1, 2, 3, 4, 5];
-
-// function itemTemplate(item) {
-//   return `<li>${item}</li>`;
-// }
-
-// function itemsTemplate(arr) {
-//   return arr.map(itemTemplate).join('');
-// }
-
-// btn.addEventListener('click', () => {
-// list.innerHTML = itemsTemplate(arr);
-// });
-
 //! =============================================
 
 //? №2
 //? Дана кнопка и пустой список ul. По клику на кнопку заполните список числами от 1 до 10.
-
-// title.textContent = 'Список чисел від 1 до 10';
-// const arr = [];
-// for (let i = 1; i <= 10; i++) {
-//     arr.push(i);
-// };
-// function itemTemplate(item) {
-//   return `<li>${item}</li>`;
-// }
-
-// function itemsTemplate(arr) {
-//   return arr.map(itemTemplate).join('');
-// }
-
-// btn.addEventListener('click', () => {
-// list.innerHTML = itemsTemplate(arr);
-// });
 
 //! =============================================
 
 //? №3
 //? Дана кнопка и пустой список ul. По клику на кнопку добавьте в конец списка новый пункт с текстом '!'.
 
-// title.textContent = 'Додати до списку пункт із текстом «!»';
-
-// btn.addEventListener('click', () => {
-//      const item = document.createElement('li');
-//      item.textContent = '!';
-//      list.append(item);
-// });
-
 //! =============================================
 
 //? №4
 //? Дана кнопка и пустой список ul. По клику на кнопку добавьте в конец списка новый пункт с порядковым номером.
-
-// title.textContent = 'Додати до списку порядковий номер';
-// let num = 0;
-// btn.addEventListener('click', () => {
-//     num += 1;
-//      const item = document.createElement('li');
-//      item.textContent = num;
-//      list.append(item);
-// });
 
 //! =============================================
 
 //? №5
 //? Дана кнопка и список ul, заполненный пунктами. По клику на кнопку удалите последний пункт списка.
 
-// title.textContent = 'Видалити останній пункт списку';
-// const arr = [1, 2, 3, 4, 5];
-// list.innerHTML = arr.map(item => `<li>${item}</li>`);
-// btn.addEventListener('click', (e) => {
-//    list.lastChild.remove();
-//    list.lastChild.remove();
-// });
-
-
 //! =============================================
 
 //? №6
 //? Дана кнопка и список ul, заполненный пунктами.По клику на кнопку удалите случайный пункт списка.
 
-// title.textContent = 'Видалити випадковий пункт списку';
-// const arr = [1,2,3,4,5];
-// function itemTemplate(item) {
-//   return `<li>${item}</li>`;
-// }
-// function itemsTemplate(arr) {
-//   return arr.map(itemTemplate).join('');
-// }
-
-// list.innerHTML = itemsTemplate(arr);
-
-
-// btn.addEventListener('click', (e) => {
-//     const randomNumber = Math.floor(Math.random() * list.children.length);
-//    list.children[randomNumber].remove();
-// });
- 
 //! =============================================
 
 //; Уровень 6.2 задачника JavaScript
@@ -147,100 +67,15 @@ list.append(item)
 //? №1
 //? По клику на кнопку создайте HTML таблицу с заданной шириной и высотой.
 
-// title.textContent = 'Таблиця с заданой шириной и висотой';
-// btn.addEventListener('click', () => {
-//     const rows = 4;      // высота (кол-во строк)
-//     const cols = 5;      // ширина (кол-во колонок)
-
-//     const table = document.createElement('table');
-//     table.style.borderCollapse = 'collapse';
-
-//     for (let i = 0; i < rows; i++) {
-//         const tr = document.createElement('tr');
-
-//         for (let j = 0; j < cols; j++) {
-//             const td = document.createElement('td');
-//             td.textContent = `${i + 1}-${j + 1}`;
-//             td.style.border = '1px solid black';
-//             td.style.padding = '5px';
-//             td.style.width = '50px';
-//             td.style.height = '50px';
-
-//             tr.append(td);
-//         }
-
-//         table.append(tr);
-//     }
-
-//     div.append(table);
-// });
-
 //! =============================================
-
 
 //? №2
 //? По клику на кнопку создайте HTML таблицу с заданной шириной и высотой так, чтобы в ячейках стояли их порядковые номера.
-
-// title.textContent = 'Таблиця / Щоб в ячейках стояли їх порядкові номера';
-// btn.addEventListener('click', () => {
-//     const rows = 4;      // высота (кол-во строк)
-//     const cols = 5;      // ширина (кол-во колонок)
-
-//     const table = document.createElement('table');
-//     table.style.borderCollapse = 'collapse';
-//     let num = 1;
-//     for (let i = 0; i < rows; i++) {
-//         const tr = document.createElement('tr');
-        
-//         for (let j = 0; j < cols; j++) {
-//             const td = document.createElement('td');
-//             td.textContent = `${num++}`;
-//             td.style.border = '1px solid black';
-//             td.style.padding = '5px';
-//             td.style.width = '50px';
-//             td.style.height = '50px';
-
-//             tr.append(td);
-//         }
-
-//         table.append(tr);
-//     };
-
-//     div.append(table);
-// });
 
 //! =============================================
 
 //? №3
 //? По клику на кнопку создайте HTML таблицу с заданной шириной и высотой так, чтобы в ячейках стояли номера их рядов и колонок.
-
-// title.textContent = 'Таблиця / Щоб стояли номера їх рядків и колонок';
-// btn.addEventListener('click', () => {
-//     const rows = 4;      // высота (кол-во строк)
-//     const cols = 5;      // ширина (кол-во колонок)
-
-//     const table = document.createElement('table');
-//     table.style.borderCollapse = 'collapse';
-   
-//     for (let i = 0; i < rows; i++) {
-//         const tr = document.createElement('tr');
-        
-//         for (let j = 0; j < cols; j++) {
-//             const td = document.createElement('td');
-//             td.textContent = `${i + 1} - ${j + 1}`;
-//             td.style.border = '1px solid black';
-//             td.style.padding = '5px';
-//             td.style.width = '50px';
-//             td.style.height = '50px';
-
-//             tr.append(td);
-//         }
-
-//         table.append(tr);
-//     };
-
-//     div.append(table);
-// });
 
 //! =============================================
 
@@ -253,68 +88,10 @@ list.append(item)
 //? ]
 //? По нажатию на кнопку создайте таблицу, заполненную данными из этого массива.
 
-// title.textContent = 'Таблиця, заповнена даними з масиву';
-// const arrArr = [
-//     [1, 2, 3],
-// 	[4, 5, 6],
-// 	[7, 8, 9],
-// ];
-// btn.addEventListener('click', () => {
-
-//             const table = document.createElement('table');
-//             table.style.borderCollapse = 'collapse';
-//              for (let i = 0; i < arrArr.length; i++) {
-//                 const tr = document.createElement('tr');
-        
-//              for (let j = 0; j < arrArr[i].length; j++) {
-//                     const td = document.createElement('td');
-//                     td.textContent = arrArr[i][j];
-//                     td.style.border = '1px solid black';
-//                     td.style.padding = '5px';
-//                     td.style.width = '50px';
-//                     td.style.height = '50px';
-
-//                     tr.append(td);
-//                 }
-
-//                 table.append(tr);
-//             };
-
-//             div.append(table);
-// });
-
 //! =============================================
 
 //? №3
 //? По клику на кнопку создайте HTML таблицу с заданной шириной и высотой так, чтобы в ячейках стояли номера их рядов и колонок.
-
-// title.textContent = 'Таблиця / Щоб стояли номера їх рядків и колонок';
-// btn.addEventListener('click', () => {
-//     const rows = 4;      // высота (кол-во строк)
-//     const cols = 5;      // ширина (кол-во колонок)
-
-//     const table = document.createElement('table');
-//     table.style.borderCollapse = 'collapse';
-   
-//     for (let i = 0; i < rows; i++) {
-//         const tr = document.createElement('tr');
-        
-//         for (let j = 0; j < cols; j++) {
-//             const td = document.createElement('td');
-//             td.textContent = `${i + 1} - ${j + 1}`;
-//             td.style.border = '1px solid black';
-//             td.style.padding = '5px';
-//             td.style.width = '50px';
-//             td.style.height = '50px';
-
-//             tr.append(td);
-//         }
-
-//         table.append(tr);
-//     };
-
-//     div.append(table);
-// });
 
 //! =============================================
 
@@ -325,31 +102,10 @@ list.append(item)
 //? №1
 //? Дан абзац и кнопка. Пусть первое нажатие на кнопку красит абзац в красный цвет, а второе нажатие в зеленый.
 
-// title.textContent = 'Пофарбує абзац';
-// text.textContent = 'Дан абзац и кнопка.';
-// text.style.color = 'black';
-// btn.addEventListener('click', () => {
-  
-//     text.style.color !== 'red' ? text.style.color = 'red' : text.style.color = 'green';
-// });
-
 //! =============================================
 
 //? №2
 //? Дан список ul. По клику на любую li добавьте ей в конец ее порядковый номер в списке, но только один раз.
-
-title.textContent = 'Порядковий номер у списку';
-const arr = ['item', 'title', 'list'];
-list.innerHTML = arr.map(item => `<li>${item}</li>`);
-
-list.addEventListener('click', (e) => {
-  if (e.target.tagName === 'LI' && !e.target.dataset.done) {
-    const index = [...list.children].indexOf(e.target) + 1;
-
-    e.target.textContent += ` ${index}`;
-    e.target.dataset.done = 'true';
-  }
-});
 
 //! =============================================
 
@@ -364,9 +120,6 @@ list.addEventListener('click', (e) => {
 // №5
 
 // Дан инпут и абзац.В инпут вводится дата.Определите, была уже дата в текущем году.Результат выведите в абзац.
-
-
-
 
 // Уровень 6.4 задачника JavaScript
 // №1
@@ -384,8 +137,6 @@ list.addEventListener('click', (e) => {
 // №4
 
 // Дан инпут и ul.В инпут вводится год.Выведите в список даты всех пятниц 13 - е в заданном году.
-
-
 
 // Уровень 6.5 задачника JavaScript
 // №1
@@ -408,11 +159,6 @@ list.addEventListener('click', (e) => {
 
 // Даны два инпута, абзац и кнопка.В инпуты через запятую вводятся числа.По клику на кнопку выведите через запятую в абзац числа, которые есть в обоих инпутах.
 
-
-
-
-
-
 // Уровень 6.6 задачника JavaScript
 // №1
 
@@ -429,10 +175,6 @@ list.addEventListener('click', (e) => {
 // №4
 
 // Дан текстареа и див.В текстареа вводится текст.Сделайте так, чтобы по нажатию Shift + Enter этот текст добавился в див.
-
-
-
-
 
 // Уровень 6.7 задачника JavaScript
 // №1
@@ -451,11 +193,6 @@ list.addEventListener('click', (e) => {
 
 // Дан инпут, кнопка и абзац.В инпут вводится число.По нажатию на кнопку выведите в абзац строку, состоящую из нулей, количество которых равно числу.Например, при вводе числа 5 у нас должна получится строка '00000'.
 
-
-
-
-
-
 // Уровень 6.8 задачника JavaScript
 // №1
 
@@ -464,10 +201,6 @@ list.addEventListener('click', (e) => {
 // №2
 
 // Дан див и кнопка.По первому клику на кнопку покажите див, а по второму клику - спрячьте.
-
-
-
-
 
 // Уровень 6.9 задачника JavaScript
 // №1
@@ -486,9 +219,6 @@ list.addEventListener('click', (e) => {
 
 // Дана кнопка и список ul, заполненный пунктами с числами.По клику на кнопку добавляйте новую li с числом, на единицу больше числа последей li из списка.
 
-
-
-
 // Уровень 6.10 задачника JavaScript
 // №1
 
@@ -505,7 +235,6 @@ list.addEventListener('click', (e) => {
 // №4
 
 // Даны текстареа, инпут и кнопка. В текстареа вводится текст со словами. В инпут вводится слово. По нажатию на кнопку выведите на экран, сколько раз встречается это слово в веденном тексте.
-
 
 //! ============================================
 
@@ -527,7 +256,7 @@ list.addEventListener('click', (e) => {
 //     "description": "Create UL list from array with templates"
 //   },
 
-  //! ============================================
+//! ============================================
 
 // По клику на кнопку создание HTML таблици с заданной шириной и высотой.
 //   btn.addEventListener('click', () => {
@@ -557,6 +286,6 @@ list.addEventListener('click', (e) => {
 //     div.append(table);
 // });
 
-  //! ============================================
+//! ============================================
 
 //   е заменити на (е)
