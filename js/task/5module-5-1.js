@@ -91,16 +91,55 @@
 
 //? Перевірка на парність: Напишіть функцію checkEven(numbers, callback), яка приймає масив чисел numbers та колбек callback. Функція повинна перевірити, чи всі числа в масиві парні, і передати результат перевірки колбек.
 
+// function checkEven(numbers, callback) {
+//   const result = numbers.every(n => n % 2 === 0);
+//   callback(result);
+// }
+// const nums = [1, 7, 2, 8, 3, 9, 4, 5, 6];
+// checkEven(nums, res => {
+//   res === true
+//     ? console.log('Всі числа парні!')
+//     : console.log('Є числа не парні');
+// });
+
 //********************************************************/
 
 //? Об'єднання рядків: Напишіть функцію concatStrings(strings, separator, callback), яка приймає масив рядків strings, рядок separator та колбек callback. Функція повинна об'єднати рядки з масиву, розділяючи їх переданим роздільником, і передати рядок, що вийшов, в колбек.
+
+// function concatStrings(strings, separator, callback) {
+//   const concat = strings.join(separator);
+//   callback(concat);
+// }
+// const arr = ['один', 'два', 'три'];
+// const separ = '-';
+// concatStrings(arr, separ, res => {
+//   console.log(res);
+// });
 
 //********************************************************/
 
 //? Перетворення в числа: Напишіть функцію parseNumbers(strings, callback), яка приймає масив рядків strings та колбек callback. Функція повинна перетворити кожен рядок з масиву на число і передати новий масив чисел в колбек.
 
+// function parseNumbers(strings, callback) {
+//   const nums = strings.map(n => Number(n));
+//   callback(nums);
+// }
+// const arr = ['1', '7', '2', '8', '3', '9', '4', '5', '6'];
+// parseNumbers(arr, res => {
+//   console.log(res);
+// });
+
 //********************************************************/
 
 //? Підрахунок символів: Напишіть функцію countCharacters(strings, callback), яка приймає масив рядків strings та колбек callback. Функція повинна підрахувати загальну кількість символів у всіх рядках масиву та передати результат у колбек.
+
+function countCharacters(strings, callback) {
+  const count = strings.reduce((acc, n) => acc + n.length, 0);
+  callback(count);
+}
+const arr = ['один', 'два', 'три'];
+countCharacters(arr, res => {
+  console.log(res);
+});
 
 //********************************************************/
