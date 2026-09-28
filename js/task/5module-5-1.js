@@ -133,13 +133,13 @@
 
 //? Підрахунок символів: Напишіть функцію countCharacters(strings, callback), яка приймає масив рядків strings та колбек callback. Функція повинна підрахувати загальну кількість символів у всіх рядках масиву та передати результат у колбек.
 
-function countCharacters(strings, callback) {
-  const count = strings.reduce((acc, n) => acc + n.length, 0);
-  callback(count);
-}
-const arr = ['один', 'два', 'три'];
-countCharacters(arr, res => {
-  console.log(res);
-});
+// function countCharacters(strings, callback) {
+//   const count = strings.reduce((acc, n) => acc + n.length, 0);
+//   callback(count);
+// }
+// const arr = ['один', 'два', 'три'];
+// countCharacters(arr, res => {
+//   console.log(res);
+// });
 
 //********************************************************/
