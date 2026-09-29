@@ -1761,55 +1761,110 @@ const books = [
 //? 13
 //? Знайти першу книгу з ціною меншою ніж 10 доларів.
 
+// function bookPrice(books) {
+//   return books.find(book => book.price < 10);
+// }
+// console.log(bookPrice(books));
+
 //**********************************************************/
 
 //? 14
-// ; Знайти першу книгу з рейтингом 4.8 і вище.
+//? Знайти першу книгу з рейтингом 4.8 і вище.
+
+// function bookRating(param) {
+//   return param.find(book => book.rating >= 4.8);
+// }
+// console.log(bookRating(books));
 
 //**********************************************************/
 
 //? 15
-// ; Знайти першу книгу жанру 'Romance' з ціною меншою ніж 8 доларів.
+//? Знайти першу книгу жанру 'Romance' з ціною меншою ніж 8 доларів.
+
+// function bookRomance(data) {
+//   return data.find(book => book.genre === 'Romance' && book.price < 8);
+// }
+// console.log(bookRomance(books));
 
 //**********************************************************/
 
 //? 16
-// ; Знайти першу книгу, видану до 1900 року.
+//? Знайти першу книгу, видану до 1900 року.
+
+// function book1900(data) {
+//   return data.find(book => book.year < 1900);
+// }
+// console.log(book1900(books));
 
 //**********************************************************/
 
 //? 17
-// ; Знайти першу книгу, що містить слово 'and' у назві.
+//? Знайти першу книгу, що містить слово 'and' у назві.
+
+// function bookAnd(data) {
+//   return data.find(book => book.title.split(' ').includes('and'));
+// }
+// console.log(bookAnd(books));
 
 //**********************************************************/
 
 //? 18
-// ; Знайти першу книгу, автором якої є 'J.R.R. Tolkien'.
+//? Знайти першу книгу, автором якої є 'J.R.R. Tolkien'.
+
+// function bookAuthor(data) {
+//   return data.find(book => book.author === 'J.R.R. Tolkien');
+// }
+// console.log(bookAuthor(books));
 
 //**********************************************************/
 
 //? 19
 // ; Знайти першу книгу жанру 'Historical' з рейтингом вище 4.7.
 
+// function bookHistorical(data) {
+//   return data.find(book => book.genre === 'Historical' && book.rating > 4.7);
+// }
+// console.log(bookHistorical(books));
+
 //**********************************************************/
 
 //? 20
-// ; Чи є в масиві хоча б одна книга жанру 'Fantasy'?
+//? Чи є в масиві хоча б одна книга жанру 'Fantasy'?
+
+// function bookFantasy(data) {
+//   return data.some(book => book.genre === 'Fantasy');
+// }
+// console.log(bookFantasy(books));
 
 //**********************************************************/
 
 //? 21
-// ; Чи є в масиві хоча б одна книга, видана після 2000 року?
+//? Чи є в масиві хоча б одна книга, видана після 2000 року?
+
+// function book2000(data) {
+//   return data.some(book => book.year > 2000);
+// }
+// console.log(book2000(books));
 
 //**********************************************************/
 
 //? 22
-// ; Чи є в масиві хоча б одна книга, автором якої є 'Fyodor Dostoevsky'?
+//? Чи є в масиві хоча б одна книга, автором якої є 'Fyodor Dostoevsky'?
+
+// function bookAuthor(data) {
+//   return data.some(book => book.author === 'Fyodor Dostoevsky');
+// }
+// console.log(bookAuthor(books));
 
 //**********************************************************/
 
 //? 23
-// ; Чи є в масиві хоча б одна книга з ціною меншою ніж 10 доларів?
+//? Чи є в масиві хоча б одна книга з ціною меншою ніж 10 доларів?
+
+// function book10(data) {
+//   return data.some(book => book.price < 10);
+// }
+// console.log(book10(books));
 
 //**********************************************************/
 

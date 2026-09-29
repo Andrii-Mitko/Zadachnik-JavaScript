@@ -1,0 +1,21 @@
+{
+  "name": "zadachnik-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrii-Mitko/Zadachnik-JavaScript.git"
+  },
+  "keywords": [],
+  "author": "Andrii_Mitko <andreymit123@gmail.com>",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Andrii-Mitko/Zadachnik-JavaScript/issues"
+  },
+  "homepage": "https://github.com/Andrii-Mitko/Zadachnik-JavaScript#readme"
+}
