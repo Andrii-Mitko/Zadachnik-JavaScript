@@ -2023,20 +2023,40 @@ const books = [
 //? 39
 //? Чи всі книги в масиві є жанру 'Adventure'?
 
+// function booksAdventure(data) {
+//   return data.every(book => book.genre === 'Adventure');
+// }
+// console.log(booksAdventure(books));
+
 //**********************************************************/
 
 //? 40
-// ; Отримати масив назв всіх книжок.
+//? Отримати масив назв всіх книжок.
+
+// function booksName(data) {
+//   return data.map(book => book.title);
+// }
+// console.log(booksName(books));
 
 //**********************************************************/
 
 //? 41
-// ; Отримати масив авторів всіх книжок.
+//? Отримати масив авторів всіх книжок.
+
+// function booksAuthor(data) {
+//   return data.map(books => books.author);
+// }
+// console.log(booksAuthor(books));
 
 //**********************************************************/
 
 //? 42
-// ; Створити масив об'єктів, які містять лише назву та автора кожної книжки.
+//? Створити масив об'єктів, які містять лише назву та автора кожної книжки.
+
+// function arrBooks(data) {
+//   return data.map(book => ({ nameBook: book.title, author: book.author }));
+// }
+// console.log(arrBooks(books));
 
 //**********************************************************/
 
