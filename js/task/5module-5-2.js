@@ -2294,27 +2294,65 @@ const books = [
 //**********************************************************/
 
 //? 63
-// ; Відсортувати книги за назвою у алфавітному порядку (від А до Я).
+//? Відсортувати книги за назвою у алфавітному порядку (від А до Я).
+
+// function booksName(data) {
+//   return data.toSorted((a, b) => a.title.localeCompare(b.title));
+// }
+// console.log(booksName(books));
 
 //**********************************************************/
 
 //? 64
-// ; Відсортувати книги за автором у зворотньому алфавітному порядку (від Z до A).
+//? Відсортувати книги за автором у зворотньому алфавітному порядку (від Z до A).
+
+// function booksAuthor(data) {
+//   return data.toSorted((a, b) => b.author.localeCompare(a.author));
+// }
+// console.log(booksAuthor(books));
 
 //**********************************************************/
 
 //? 65
-// ; Відсортувати книги за жанром у алфавітному порядку, але книги одного жанру за назвою у зворотньому алфавітному порядку.
+//? Відсортувати книги за жанром у алфавітному порядку, але книги одного жанру за назвою у зворотньому алфавітному порядку.
+
+//; my
+// function booksGenre(data) {
+//   return data
+//     .toSorted((a, b) => b.title.localeCompare(a.title))
+//     .toSorted((a, b) => a.genre.localeCompare(b.genre));
+// }
+// console.log(booksGenre(books));
+
+//; gpt
+// function booksGenre(data) {
+//   return data.toSorted((a, b) => {
+//     const genreCompare = a.genre.localeCompare(b.genre);
+//     return genreCompare !== 0 ? genreCompare : b.title.localeCompare(a.title);
+//   });
+// }
+// console.log(booksGenre(books));
 
 //**********************************************************/
 
 //? 66
-// ; Відсортувати книги за назвою у алфавітному порядку, але книги з однаковою назвою за автором у зворотньому алфавітному порядку.
+//? Відсортувати книги за назвою у алфавітному порядку, але книги з однаковою назвою за автором у зворотньому алфавітному порядку.
+
+// function booksNameAuthor(data) {
+//   return data
+//     .toSorted((a, b) => b.author.localeCompare(a.author))
+//     .toSorted((a, b) => a.title.localeCompare(b.title));
+// }
 
 //**********************************************************/
 
 //? 67
-// ; Відсортувати книги за ціною, але спочатку розташувати ті, які коштують менше 10 доларів, потім решту.
+//? Відсортувати книги за ціною, але спочатку розташувати ті, які коштують менше 10 доларів, потім решту.
+
+// function booksPrice(data) {
+//   return data.toSorted((a, b) => a.price - b.price);
+// }
+// console.log(booksPrice(books));
 
 //**********************************************************/
 
