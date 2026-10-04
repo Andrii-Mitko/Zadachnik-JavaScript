@@ -2649,7 +2649,7 @@ const cars = [
   {
     brand: 'Mazda',
     model: 'CX-5',
-    year: 2020,
+    year: 2016,
     color: 'Red',
     price: 28000,
     amount: 5,
@@ -2734,294 +2734,598 @@ const cars = [
 
 //**********************************************************/
 
-// # 2
-// ; Знайти усі спорткари
+//? # 2
+//? Знайти усі спорткари
+
+// function sportCar(data) {
+//   return data.filter(car => car.isSportCar);
+// }
+// console.log(sportCar(cars));
 
 //**********************************************************/
 
-// # 3
-// ; Знайти авто 2022 року
+//? # 3
+//? Знайти авто 2022 року
+
+// function carYear(data) {
+//   return data.filter(car => car.year === 2022);
+// }
+// console.log(carYear(cars));
 
 //**********************************************************/
 
-// # 4
-// ; Знайти авто певної марки
+//? # 4
+//? Знайти авто певної марки
+
+// function carType(data, typeCar) {
+//   return data.filter(car => car.type === typeCar);
+// }
+// console.log(carType(cars, 'SUV'));
 
 //**********************************************************/
 
-// # 5
-// ; Знайти авто дорожче заданої ціни
+//? # 5
+//? Знайти авто дорожче заданої ціни
+
+// function carsPrice(data, price) {
+//   return data.filter(car => car.price > price);
+// }
+// console.log(carsPrice(cars, 60000));
 
 //**********************************************************/
 
-// # 6
-// ; Знайти авто заданого типу
+//? # 6
+//? Знайти авто заданого типу
+
+// function carType(cars, type) {
+//   return cars.filter(car => car.type === type);
+// }
+// console.log(carType(cars, 'SUV'));
 
 //**********************************************************/
 
-// # 7
-// ; Знайти авто з кількістю більше ніж задане значення
+//? # 7
+//? Знайти авто з кількістю більше ніж задане значення
+
+// function carsAmount(cars, amount) {
+//   return cars.filter(car => car.amount > amount);
+// }
+// console.log(carsAmount(cars, 3));
 
 //**********************************************************/
 
-// # 8
-// ; Знайти авто, випущені після 2018 року
+//? # 8
+//? Знайти авто, випущені після 2018 року
+
+// function carYear(cars) {
+//   return cars.filter(car => car.year > 2018);
+// }
+// console.log(carYear(cars));
 
 //**********************************************************/
 
-// # 9
-// ; Знайти авто, випущені до 2015 року
+//? # 9
+//? Знайти авто, випущені до 2015 року
+
+// function carYear(cars) {
+//   return cars.filter(car => car.year < 2015);
+// }
+// console.log(carYear(cars));
 
 //**********************************************************/
 
-// # 10
-// ; Знайти авто, ціна яких в межах від 20000 до 40000
+//? # 10
+//? Знайти авто, ціна яких в межах від 20000 до 40000
+
+// function carsPrice(cars) {
+//   return cars.filter(car => car.price > 20000 && car.price < 40000);
+// }
+// console.log(carsPrice(cars));
 
 //**********************************************************/
 
-// # 11
-// ; Знайти всі авто, які не є спортивними
+//? # 11
+//? Знайти всі авто, які не є спортивними
+
+// function SportCar(cars) {
+//   return cars.filter(car => car.isSportCar !== true);
+// }
+// console.log(SportCar(cars));
 
 //**********************************************************/
 
-// # 12
-// ; Знайти всі авто чорного кольору
+//? # 12
+//? Знайти всі авто чорного кольору
+
+// function carColor(cars) {
+//   return cars.filter(car => car.color === 'Black');
+// }
+// console.log(carColor(cars));
 
 //**********************************************************/
 
-// # 13
-// ; Знайти всі автомобілі марки 'BMW'
+//? # 13
+//? Знайти всі автомобілі марки 'BMW'
+
+// function carBMW(cars) {
+//   return cars.filter(car => car.brand === 'BMW');
+// }
+// console.log(carBMW(cars));
 
 //**********************************************************/
 
-// # 14
-// ; Знайти всі авто типу 'SUV'
+//? # 14
+//? Знайти всі авто типу 'SUV'
+
+// function carSUV(cars) {
+//   return cars.filter(car => car.type === 'SUV');
+// }
+// console.log(carSUV(cars));
 
 //**********************************************************/
 
-// # 15
-// ; Знайти всі авто, що мають ціну менше ніж 30000
+//? # 15
+//? Знайти всі авто, що мають ціну менше ніж 30000
+
+// function carPrice(cars) {
+//   return cars.filter(car => car.price < 30000);
+// }
+// console.log(carPrice(cars));
 
 //**********************************************************/
 
-// # 16
-// ; Знайти всі авто, що мають ціну більше ніж 50000
+//? # 16
+//? Знайти всі авто, що мають ціну більше ніж 50000
+
+// function carPrice(cars) {
+//   return cars.filter(car => car.price > 50000);
+// }
+// console.log(carPrice(cars));
 
 //**********************************************************/
 
-// # 17
-// ; Знайти всі авто, випущені після 2021 року
+//? # 17
+//? Знайти всі авто, випущені після 2021 року
+
+// function carYear(cars) {
+//   return cars.filter(car => car.year > 2021);
+// }
+// console.log(carYear(cars));
 
 //**********************************************************/
 
-// # 18
-// ; Знайти всі авто марки 'Audi'
+//?# 18
+//? Знайти всі авто марки 'Audi'
+
+// function carAudi(cars) {
+//   return cars.filter(car => car.brand === 'Audi');
+// }
+// console.log(carAudi(cars));
 
 //**********************************************************/
 
-// # 19
-// ; Знайти всі авто, що мають кількість більше 2
+//? # 19
+//? Знайти всі авто, що мають кількість більше 2
+
+// function carsAmount(cars) {
+//   return cars.filter(car => car.amount > 2);
+// }
+// console.log(carsAmount(cars));
 
 //**********************************************************/
 
-// # 20
-// ; Знайти всі авто червоного кольору
+//? # 20
+//? Знайти всі авто червоного кольору
+
+// function carColor(cars) {
+//   return cars.filter(car => car.color === 'Red');
+// }
+// console.log(carColor(cars));
 
 //**********************************************************/
 
-// # 21
-// ; Знайти всі авто, які є седанами
+//? # 21
+//? Знайти всі авто, які є седанами
+
+// function carType(cars) {
+//   return cars.filter(car => car.type === 'Sedan');
+// }
+// console.log(carType(cars));
 
 //**********************************************************/
 
-// # 22
-// ; Знайти всі авто марки 'Mercedes'
+//? # 22
+//? Знайти всі авто марки 'Mercedes'
+
+// function carBrand(cars) {
+//   return cars.filter(car => car.brand === 'Mercedes-Benz');
+// }
+// console.log(carBrand(cars));
 
 //**********************************************************/
 
-// # 23
-// ; Знайти всі авто, які не є седанами
+//? # 23
+//? Знайти всі авто, які не є седанами
+
+// function carType(cars) {
+//   return cars.filter(car => car.type !== 'Sedan');
+// }
+// console.log(carType(cars));
 
 //**********************************************************/
 
-// # 24
-// ; Знайти всі авто, випущені в 2020 році
+//? # 24
+//? Знайти всі авто, випущені в 2020 році
+
+// function carYear(cars) {
+//   return cars.filter(car => car.year === 2020);
+// }
+// console.log(carYear(cars));
 
 //**********************************************************/
 
-// # 25
-// ; Знайти всі авто марки 'Tesla'
+//? # 25
+//? Знайти всі авто марки 'Tesla'
+
+// function carBrand(cars) {
+//   return cars.filter(car => car.brand === 'Tesla');
+// }
+// console.log(carBrand(cars));
 
 //**********************************************************/
 
-// # 26
-// ; Знайти всі авто, що мають кількість менше 5
+//? # 26
+//? Знайти всі авто, що мають кількість менше 5
+
+// function carAmount(cars) {
+//   return cars.filter(car => car.amount < 5);
+// }
+// console.log(carAmount(cars));
 
 //**********************************************************/
 
-// # 27
-// ; Знайти всі авто, що мають ціну більше ніж 25000
+//? # 27
+//? Знайти всі авто, що мають ціну більше ніж 25000
+
+// function carPrice(cars) {
+//   return cars.filter(car => car.price > 25000);
+// }
+// console.log(carPrice(cars));
 
 //**********************************************************/
 
-// # 28
-// ; Знайти всі авто марки 'Lexus'
+//? # 28
+//? Знайти всі авто марки 'Lexus'
+
+// function carBrand(cars) {
+//   return cars.filter(car => car.brand === 'Lexus');
+// }
+// console.log(carBrand(cars));
 
 //**********************************************************/
 
-// # 29
-// ; Знайти всі авто, випущені до 2017 року
+//? # 29
+//? Знайти всі авто, випущені до 2017 року
+
+// function carYear(cars) {
+//   return cars.filter(car => car.year < 2017);
+// }
+// console.log(carYear(cars));
 
 //**********************************************************/
 
-// # 30
-// ; Знайти всі авто білого кольору
+//? # 30
+//? Знайти всі авто білого кольору
+
+// function carColor(cars) {
+//   return cars.filter(car => car.color === 'White');
+// }
+// console.log(carColor(cars));
 
 //**********************************************************/
 
-// # 31
-// ; Знайти авто заданого кольору
+//? # 31
+//? Знайти авто заданого кольору
+
+// function carColor(cars, color) {
+//   return cars.filter(car => car.color === color);
+// }
+// console.log(carColor(cars, 'Blue'));
 
 //**********************************************************/
 
-// # 32
-// ; Знайти усі спорткари
+//? # 32
+//? Знайти усі спорткари
+
+// function sportCar(cars) {
+//   return cars.filter(car => car.isSportCar);
+// }
+// console.log(sportCar(cars));
 
 //**********************************************************/
 
-// # 33
-// ; Порахувати кількість авто заданого року
+//? # 33
+//? Порахувати кількість авто заданого року
+
+// function carYear(cars, year) {
+//   return cars.filter(car => car.year === year).length;
+// }
+// console.log(carYear(cars, 2020));
 
 //**********************************************************/
 
-// # 34
-// ; Знайти всі машини з ціною вище вказаної.
+//? # 34
+//? Знайти всі машини з ціною вище вказаної.
+
+// function carPrice(cars, price) {
+//   return cars.filter(car => car.price > price);
+// }
+// console.log(carPrice(cars, 40000));
 
 //**********************************************************/
 
-// # 35
-// ; Порахувати кількість машин вказаного року.
+//? # 35
+//? Порахувати кількість машин вказаного року.
+
+// function carAmount(cars, year) {
+//   return cars.filter(car => car.year === year).length;
+// }
+// console.log(carAmount(cars, 2020));
 
 //**********************************************************/
 
 //? # 36
-// ; Відсортувати машини за роком випуску (від найстарішого до найновішого).
+//? Відсортувати машини за роком випуску (від найстарішого до найновішого).
+
+// function carYear(cars) {
+//   return cars.toSorted((a, b) => a.year - b.year);
+// }
+// console.log(carYear(cars));
 
 //**********************************************************/
 
 //? # 37
-// ; Знайти найдорожчу машину.
+//? Знайти найдорожчу машину.
+
+// function carPrice(cars) {
+//   return cars.toSorted((a, b) => b.year - a.year)[0];
+// }
+// console.log(carPrice(cars));
 
 //**********************************************************/
 
 //? # 38
-// ; Знайти всі машини заданої марки (наприклад, Toyota).
+//? Знайти всі машини заданої марки (наприклад, Toyota).
+
+// function carBrand(cars, brand) {
+//   return cars.filter(car => car.brand === brand);
+// }
+// console.log(carBrand(cars, 'Toyota'));
 
 //**********************************************************/
 
 //? # 39
-// ; Порахувати загальну кількість машин.
+//? Порахувати загальну кількість машин.
+
+// function carAll(cars) {
+//   return cars.length;
+// }
+// console.log(carAll(cars));
 
 //**********************************************************/
 
 //? # 40
-// ; Відсортувати машини за ціною (від найдешевшої до найдорожчої).
+//? Відсортувати машини за ціною (від найдешевшої до найдорожчої).
+
+// function carPrice(cars) {
+//   return cars.toSorted((a, b) => a.price - b.price);
+// }
+// console.log(carPrice(cars));
 
 //**********************************************************/
 
 //? # 41
-// ; Знайти всі машини певного типу (наприклад, SUV).
+//? Знайти всі машини певного типу (наприклад, SUV).
+
+// function carType(cars, type) {
+//   return cars.filter(car => car.type === type);
+// }
+// console.log(carType(cars, 'SUV'));
 
 //**********************************************************/
 
 //? # 42
-// ; Знайти всі машини певного кольору та року випуску.
+//? Знайти всі машини певного кольору та року випуску.
+
+// function carColor(cars, color, year) {
+//   return cars.filter(car => car.color === color && car.year === year);
+// }
+// console.log(carColor(cars, 'Red', 2020));
 
 //**********************************************************/
 
 //? # 43
-// ; Порахувати середню ціну всіх машин.
+//? Порахувати середню ціну всіх машин.
+
+// function carPrice(cars) {
+//   const sum = cars.reduce((sum, car) => sum + car.price, 0);
+//   return sum / cars.length;
+// }
+// console.log(carPrice(cars));
 
 //**********************************************************/
 
 //? # 44
-// ; Знайти всі машини, у яких кількість на складі більша за 0.
+//? Знайти всі машини, у яких кількість на складі більша за 0.
+
+// function carAmount(cars) {
+//   return cars.filter(car => car.amount > 0);
+// }
+// console.log(carAmount(cars));
 
 //**********************************************************/
 
 //? # 45
-// ; Знайти всі машини з ціною менше 30000 та роком випуску після 2020 року.
+//? Знайти всі машини з ціною менше 30000 та роком випуску після 2020 року.
+
+// function carPrice(cars) {
+//   return cars.filter(car => car.price < 30000 && car.year > 2020);
+// }
+// console.log(carPrice(cars));
 
 //**********************************************************/
 
 //? # 46
-// ; Порахувати сумарну кількість всіх машин заданої марки.
+//? Порахувати сумарну кількість всіх машин заданої марки.
+
+// function carAmount(cars, brand) {
+//   const carBrand = cars.filter(car => car.brand === brand);
+//   return carBrand.reduce((sum, car) => sum + car.amount, 0);
+// }
+// console.log(carAmount(cars, 'BMW'));
 
 //**********************************************************/
 
 //? # 47
-// ; Відсортувати машини за кількістю на складі (від найбільшої до найменшої).
+//? Відсортувати машини за кількістю на складі (від найбільшої до найменшої).
+
+// function carAmount(cars) {
+//   return cars.toSorted((a, b) => b.amount - a.amount);
+// }
+// console.log(carAmount(cars));
 
 //**********************************************************/
 
 //? # 48
-// ; Знайти всі машини, які не є спортивними та доступні для продажу.
+//? Знайти всі машини, які не є спортивними та доступні для продажу.
+
+// function sportCar(cars) {
+//   return cars.filter(car => car.isSportCar !== true && car.amount > 0);
+// }
+// console.log(sportCar(cars));
 
 //**********************************************************/
 
 //? # 49
-// ; Порахувати загальну вартість всіх машин складі.
+//? Порахувати загальну вартість всіх машин складі.
+
+// function carsAll(cars) {
+//   return cars.reduce((sum, car) => sum + car.price * car.amount, 0);
+// }
+// console.log(carsAll(cars));
 
 //**********************************************************/
 
 //? # 50
-// ; Знайти всі машини певного типу та кольору.
+//? Знайти всі машини певного типу та кольору.
+
+// function carType(cars, type, color) {
+//   return cars.filter(car => car.type === type && car.color === color);
+// }
+// console.log(carType(cars, 'SUV', 'Green'));
 
 //**********************************************************/
 
 //? # 51
+//? Відсортувати машини за брендом та моделлю в алфавітному порядку.
 
-// ; Відсортувати машини за брендом та моделлю в алфавітному порядку.
+// function carBrand(cars) {
+//   return cars.toSorted((a, b) => {
+//     const brandCompare = a.brand.localeCompare(b.brand);
+//     if (brandCompare !== 0) {
+//       return brandCompare;
+//     }
+//     return a.model.localeCompare(b.model);
+//   });
+// }
+// console.log(carBrand(cars));
 
 //**********************************************************/
 
 //? # 52
-// ; Перевірити, чи є хоч одна машина певного кольору.
+//? Перевірити, чи є хоч одна машина певного кольору.
+
+// function carColor(cars, color) {
+//   return cars.some(car => car.color === color);
+// }
+// console.log(carColor(cars, 'Red'));
 
 //**********************************************************/
 
 //? # 53
-// ; Перевірити, чи є хоч одна машина певного року.
+//? Перевірити, чи є хоч одна машина певного року.
+
+// function carYear(cars, year) {
+//   return cars.some(car => car.year === year);
+// }
+// console.log(carYear(cars, 2020));
 
 //**********************************************************/
 
 //? # 54
-// ; Перевірити, чи є всі авто є спроткарами.
+//? Перевірити, чи є всі авто є спроткарами.
+
+// function sportCar(cars) {
+//   return cars.every(car => car.isSportCar === true);
+// }
+// console.log(sportCar(cars));
 
 //**********************************************************/
 
 //? # 55
-// ; Перевірити, чи є всі новіші за вказаний рік.
+//? Перевірити, чи є всі новіші за вказаний рік.
+
+// function carYear(cars, year) {
+//   return cars.every(car => car.year > year);
+// }
+// console.log(carYear(cars, 2015));
 
 //**********************************************************/
 
 //? # 56
-// ; Створити новий масив, що містить лише назви моделей усіх машин.
+//? Створити новий масив, що містить лише назви моделей усіх машин.
+
+// function carModel(cars) {
+//   return cars.map(car => car.model);
+// }
+// console.log(carModel(cars));
 
 //**********************************************************/
 
 //? # 57
-// ; Створити масив, що містить розмітку кожної машини.
+//? Створити масив, що містить розмітку кожної машини.
+
+// function carMarkup(cars) {
+//   return cars.map(
+//     car => `
+//     <article>
+//      <h2>${car.brand} ${car.model}</h2>
+//         <p>Тип: ${car.type}</p>
+//         <p>Ціна: ${car.price}</p>
+//         <p>Колір: ${car.color}</p>
+//         <p>Залишилось: ${car.amount}</p>
+//         <p>Рік випуску: ${car.year}</p>
+//         <p> ${car.isSportCar ? 'Це Спорткар' : 'Це не спорткар'}</p>
+//     </article>
+// `,
+//   );
+// }
+// console.log(carMarkup(cars));
 
 //**********************************************************/
 
 //? # 58
-// ; Знайти індекс першої машини з роком випуску 2022 року.
+//? Знайти індекс першої машини з роком випуску 2022 року.
+
+// function carIndex(cars) {
+//   return cars.findIndex(car => car.year === 2022);
+// }
+// console.log(carIndex(cars));
 
 //**********************************************************/
 
 //? # 59
-// ; Сортувати за ціною
+//? Сортувати за ціною
 
 //**********************************************************/
 
@@ -3089,7 +3393,7 @@ const cars = [
 
 //**********************************************************/
 
-const users1 = [
+const user = [
   {
     firstName: 'Alice',
     lastName: 'Johnson',
@@ -3388,240 +3692,7 @@ const users1 = [
   },
 ];
 
-const users2 = [
-  {
-    id: 1,
-    name: 'Leanne Graham',
-    username: 'Bret',
-    email: 'Sincere@april.biz',
-    address: {
-      street: 'Kulas Light',
-      suite: 'Apt. 556',
-      city: 'Gwenborough',
-      zipcode: '92998-3874',
-      geo: {
-        lat: '-37.3159',
-        lng: '81.1496',
-      },
-    },
-    phone: '1-770-736-8031 x56442',
-    website: 'hildegard.org',
-    company: {
-      name: 'Romaguera-Crona',
-      catchPhrase: 'Multi-layered client-server neural-net',
-      bs: 'harness real-time e-markets',
-    },
-  },
-  {
-    id: 2,
-    name: 'Ervin Howell',
-    username: 'Antonette',
-    email: 'Shanna@melissa.tv',
-    address: {
-      street: 'Victor Plains',
-      suite: 'Suite 879',
-      city: 'Wisokyburgh',
-      zipcode: '90566-7771',
-      geo: {
-        lat: '-43.9509',
-        lng: '-34.4618',
-      },
-    },
-    phone: '010-692-6593 x09125',
-    website: 'anastasia.net',
-    company: {
-      name: 'Deckow-Crist',
-      catchPhrase: 'Proactive didactic contingency',
-      bs: 'synergize scalable supply-chains',
-    },
-  },
-  {
-    id: 3,
-    name: 'Clementine Bauch',
-    username: 'Samantha',
-    email: 'Nathan@yesenia.net',
-    address: {
-      street: 'Douglas Extension',
-      suite: 'Suite 847',
-      city: 'McKenziehaven',
-      zipcode: '59590-4157',
-      geo: {
-        lat: '-68.6102',
-        lng: '-47.0653',
-      },
-    },
-    phone: '1-463-123-4447',
-    website: 'ramiro.info',
-    company: {
-      name: 'Romaguera-Jacobson',
-      catchPhrase: 'Face to face bifurcated interface',
-      bs: 'e-enable strategic applications',
-    },
-  },
-  {
-    id: 4,
-    name: 'Patricia Lebsack',
-    username: 'Karianne',
-    email: 'Julianne.OConner@kory.org',
-    address: {
-      street: 'Hoeger Mall',
-      suite: 'Apt. 692',
-      city: 'South Elvis',
-      zipcode: '53919-4257',
-      geo: {
-        lat: '29.4572',
-        lng: '-164.2990',
-      },
-    },
-    phone: '493-170-9623 x156',
-    website: 'kale.biz',
-    company: {
-      name: 'Robel-Corkery',
-      catchPhrase: 'Multi-tiered zero tolerance productivity',
-      bs: 'transition cutting-edge web services',
-    },
-  },
-  {
-    id: 5,
-    name: 'Chelsey Dietrich',
-    username: 'Kamren',
-    email: 'Lucio_Hettinger@annie.ca',
-    address: {
-      street: 'Skiles Walks',
-      suite: 'Suite 351',
-      city: 'Roscoeview',
-      zipcode: '33263',
-      geo: {
-        lat: '-31.8129',
-        lng: '62.5342',
-      },
-    },
-    phone: '(254)954-1289',
-    website: 'demarco.info',
-    company: {
-      name: 'Keebler LLC',
-      catchPhrase: 'User-centric fault-tolerant solution',
-      bs: 'revolutionize end-to-end systems',
-    },
-  },
-  {
-    id: 6,
-    name: 'Mrs. Dennis Schulist',
-    username: 'Leopoldo_Corkery',
-    email: 'Karley_Dach@jasper.info',
-    address: {
-      street: 'Norberto Crossing',
-      suite: 'Apt. 950',
-      city: 'South Christy',
-      zipcode: '23505-1337',
-      geo: {
-        lat: '-71.4197',
-        lng: '71.7478',
-      },
-    },
-    phone: '1-477-935-8478 x6430',
-    website: 'ola.org',
-    company: {
-      name: 'Considine-Lockman',
-      catchPhrase: 'Synchronised bottom-line interface',
-      bs: 'e-enable innovative applications',
-    },
-  },
-  {
-    id: 7,
-    name: 'Kurtis Weissnat',
-    username: 'Elwyn.Skiles',
-    email: 'Telly.Hoeger@billy.biz',
-    address: {
-      street: 'Rex Trail',
-      suite: 'Suite 280',
-      city: 'Howemouth',
-      zipcode: '58804-1099',
-      geo: {
-        lat: '24.8918',
-        lng: '21.8984',
-      },
-    },
-    phone: '210.067.6132',
-    website: 'elvis.io',
-    company: {
-      name: 'Johns Group',
-      catchPhrase: 'Configurable multimedia task-force',
-      bs: 'generate enterprise e-tailers',
-    },
-  },
-  {
-    id: 8,
-    name: 'Nicholas Runolfsdottir V',
-    username: 'Maxime_Nienow',
-    email: 'Sherwood@rosamond.me',
-    address: {
-      street: 'Ellsworth Summit',
-      suite: 'Suite 729',
-      city: 'Aliyaview',
-      zipcode: '45169',
-      geo: {
-        lat: '-14.3990',
-        lng: '-120.7677',
-      },
-    },
-    phone: '586.493.6943 x140',
-    website: 'jacynthe.com',
-    company: {
-      name: 'Abernathy Group',
-      catchPhrase: 'Implemented secondary concept',
-      bs: 'e-enable extensible e-tailers',
-    },
-  },
-  {
-    id: 9,
-    name: 'Glenna Reichert',
-    username: 'Delphine',
-    email: 'Chaim_McDermott@dana.io',
-    address: {
-      street: 'Dayna Park',
-      suite: 'Suite 449',
-      city: 'Bartholomebury',
-      zipcode: '76495-3109',
-      geo: {
-        lat: '24.6463',
-        lng: '-168.8889',
-      },
-    },
-    phone: '(775)976-6794 x41206',
-    website: 'conrad.com',
-    company: {
-      name: 'Yost and Sons',
-      catchPhrase: 'Switchable contextually-based project',
-      bs: 'aggregate real-time technologies',
-    },
-  },
-  {
-    id: 10,
-    name: 'Clementina DuBuque',
-    username: 'Moriah.Stanton',
-    email: 'Rey.Padberg@karina.biz',
-    address: {
-      street: 'Kattie Turnpike',
-      suite: 'Suite 198',
-      city: 'Lebsackbury',
-      zipcode: '31428-2261',
-      geo: {
-        lat: '-38.2386',
-        lng: '57.2232',
-      },
-    },
-    phone: '024-648-3804',
-    website: 'ambrose.net',
-    company: {
-      name: 'Hoeger LLC',
-      catchPhrase: 'Centralized empowering task-force',
-      bs: 'target end-to-end models',
-    },
-  },
-];
-
-// ; USERS
+// ; USERS1
 // ; Знайти користувачів віком від 25 до 40 років.
 // ; Знайти всіх користувачів із активним статусом.
 // ; Порахувати кількість користувачів молодше 30 років.
