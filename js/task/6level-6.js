@@ -1,37 +1,46 @@
 //; "ЦЕЙ КОД  ДО ВСІХ ЗАВДАНЬ 6 РІВНЯ"
 
-// const main = document.querySelector('main');
-// main.style.cssText = 'display: flex; justify-content: center; flex-direction: column; align-items: center;';
+const main = document.querySelector('main');
+main.style.cssText =
+  'display: flex; justify-content: center; flex-direction: column; align-items: center;';
 
-// const title = document.querySelector('h1')
+const title = document.querySelector('h1');
 
-//  const div = document.querySelector('.div');
-//     div.style.cssText = 'display: flex; flex-direction: column;';
+const div = document.querySelector('.div');
+div.style.cssText = 'display: flex; flex-direction: column;';
 
-// const btn = document.createElement('button');
-// btn.textContent = 'Натисни тут';
-// btn.style.cssText = " padding: 10px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer; margin: 10px;";
+const btn = document.createElement('button');
+btn.textContent = 'Натисни тут';
+btn.style.cssText =
+  ' padding: 10px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer; margin: 10px;';
 
-// const text = document.createElement('p');
-// text.style.cssText = 'margin: 15px;';
+const text = document.createElement('p');
+text.style.cssText = 'margin: 15px;';
 
-// const list = document.createElement('ul');
-// list.style.cssText = "display: flex;   flex-wrap: wrap;   gap: 5px;   list-style: none;   padding: 0;";
+const ul = document.createElement('ul');
+ul.style.cssText =
+  'display: flex;   flex-wrap: wrap;   gap: 5px;   list-style: none;   padding: 0;';
 
-// main.append(title, div, btn, text, list);
+main.append(title, div, btn, text, ul);
 
-// const item = document.createElement('li');
-// item.style.cssText = 'padding: 5px 10px;';
-// list.append(item)
-
-//! =============================================
+//* =============================================
 
 //; Уровень 6.1 задачника JavaScript
 
-//! =============================================
+//* =============================================
 
 //? №1
 //? Дана кнопка, пустой список ul и массив. По клику на кнопку заполните список элементами этого массива.
+
+// const arr = ['a', 'b', 'c', 'd', 'i', 'f'];
+
+// btn.addEventListener('click', () => {
+//   arr.forEach(item => {
+//     const li = document.createElement('li');
+//     ul.append(li);
+//     li.textContent = item;
+//   });
+// });
 
 //! =============================================
 

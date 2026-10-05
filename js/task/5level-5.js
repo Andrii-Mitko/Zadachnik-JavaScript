@@ -1,7 +1,4 @@
-
 //; "ЦЕЙ КОД  ДО ВСІХ ЗАВДАНЬ 5 РІВНЯ"
-
-
 
 // const main = document.querySelector('main');
 // main.style.cssText = 'display: flex; justify-content: center; flex-direction: column; align-items: center;';
@@ -29,19 +26,19 @@
 //? Даны два инпута, абзац и кнопка. В инпуты вводятся числа. По нажатию на кнопку выведите в абзац сумму этих чисел.
 
 // title.textContent = 'СУМА';
-// btn.addEventListener('click', (e) => {
+// btn.addEventListener('click', e => {
 //   e.preventDefault();
 //   const num1 = inputFirst.value;
-// const num2 = inputSecond.value;
+//   const num2 = inputSecond.value;
 //   if (isNaN(num1) || isNaN(num2)) {
 //     pText.textContent = 'Введите числа';
 //     return;
 //   }
 //   pText.textContent = Number(num1) + Number(num2);
-//    inputFirst.value = '';
+//   inputFirst.value = '';
 //   inputSecond.value = '';
 // });
-   
+
 //! =============================================
 
 //? №2
@@ -59,7 +56,6 @@
 //     pText.textContent = num**2;
 //     inputSecond.value = '';
 // });
-
 
 //! =============================================
 
@@ -115,7 +111,7 @@
 // inputFirst.remove();
 // inputSecond.remove();
 // btn.remove();
- 
+
 // div2.addEventListener('click', e => {
 //     e.preventDefault();
 //     if (e.target.tagName === 'P') {
@@ -137,7 +133,7 @@
 //    if (e.target.tagName === 'INPUT') {
 //         const num = Number(e.target.value)
 //        e.target.value = num * num;
-  
+
 //     };
 // });
 
@@ -377,7 +373,6 @@
 //     }
 //     pText.textContent = str;
 // });
-
 
 //! =============================================
 
@@ -621,8 +616,6 @@
 //   });
 // });
 
-
-
 //! =============================================
 
 //; Уровень 5.7 задачника JavaScript
@@ -755,7 +748,6 @@
 //             }
 //         }
 // });
- 
 
 //! =============================================
 
@@ -770,7 +762,6 @@
 //         const index = Math.floor(Math.random() * arr.length);
 //         inputSecond.value = arr[index];
 // });
-
 
 //! =============================================
 
@@ -854,7 +845,6 @@
 //         inputSecond.value = '';
 //         });
 
-
 //! =============================================
 
 //; Уровень 5.9 задачника JavaScript
@@ -933,7 +923,6 @@
 //         };
 // });
 
-
 //! ============================================
 
 //? №5
@@ -946,7 +935,7 @@
 // const list = document.querySelector('.list');
 //  textarea.addEventListener('blur', () => {
 //     const str = textarea.value;
-    
+
 //     const sentences = str
 //         .split(/[.!?]+/)            // разделяем по ., ! или ?
 //         .map(s => s.trim())         // убираем пробелы
@@ -1032,7 +1021,6 @@
 //     const parn = arr.filter(n => n % 2 === 0);
 //     inputFirst.value = parn.join(', ');
 // });
-
 
 //! ============================================
 
