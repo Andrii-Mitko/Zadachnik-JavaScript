@@ -1,37 +1,15 @@
-//; "ЦЕЙ КОД  ДО ВСІХ ЗАВДАНЬ 6 РІВНЯ"
-
-const main = document.querySelector('main');
-main.style.cssText =
-  'display: flex; justify-content: center; flex-direction: column; align-items: center;';
-
-const title = document.querySelector('h1');
-
-const div = document.querySelector('.div');
-div.style.cssText = 'display: flex; flex-direction: column;';
-
-const btn = document.createElement('button');
-btn.textContent = 'Натисни тут';
-btn.style.cssText =
-  ' padding: 10px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer; margin: 10px;';
-
-const text = document.createElement('p');
-text.style.cssText = 'margin: 15px;';
-
-const ul = document.createElement('ul');
-ul.style.cssText =
-  'display: flex;   flex-wrap: wrap;   gap: 5px;   list-style: none;   padding: 0;';
-
-main.append(title, div, btn, text, ul);
-
-//* =============================================
-
-//; Уровень 6.1 задачника JavaScript
+//! Уровень 6.1 задачника JavaScript
 
 //* =============================================
 
 //? №1
 //? Дана кнопка, пустой список ul и массив. По клику на кнопку заполните список элементами этого массива.
 
+// const main = document.querySelector('main');
+// const btn = document.createElement('button');
+// btn.textContent = 'Тисни тут';
+// const ul = document.createElement('ul');
+// main.append(btn, ul);
 // const arr = ['a', 'b', 'c', 'd', 'i', 'f'];
 
 // btn.addEventListener('click', () => {
@@ -47,25 +25,98 @@ main.append(title, div, btn, text, ul);
 //? №2
 //? Дана кнопка и пустой список ul. По клику на кнопку заполните список числами от 1 до 10.
 
+// const main = document.querySelector('main');
+// const btn = document.createElement('button');
+// btn.textContent = 'Тисни тут';
+// const ul = document.createElement('ul');
+// main.append(btn, ul);
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// btn.addEventListener('click', () => {
+//   arr.forEach(item => {
+//     const li = document.createElement('li');
+//     ul.append(li);
+//     li.textContent = item;
+//   });
+// });
+
 //! =============================================
 
 //? №3
 //? Дана кнопка и пустой список ul. По клику на кнопку добавьте в конец списка новый пункт с текстом '!'.
+
+// const main = document.querySelector('main');
+// const btn = document.createElement('button');
+// btn.textContent = 'Тисни тут';
+// const ul = document.createElement('ul');
+// main.append(btn, ul);
+// btn.addEventListener('click', () => {
+//   const li = document.createElement('li');
+//   li.textContent = '!';
+//   ul.append(li);
+// });
 
 //! =============================================
 
 //? №4
 //? Дана кнопка и пустой список ul. По клику на кнопку добавьте в конец списка новый пункт с порядковым номером.
 
+// const main = document.querySelector('main');
+// const btn = document.createElement('button');
+// const ul = document.createElement('ul');
+// btn.textContent = 'Тисни тут';
+// main.append(btn, ul);
+// let num = 0;
+// btn.addEventListener('click', () => {
+//   const li = document.createElement('li');
+//   num += 1;
+//   li.textContent = num;
+//   ul.append(li);
+// });
+
 //! =============================================
 
 //? №5
 //? Дана кнопка и список ul, заполненный пунктами. По клику на кнопку удалите последний пункт списка.
 
+// const main = document.querySelector('main');
+// const btn = document.createElement('button');
+// const ul = document.createElement('ul');
+// main.append(btn, ul);
+// btn.textContent = 'Видалити останній пункт';
+
+// for (let i = 1; i <= 10; i++) {
+//   const li = document.createElement('li');
+//   li.textContent = `Пункт ${i}`;
+//   ul.append(li);
+// }
+
+// btn.addEventListener('click', () => {
+//   if (ul.lastElementChild) {
+//     ul.lastElementChild.remove();
+//   }
+// });
+
 //! =============================================
 
 //? №6
 //? Дана кнопка и список ul, заполненный пунктами.По клику на кнопку удалите случайный пункт списка.
+
+// const main = document.querySelector('main');
+// const btn = document.createElement('button');
+// btn.textContent = 'Видалити випадковий пункт';
+// const ul = document.createElement('ul');
+// main.append(btn, ul);
+// for (let i = 1; i <= 10; i++) {
+//   const li = document.createElement('li');
+//   li.textContent = `Пункт №${i}`;
+//   ul.append(li);
+// }
+
+// btn.addEventListener('click', () => {
+//   const items = ul.querySelectorAll('li');
+//   if (items.length === 0) return;
+//   items[Math.floor(Math.random() * items.length)].remove();
+// });
 
 //! =============================================
 
