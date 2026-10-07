@@ -20,7 +20,7 @@
 //   });
 // });
 
-//! =============================================
+//* =============================================
 
 //? №2
 //? Дана кнопка и пустой список ul. По клику на кнопку заполните список числами от 1 до 10.
@@ -39,7 +39,7 @@
 //   });
 // });
 
-//! =============================================
+//* =============================================
 
 //? №3
 //? Дана кнопка и пустой список ul. По клику на кнопку добавьте в конец списка новый пункт с текстом '!'.
@@ -55,7 +55,7 @@
 //   ul.append(li);
 // });
 
-//! =============================================
+//* =============================================
 
 //? №4
 //? Дана кнопка и пустой список ul. По клику на кнопку добавьте в конец списка новый пункт с порядковым номером.
@@ -73,7 +73,7 @@
 //   ul.append(li);
 // });
 
-//! =============================================
+//* =============================================
 
 //? №5
 //? Дана кнопка и список ul, заполненный пунктами. По клику на кнопку удалите последний пункт списка.
@@ -96,7 +96,7 @@
 //   }
 // });
 
-//! =============================================
+//* =============================================
 
 //? №6
 //? Дана кнопка и список ul, заполненный пунктами.По клику на кнопку удалите случайный пункт списка.
@@ -127,17 +127,79 @@
 //? №1
 //? По клику на кнопку создайте HTML таблицу с заданной шириной и высотой.
 
-//! =============================================
+// const main = document.querySelector('main');
+// const btn = document.createElement('button');
+
+// btn.textContent = 'Створити таблицю';
+// main.append(btn);
+
+// btn.addEventListener('click', () => {
+//   const table = document.createElement('table');
+
+//   for (let i = 0; i < 5; i++) {
+//     const tr = document.createElement('tr');
+
+//     for (let j = 0; j < 4; j++) {
+//       const td = document.createElement('td');
+//       td.textContent = `${i + 1}:${j + 1}`;
+//       tr.append(td);
+//     }
+
+//     table.append(tr);
+//   }
+
+//   main.append(table);
+// });
+
+//* =============================================
 
 //? №2
 //? По клику на кнопку создайте HTML таблицу с заданной шириной и высотой так, чтобы в ячейках стояли их порядковые номера.
 
-//! =============================================
+// const main = document.querySelector('main');
+// const btn = document.createElement('button');
+// btn.textContent = 'Створити HTML таблицю';
+// main.append(btn);
+// btn.addEventListener('click', () => {
+//   const table = document.createElement('table');
+//   let num = 0;
+//   for (let i = 1; i <= 5; i++) {
+//     const tr = document.createElement('tr');
+//     for (let j = 1; j <= 4; j++) {
+//       const td = document.createElement('td');
+//       td.textContent = num += 1;
+//       tr.append(td);
+//     }
+//     table.append(tr);
+//   }
+//   main.append(table);
+// });
+
+//* =============================================
 
 //? №3
 //? По клику на кнопку создайте HTML таблицу с заданной шириной и высотой так, чтобы в ячейках стояли номера их рядов и колонок.
 
-//! =============================================
+// const main = document.querySelector('main');
+// const btn = document.createElement('button');
+// btn.textContent = 'Створити HTML таблицю';
+// main.append(btn);
+// btn.addEventListener('click', () => {
+//   const table = document.createElement('table');
+
+//   for (let i = 1; i <= 5; i++) {
+//     const tr = document.createElement('tr');
+//     for (let j = 1; j <= 4; j++) {
+//       const td = document.createElement('td');
+//       td.textContent = `${i} : ${j}`;
+//       tr.append(td);
+//     }
+//     table.append(tr);
+//   }
+//   main.append(table);
+// });
+
+//* =============================================
 
 //? №4
 //? Дан массив:
@@ -148,10 +210,28 @@
 //? ]
 //? По нажатию на кнопку создайте таблицу, заполненную данными из этого массива.
 
-//! =============================================
-
-//? №3
-//? По клику на кнопку создайте HTML таблицу с заданной шириной и высотой так, чтобы в ячейках стояли номера их рядов и колонок.
+// const arrArr = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+// const main = document.querySelector('main');
+// const btn = document.createElement('button');
+// btn.textContent = 'Створити таблицю';
+// main.append(btn);
+// btn.addEventListener('click', () => {
+//   const table = document.createElement('table');
+//   for (let i = 0; i < arrArr.length; i++) {
+//     const tr = document.createElement('tr');
+//     for (let j = 0; j < arrArr[i].length; j++) {
+//       const td = document.createElement('td');
+//       td.textContent = arrArr[i][j];
+//       tr.append(td);
+//     }
+//     table.append(tr);
+//   }
+//   main.append(table);
+// });
 
 //! =============================================
 
@@ -162,12 +242,46 @@
 //? №1
 //? Дан абзац и кнопка. Пусть первое нажатие на кнопку красит абзац в красный цвет, а второе нажатие в зеленый.
 
-//! =============================================
+// const main = document.querySelector('main');
+// const text = document.createElement('p');
+// text.textContent = 'Абзац!';
+// const btn = document.createElement('button');
+// btn.textContent = 'Зминити колір';
+// main.append(text, btn);
+
+// btn.addEventListener('click', () => {
+//   text.style.color === 'red'
+//     ? (text.style.color = 'green')
+//     : (text.style.color = 'red');
+// });
+
+//* =============================================
 
 //? №2
 //? Дан список ul. По клику на любую li добавьте ей в конец ее порядковый номер в списке, но только один раз.
 
-//! =============================================
+// const arr = ['Перший', 'Другий', 'Один', 'Два', 'Три'];
+// const main = document.querySelector('main');
+// const ul = document.createElement('ul');
+// arr.forEach(item => {
+//   const li = document.createElement('li');
+//   li.textContent = item;
+//   ul.append(li);
+// });
+// main.append(ul);
+
+// ul.addEventListener('click', e => {
+//   if (e.target.tagName !== 'LI') {
+//     return;
+//   }
+//   const index = [...ul.children].indexOf(e.target) + 1;
+//   if (e.target.textContent.endsWith(`${index}`)) {
+//     return;
+//   }
+//   e.target.textContent += ` - ${index}`;
+// });
+
+//* =============================================
 
 // №3
 
