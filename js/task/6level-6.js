@@ -283,13 +283,58 @@
 
 //* =============================================
 
-// №3
+//? №3
+//? Дан список ul. По клику на любую li, если нажата клавиша Ctrl, удалите эту li из списка.
 
-// Дан список ul. По клику на любую li, если нажата клавиша Ctrl, удалите эту li из списка.
+// const arr = ['Перший', 'Другий', 'Один', 'Два', 'Три'];
+// const main = document.querySelector('main');
+// const ul = document.createElement('ul');
+// arr.forEach(item => {
+//   const li = document.createElement('li');
+//   li.textContent = item;
+//   ul.append(li);
+// });
+// main.append(ul);
 
-// №4
+// ul.addEventListener('click', e => {
+//   if (e.target.tagName !== 'LI') {
+//     return;
+//   }
 
-// There are more than 20 characters with translation, please reduce the translation content.
+//   if (e.ctrlKey) {
+//     e.target.remove();
+//   }
+// });
+
+//* =============================================
+
+//? №4
+//? Дан абзац с числом и кнопка. По нажатию на кнопку пусть число из абзаца каждую секунду увеличивается на единицу.
+
+const main = document.querySelector('main');
+const num = document.createElement('p');
+num.textContent = '0';
+
+const btn = document.createElement('button');
+btn.textContent = 'Збільшити';
+
+main.append(num, btn);
+
+let res = Number(num.textContent);
+let intervalId;
+
+btn.addEventListener('mousedown', () => {
+  intervalId = setInterval(() => {
+    res += 1;
+    num.textContent = res;
+  }, 1000);
+});
+
+btn.addEventListener('mouseup', () => {
+  clearInterval(intervalId);
+});
+
+//* =============================================
 
 // №5
 
