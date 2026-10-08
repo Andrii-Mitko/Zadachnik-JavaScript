@@ -59,6 +59,34 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
+input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  font: inherit;
+  color: #f8fafc;
+  background-color: #1e293b;
+  outline: none;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+input:hover {
+  border-color: #475569;
+}
+
+input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgb(96 165 250 / 20%);
+}
+
 p {
   min-height: 24px;
   margin: 20px 0;

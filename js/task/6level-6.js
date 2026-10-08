@@ -311,39 +311,63 @@
 //? №4
 //? Дан абзац с числом и кнопка. По нажатию на кнопку пусть число из абзаца каждую секунду увеличивается на единицу.
 
+// const main = document.querySelector('main');
+// const num = document.createElement('p');
+// num.textContent = '0';
+
+// const btn = document.createElement('button');
+// btn.textContent = 'Збільшити';
+
+// main.append(num, btn);
+
+// let res = Number(num.textContent);
+// let intervalId;
+
+// btn.addEventListener('mousedown', () => {
+//   intervalId = setInterval(() => {
+//     res += 1;
+//     num.textContent = res;
+//   }, 1000);
+// });
+
+// btn.addEventListener('mouseup', () => {
+//   clearInterval(intervalId);
+// });
+
+//* =============================================
+
+//? №5
+//? Дан инпут и абзац. В инпут вводится дата.Определите, была уже дата в текущем году.Результат выведите в абзац.
+
 const main = document.querySelector('main');
-const num = document.createElement('p');
-num.textContent = '0';
+const input = document.createElement('input');
+input.type = 'date';
+const text = document.createElement('p');
+main.append(input, text);
 
-const btn = document.createElement('button');
-btn.textContent = 'Збільшити';
+input.addEventListener('input', e => {
+  const date = new Date(e.target.value);
+  const today = new Date();
 
-main.append(num, btn);
-
-let res = Number(num.textContent);
-let intervalId;
-
-btn.addEventListener('mousedown', () => {
-  intervalId = setInterval(() => {
-    res += 1;
-    num.textContent = res;
-  }, 1000);
-});
-
-btn.addEventListener('mouseup', () => {
-  clearInterval(intervalId);
+  if (date.getFullYear() !== today.getFullYear()) {
+    text.textContent = 'Дата не належить цьому року';
+  } else if (date <= today) {
+    text.textContent = 'Дата вже була цього року';
+  } else {
+    text.textContent = 'Дата ще не була цього року';
+  }
 });
 
 //* =============================================
 
-// №5
+//! Уровень 6.4 задачника JavaScript
 
-// Дан инпут и абзац.В инпут вводится дата.Определите, была уже дата в текущем году.Результат выведите в абзац.
+//* =============================================
 
-// Уровень 6.4 задачника JavaScript
-// №1
+//? №1
+//? Дан список ul. Сделайте так, чтобы по клику на любую li она удалялась из списка.
 
-// Дан список ul. Сделайте так, чтобы по клику на любую li она удалялась из списка.
+//* =============================================
 
 // №2
 
