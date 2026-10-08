@@ -336,27 +336,27 @@
 
 //* =============================================
 
-//? №5
-//? Дан инпут и абзац. В инпут вводится дата.Определите, была уже дата в текущем году.Результат выведите в абзац.
+// //? №5
+// //? Дан инпут и абзац. В инпут вводится дата.Определите, была уже дата в текущем году.Результат выведите в абзац.
 
-const main = document.querySelector('main');
-const input = document.createElement('input');
-input.type = 'date';
-const text = document.createElement('p');
-main.append(input, text);
+// const main = document.querySelector('main');
+// const input = document.createElement('input');
+// input.type = 'date';
+// const text = document.createElement('p');
+// main.append(input, text);
 
-input.addEventListener('input', e => {
-  const date = new Date(e.target.value);
-  const today = new Date();
+// input.addEventListener('input', e => {
+//   const date = new Date(e.target.value);
+//   const today = new Date();
 
-  if (date.getFullYear() !== today.getFullYear()) {
-    text.textContent = 'Дата не належить цьому року';
-  } else if (date <= today) {
-    text.textContent = 'Дата вже була цього року';
-  } else {
-    text.textContent = 'Дата ще не була цього року';
-  }
-});
+//   if (date.getFullYear() !== today.getFullYear()) {
+//     text.textContent = 'Дата не належить цьому року';
+//   } else if (date <= today) {
+//     text.textContent = 'Дата вже була цього року';
+//   } else {
+//     text.textContent = 'Дата ще не була цього року';
+//   }
+// });
 
 //* =============================================
 
