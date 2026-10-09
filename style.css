@@ -41,6 +41,7 @@ button {
   color: #ffffff;
   background-color: #2563eb;
   cursor: pointer;
+  margin: 10px;
   transition:
     background-color 150ms ease,
     transform 150ms ease;
@@ -69,6 +70,7 @@ input {
   color: #f8fafc;
   background-color: #1e293b;
   outline: none;
+  margin: 10px;
   transition:
     border-color 150ms ease,
     box-shadow 150ms ease;

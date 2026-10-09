@@ -367,24 +367,113 @@
 //? №1
 //? Дан список ul. Сделайте так, чтобы по клику на любую li она удалялась из списка.
 
+// const arr = ['Перший', 'Другий', 'Один', 'Два', 'Три'];
+// const main = document.querySelector('main');
+// const ul = document.createElement('ul');
+// arr.forEach(item => {
+//   const li = document.createElement('li');
+//   li.textContent = item;
+//   ul.append(li);
+// });
+// main.append(ul);
+// ul.addEventListener('click', e => {
+//   if (e.target.tagName !== 'LI') {
+//     return;
+//   }
+//   e.target.remove();
+// });
+
 //* =============================================
 
-// №2
+//? №2
+//? Дан список ul и инпут. Сделайте так, чтобы по потери фокуса инпутом его текст становился новым пунктом списка.
 
-// Дан список ul и инпут. Сделайте так, чтобы по потери фокуса инпутом его текст становился новым пунктом списка.
+// const main = document.querySelector('main');
+// const ul = document.createElement('ul');
+// const input = document.createElement('input');
+// main.append(ul, input);
 
-// №3
+// input.addEventListener('focusout', e => {
+//   const li = document.createElement('li');
+//   li.textContent = e.target.value;
+//   ul.append(li);
+//   e.target.value = '';
+// });
 
-// Дана таблица из трех колонок, три инпута и кнопка. Сделайте так, чтобы по клику на кнопку в таблицу добавлялся новый ряд с текстами ячеек из инпутов.
+//* =============================================
 
-// №4
+//? №3
+//? Дана таблица из трех колонок, три инпута и кнопка. Сделайте так, чтобы по клику на кнопку в таблицу добавлялся новый ряд с текстами ячеек из инпутов.
 
-// Дан инпут и ul.В инпут вводится год.Выведите в список даты всех пятниц 13 - е в заданном году.
+// const main = document.querySelector('main');
 
-// Уровень 6.5 задачника JavaScript
-// №1
+// const input1 = document.createElement('input');
+// const input2 = document.createElement('input');
+// const input3 = document.createElement('input');
 
-// Дан абзац и инпут. В инпут вводится дата рождения юзера в формате год-месяц-день. Выведите в абзац, сколько полных лет юзеру.
+// const btn = document.createElement('button');
+// btn.textContent = 'Додати рядок';
+
+// const table = document.createElement('table');
+
+// main.append(input1, input2, input3, btn, table);
+
+// btn.addEventListener('click', () => {
+//   const tr = document.createElement('tr');
+
+//   for (const input of [input1, input2, input3]) {
+//     const td = document.createElement('td');
+//     td.textContent = input.value;
+//     tr.append(td);
+//   }
+
+//   table.append(tr);
+// });
+
+//* =============================================
+
+//? №4
+//? Дан инпут и ul.В инпут вводится год.Выведите в список даты всех пятниц 13 - е в заданном году.
+
+// const main = document.querySelector('main');
+
+// const input = document.createElement('input');
+// input.type = 'number';
+// input.placeholder = 'Введіть рік';
+
+// const ul = document.createElement('ul');
+
+// main.append(input, ul);
+
+// input.addEventListener('input', e => {
+//   const year = Number(e.target.value);
+
+//   ul.innerHTML = '';
+
+//   for (let month = 0; month < 12; month++) {
+//     const date = new Date(year, month, 13);
+
+//     if (date.getDay() !== 5) {
+//       continue;
+//     }
+
+//     const li = document.createElement('li');
+//     li.textContent = date.toLocaleDateString('uk-UA');
+
+//     ul.append(li);
+//   }
+// });
+
+//* =============================================
+
+//! Уровень 6.5 задачника JavaScript
+
+//* =============================================
+
+//? №1
+//? Дан абзац и инпут. В инпут вводится дата рождения юзера в формате год-месяц-день. Выведите в абзац, сколько полных лет юзеру.
+
+//* =============================================
 
 // №2
 
