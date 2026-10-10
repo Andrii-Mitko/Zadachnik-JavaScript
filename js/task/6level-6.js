@@ -551,43 +551,270 @@
 //? №4
 //? Дано произвольное количество инпутов и кнопка. В инпуты вводятся числа. По нажатию на кнопку найдите сумму введенных чисел и выведите в текст кнопки.
 
-//* =============================================
+// const main = document.querySelector('main');
+// const ul = document.createElement('ul');
+// const buttonInput = document.createElement('button');
+// buttonInput.textContent = 'Створити Input';
+// const buttonSum = document.createElement('button');
+// buttonSum.textContent = 'Сумма';
+// main.append(ul, buttonInput, buttonSum);
 
-// №5
+// buttonInput.addEventListener('click', () => {
+//   const li = document.createElement('li');
+//   const input = document.createElement('input');
+//   input.type = 'number';
+//   li.append(input);
+//   ul.append(li);
+// });
 
-// Даны два инпута, абзац и кнопка.В инпуты через запятую вводятся числа.По клику на кнопку выведите через запятую в абзац числа, которые есть в обоих инпутах.
-
-//* =============================================
-
-// Уровень 6.6 задачника JavaScript
-
-//* =============================================
-
-// №1
-
-// Дан массив, инпут, кнопка и абзац. В инпут вводится число. По нажатию на кнопку выведите в абзац элемент массива, номер которого введен в инпут.
-
-//* =============================================
-
-// №2
-
-// Дан абзац, кнопка и массив с цветами. Пусть нажатие на кнопку красит абзац в случайный цвет из массива.
-
-//* =============================================
-
-// №3
-
-// Дана таблица, кнопка и массив с цветами. Пусть нажатие на любую ячейку красит ее в случайный цвет из массива цветов.
+// buttonSum.addEventListener('click', () => {
+//   const numArr = [...document.querySelectorAll('ul li input')];
+//   const sum = numArr.reduce((z, num) => z + Number(num.value), 0);
+//   buttonSum.textContent = sum;
+// });
 
 //* =============================================
 
-// №4
+//? №5
+//? Даны два инпута, абзац и кнопка.В инпуты через запятую вводятся числа.По клику на кнопку выведите через запятую в абзац числа, которые есть в обоих инпутах.
 
-// Дан текстареа и див.В текстареа вводится текст.Сделайте так, чтобы по нажатию Shift + Enter этот текст добавился в див.
+// const main = document.querySelector('main');
+// const input1 = document.createElement('input');
+// input1.placeholder = '1,2,3...';
+// const input2 = document.createElement('input');
+// input2.placeholder = '1,2,3...';
+// const text = document.createElement('p');
+// const btn = document.createElement('button');
+// btn.textContent = 'Сравнить';
+// main.append(input1, input2, text, btn);
+
+// btn.addEventListener('click', () => {
+//   const numbers1 = input1.value.split(',').map(item => item.trim());
+//   const numbers2 = input2.value.split(',').map(item => item.trim());
+
+//   const commonNumbers = numbers1.filter(number => numbers2.includes(number));
+
+//   text.textContent = commonNumbers.join(', ');
+// });
 
 //* =============================================
 
-// Уровень 6.7 задачника JavaScript
+//! Уровень 6.6 задачника JavaScript
+
+//* =============================================
+
+//? №1
+//? Дан массив, инпут, кнопка и абзац. В инпут вводится число. По нажатию на кнопку выведите в абзац элемент массива, номер которого введен в инпут.
+
+// const main = document.querySelector('main');
+// main.style.display = 'flex';
+// main.style.flexDirection = 'column';
+// main.style.alignItems = 'center';
+// const words = ['яблуко', 'книга', 'сонце', 'річка'];
+// const input = document.createElement('input');
+// input.type = 'number';
+// const btn = document.createElement('button');
+// btn.textContent = 'Виявити';
+// const text = document.createElement('p');
+// main.append(words.join(', '), input, btn, text);
+
+// btn.addEventListener('click', () => {
+//   const index = Number(input.value) - 1;
+//   if (input.value === '' || index < 0 || index >= words.length) {
+//     return (text.textContent = `Введіть число від 1 до ${words.length}`);
+//   }
+//   text.textContent = words[index];
+// });
+
+//* =============================================
+
+//? №2
+//? Дан абзац, кнопка и массив с цветами. Пусть нажатие на кнопку красит абзац в случайный цвет из массива.
+
+// const main = document.querySelector('main');
+// const text = document.createElement('p');
+// text.textContent = 'При натисканні на кнопку колір тексту змінюватиметься!';
+// const btn = document.createElement('button');
+// btn.textContent = 'Змінити колір';
+// main.append(text, btn);
+
+const colors = [
+  '#FF1744',
+  '#F50057',
+  '#D500F9',
+  '#651FFF',
+  '#3D5AFE',
+  '#2979FF',
+  '#00B0FF',
+  '#00E5FF',
+  '#1DE9B6',
+  '#00E676',
+  '#76FF03',
+  '#C6FF00',
+  '#FFEA00',
+  '#FFC400',
+  '#FF9100',
+  '#FF3D00',
+  '#FF6E40',
+  '#FF5252',
+  '#E040FB',
+  '#7C4DFF',
+  '#448AFF',
+  '#40C4FF',
+  '#18FFFF',
+  '#64FFDA',
+  '#69F0AE',
+  '#B2FF59',
+  '#EEFF41',
+  '#FFFF00',
+  '#FFD740',
+  '#FFAB40',
+  '#F44336',
+  '#E91E63',
+  '#9C27B0',
+  '#673AB7',
+  '#3F51B5',
+  '#2196F3',
+  '#03A9F4',
+  '#00BCD4',
+  '#009688',
+  '#4CAF50',
+  '#8BC34A',
+  '#CDDC39',
+  '#FFEB3B',
+  '#FFC107',
+  '#FF9800',
+  '#FF5722',
+  '#795548',
+  '#9E9E9E',
+  '#607D8B',
+  '#00A8E8',
+  '#FF0080',
+  '#FF00FF',
+  '#A100FF',
+  '#5B00FF',
+  '#0055FF',
+  '#00A3FF',
+  '#00FFD1',
+  '#00FF88',
+  '#A8FF00',
+  '#FFE600',
+  '#FFB000',
+  '#FF5E00',
+  '#FF2E63',
+  '#FB5607',
+  '#8338EC',
+  '#3A86FF',
+  '#06D6A0',
+  '#FFD166',
+  '#EF476F',
+  '#118AB2',
+  '#F15BB5',
+  '#FEE440',
+  '#00BBF9',
+  '#00F5D4',
+  '#9B5DE5',
+  '#FF70A6',
+  '#FF9770',
+  '#FFD670',
+  '#E9FF70',
+  '#70D6FF',
+  '#B8F2E6',
+  '#FAF3DD',
+  '#CDB4DB',
+  '#FFC8DD',
+  '#A2D2FF',
+  '#FFADAD',
+  '#FFD6A5',
+  '#FDFFB6',
+  '#CAFFBF',
+  '#9BF6FF',
+  '#A0C4FF',
+  '#BDB2FF',
+  '#FFC6FF',
+  '#FFFFFC',
+  '#FF006E',
+  '#FB5607',
+  '#FFBE0B',
+  '#8338EC',
+  '#3A86FF',
+  '#06D6A0',
+  '#FF4D6D',
+  '#C9184A',
+  '#FF758F',
+  '#FFCCD5',
+  '#7209B7',
+  '#560BAD',
+  '#480CA8',
+  '#3F37C9',
+  '#4361EE',
+  '#4895EF',
+  '#4CC9F0',
+  '#2EC4B6',
+  '#CBF3F0',
+  '#FFBF69',
+  '#FF9F1C',
+];
+
+// btn.addEventListener('click', () => {
+//   const randomColor = colors[Math.floor(Math.random() * colors.length)];
+//   text.style.color = randomColor;
+// });
+
+//* =============================================
+
+//? №3
+//? Дана таблица, кнопка и массив с цветами. Пусть нажатие на любую ячейку красит ее в случайный цвет из массива цветов.
+
+// const table = document.createElement('table');
+
+// for (let i = 1; i <= 5; i++) {
+//   const tr = document.createElement('tr');
+//   for (let j = 1; j <= 5; j++) {
+//     const td = document.createElement('td');
+//     tr.append(td);
+//   }
+//   table.append(tr);
+// }
+// const btn = document.createElement('button');
+// btn.textContent = 'Сброс';
+
+// const main = document.querySelector('main');
+// main.append(table, btn);
+
+// table.addEventListener('click', e => {
+//   if (e.target.tagName !== 'TD') {
+//     return;
+//   }
+//   const randomColor = colors[Math.floor(Math.random() * colors.length)];
+//   e.target.style.backgroundColor = randomColor;
+// });
+
+// btn.addEventListener('click', () => {
+//   table.querySelectorAll('td').forEach(item => {
+//     item.style.backgroundColor = '';
+//   });
+// });
+
+//* =============================================
+
+//? №4
+//? Дан текстареа и див.В текстареа вводится текст.Сделайте так, чтобы по нажатию Shift + Enter этот текст добавился в див.
+
+// const main = document.querySelector('main');
+// const textarea = document.createElement('textarea');
+// const div = document.createElement('div');
+// main.append(textarea, div);
+// textarea.addEventListener('keydown', e => {
+//   if (e.shiftKey && e.key === 'Enter') {
+//     div.textContent = textarea.value;
+//     textarea.value = '';
+//   }
+// });
+
+//* =============================================
+
+//! Уровень 6.7 задачника JavaScript
 
 //* =============================================
 

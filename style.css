@@ -41,7 +41,7 @@ button {
   color: #ffffff;
   background-color: #2563eb;
   cursor: pointer;
-  margin: 10px;
+  margin: 20px;
   transition:
     background-color 150ms ease,
     transform 150ms ease;
@@ -70,7 +70,7 @@ input {
   color: #f8fafc;
   background-color: #1e293b;
   outline: none;
-  margin: 10px;
+  margin: 20px;
   transition:
     border-color 150ms ease,
     box-shadow 150ms ease;
@@ -91,7 +91,7 @@ input:focus {
 
 p {
   min-height: 24px;
-  margin: 20px 0;
+  margin: 20px;
   color: #cbd5e1;
 }
 
@@ -100,7 +100,7 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin: 20px 0 0;
+  margin: 20px;
   padding: 0;
   list-style: none;
 }
@@ -112,6 +112,12 @@ li {
   border-radius: 8px;
   color: #e2e8f0;
   background-color: #1e293b;
+}
+
+li:has(input) {
+  padding: 0;
+  border: 0;
+  background: none;
 }
 
 table {
