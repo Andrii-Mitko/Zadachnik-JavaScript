@@ -818,61 +818,182 @@ const colors = [
 
 //* =============================================
 
-// №1
+//? №1
+//? Выведите даты всех выходных дней текущего года в виде списка ul.
 
-// Выведите даты всех выходных дней текущего года в виде списка ul.
+// const main = document.querySelector('main');
+// const ul = document.createElement('ul');
+// main.append(ul);
+// const year = new Date().getFullYear();
 
-//* =============================================
+// for (let month = 0; month < 12; month++) {
+//   const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-// №2
+//   for (let day = 1; day <= daysInMonth; day++) {
+//     const date = new Date(year, month, day);
+//     const weekDay = date.getDay();
 
-// Дан абзац и кнопка. По клику на кнопку выведите в абзац название дня недели последнего дня текущего месяца.
-
-//* =============================================
-
-// №3
-
-// Дана кнопка и селект. По клику на кнопку заполните селект числами от первого до последнего дня текущего месяца.
-
-//* =============================================
-
-// №4
-
-// Дан инпут, кнопка и абзац.В инпут вводится число.По нажатию на кнопку выведите в абзац строку, состоящую из нулей, количество которых равно числу.Например, при вводе числа 5 у нас должна получится строка '00000'.
-
-//* =============================================
-
-// Уровень 6.8 задачника JavaScript
+//     if (weekDay === 0 || weekDay === 6) {
+//       const li = document.createElement('li');
+//       li.textContent = date.toLocaleDateString('uk-UA');
+//       ul.append(li);
+//     }
+//   }
+// }
 
 //* =============================================
 
-//* =============================================
+//? №2
+//? Дан абзац и кнопка. По клику на кнопку выведите в абзац название дня недели последнего дня текущего месяца.
 
-// №1
+// const main = document.querySelector('main');
+// const text = document.createElement('text');
+// const btn = document.createElement('button');
+// btn.textContent = 'День тиждня цього місяця';
+// main.append(text, btn);
 
-// Дана таблица. По клику на ячейку, если нажата клавиша Shift, красьте ячейку в красный цвет, а если клавиша Ctrl, то в зеленый.
+// btn.addEventListener('click', () => {
+//   const lastDay = new Date(
+//     new Date().getFullYear(),
+//     new Date().getMonth() + 1,
+//     0,
+//   );
+//   const weekday = lastDay.toLocaleDateString('uk-UA', { weekday: 'long' });
 
-//* =============================================
-
-// №2
-
-// Дан див и кнопка.По первому клику на кнопку покажите див, а по второму клику - спрячьте.
-
-//* =============================================
-
-// Уровень 6.9 задачника JavaScript
-
-//* =============================================
-
-// №1
-
-// Дан абзац, кнопка и массив с цветами. Пусть нажатие на кнопку красит абзац в следующий цвет из массива и так по кругу.
+//   text.textContent = weekday;
+// });
 
 //* =============================================
 
-// №2
+//? №3
+//? Дана кнопка и селект. По клику на кнопку заполните селект числами от первого до последнего дня текущего месяца.
 
-// Дан абзац и два инпута. В инпуты вводятся даты. Выведите в абзац, сколько дней между введенными датами.
+// const main = document.querySelector('main');
+// const btn = document.createElement('button');
+// btn.textContent = 'Дати';
+// const select = document.createElement('select');
+// main.append(btn, select);
+// btn.addEventListener('click', () => {
+//   const lastDay = new Date(
+//     new Date().getFullYear(),
+//     new Date().getMonth() + 1,
+//     0,
+//   ).getDate();
+
+//   select.replaceChildren();
+
+//   for (let day = 1; day <= lastDay; day++) {
+//     const option = document.createElement('option');
+//     option.textContent = day;
+//     select.append(option);
+//   }
+// });
+
+//* =============================================
+
+//? №4
+//? Дан инпут, кнопка и абзац.В инпут вводится число.По нажатию на кнопку выведите в абзац строку, состоящую из нулей, количество которых равно числу.Например, при вводе числа 5 у нас должна получится строка '00000'.
+
+// const main = document.querySelector('main');
+// const input = document.createElement('input');
+// input.type = 'number';
+// const btn = document.createElement('button');
+// btn.textContent = 'Тисни тут';
+// const text = document.createElement('p');
+// main.append(input, btn, text);
+
+// btn.addEventListener('click', () => {
+//   const arr = input.value
+//     .split('')
+//     .map(num => (num = '0'))
+//     .join(' ');
+//   text.textContent = String(arr);
+// });
+
+//* =============================================
+
+//! Уровень 6.8 задачника JavaScript
+
+//* =============================================
+
+//? №1
+//? Дана таблица. По клику на ячейку, если нажата клавиша Shift, красьте ячейку в красный цвет, а если клавиша Ctrl, то в зеленый.
+
+// const main = document.querySelector('main');
+// const table = document.createElement('table');
+
+// for (let i = 1; i <= 5; i++) {
+//   const tr = document.createElement('tr');
+//   for (let j = 1; j <= 4; j++) {
+//     const td = document.createElement('td');
+//     td.textContent = `${i}, ${j}`;
+//     tr.append(td);
+//   }
+//   table.append(tr);
+// }
+
+// main.append(table);
+
+// table.addEventListener('click', e => {
+//   if (e.target.tagName !== 'TD') {
+//     return;
+//   }
+//   if (e.shiftKey) {
+//     e.target.style.backgroundColor = 'red';
+//   }
+//   if (e.ctrlKey) {
+//     e.target.style.backgroundColor = 'green';
+//   }
+// });
+
+//* =============================================
+
+//? №2
+//? Дан див и кнопка.По первому клику на кнопку покажите див, а по второму клику - спрячьте.
+
+// const main = document.querySelector('main');
+// const div = document.querySelector('.div');
+// div.style.width = '100%';
+// div.style.height = '200px';
+// div.style.backgroundColor = 'green';
+// div.style.display = 'none';
+// const btn = document.createElement('button');
+// btn.textContent = 'Показати';
+// main.append(div, btn);
+
+// btn.addEventListener('click', () => {
+//   div.style.display === 'none'
+//     ? (div.style.display = 'block')
+//     : (div.style.display = 'none');
+// });
+
+//* =============================================
+
+//! Уровень 6.9 задачника JavaScript
+
+//* =============================================
+
+//? №1
+//? Дан абзац, кнопка и массив с цветами. Пусть нажатие на кнопку красит абзац в следующий цвет из массива и так по кругу.
+
+// const main = document.querySelector('main');
+// const text = document.createElement('p');
+// text.textContent = 'Путин - хуйло!';
+// const btn = document.createElement('button');
+// btn.textContent = 'Зминити колір';
+// main.append(text, btn);
+
+// let index = 0;
+
+// btn.addEventListener('click', () => {
+//   text.style.color = colors[index];
+//   index = (index + 1) % colors.length;
+// });
+
+//* =============================================
+
+//? №2
+//? Дан абзац и два инпута. В инпуты вводятся даты. Выведите в абзац, сколько дней между введенными датами.
 
 //* =============================================
 
@@ -888,7 +1009,7 @@ const colors = [
 
 //* =============================================
 
-// Уровень 6.10 задачника JavaScript
+//! Уровень 6.10 задачника JavaScript
 
 //* =============================================
 
