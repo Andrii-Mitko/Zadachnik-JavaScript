@@ -995,17 +995,76 @@ const colors = [
 //? №2
 //? Дан абзац и два инпута. В инпуты вводятся даты. Выведите в абзац, сколько дней между введенными датами.
 
+// const main = document.querySelector('main');
+// const text = document.createElement('p');
+// const input1 = document.createElement('input');
+// input1.type = 'date';
+// const input2 = document.createElement('input');
+// input2.type = 'date';
+// main.append(text, input1, input2);
+
+// input2.addEventListener('change', () => {
+//   if (!input1.value || !input2.value) return;
+//   const mDay =
+//     Math.abs(new Date(input1.value) - new Date(input2.value)) /
+//     (1000 * 60 * 60 * 24);
+//   text.textContent = mDay;
+// });
+
 //* =============================================
 
-// №3
+//? №3
+//? Дан список ul. По клику на любую li записывайте в конец ее текста порядковый номер клика по этой li.
 
-// Дан список ul. По клику на любую li записывайте в конец ее текста порядковый номер клика по этой li.
+// const main = document.querySelector('main');
+// const ul = document.createElement('ul');
+// const arr = [
+//   'яблуко',
+//   'будинок',
+//   'машина',
+//   'книга',
+//   'сонце',
+//   'дерево',
+//   'вода',
+//   'комп’ютер',
+//   'телефон',
+//   'квітка',
+// ];
+// arr.forEach(item => {
+//   const li = document.createElement('li');
+//   li.textContent = item;
+//   ul.append(li);
+// });
+// main.append(ul);
+
+// ul.addEventListener('click', e => {
+//   if (e.target.tagName !== 'LI') return;
+
+//   const count = Number(e.target.dataset.count || 0) + 1;
+
+//   e.target.dataset.count = count;
+//   e.target.textContent = e.target.textContent.replace(/\s*\(\d+\)$/, '');
+//   e.target.textContent += ` (${count})`;
+// });
 
 //* =============================================
 
-// №4
+//? №4
+//? Дана кнопка и список ul, заполненный пунктами с числами.По клику на кнопку добавляйте новую li с числом, на единицу больше числа последей li из списка.
 
-// Дана кнопка и список ul, заполненный пунктами с числами.По клику на кнопку добавляйте новую li с числом, на единицу больше числа последей li из списка.
+// const main = document.querySelector('main');
+// const btn = document.createElement('button');
+// btn.textContent = 'Додати число';
+// const ul = document.createElement('ul');
+// ul.innerHTML = '<li>1</li><li>2</li><li>3</li>';
+// main.append(btn, ul);
+
+// btn.addEventListener('click', () => {
+//   const num = Number(ul.lastElementChild.textContent) + 1;
+//   const li = document.createElement('li');
+//   li.textContent = num;
+//   ul.append(li);
+// });
 
 //* =============================================
 
@@ -1013,15 +1072,46 @@ const colors = [
 
 //* =============================================
 
-// №1
+//? №1
+//? Дана кнопка, инпут и список ul, В инпут вводится текст. По клику на кнопку добавьте в список новую li с этим текстом, но только если этот текст больше текста последнего тега li из списка.
 
-// Дана кнопка, инпут и список ul, В инпут вводится текст. По клику на кнопку добавьте в список новую li с этим текстом, но только если этот текст больше текста последнего тега li из списка.
+// const main = document.querySelector('main');
+// const btn = document.createElement('button');
+// btn.textContent = 'Додати текст';
+// const input = document.createElement('input');
+// const ul = document.createElement('ul');
+// ul.innerHTML = `<li>1</li><li>2</li><li>3</li>`;
+// main.append(btn, input, ul);
+
+// btn.addEventListener('click', () => {
+//   if (ul.lastElementChild.textContent.length < input.value.length) {
+//     const li = document.createElement('li');
+//     li.textContent = input.value;
+//     ul.append(li);
+//     input.value = '';
+//   }
+// });
 
 //* =============================================
 
-// №2
+//? №2
+//? Сделайте вручную HTML таблицу 8 на 8. По нажатию на кнопку покрасьте каждую четную ячейку в белый цвет, а нечетную - в черный.
 
-// Сделайте вручную HTML таблицу 8 на 8. По нажатию на кнопку покрасьте каждую четную ячейку в белый цвет, а нечетную - в черный.
+const main = document.querySelector('main');
+
+const table = document.createElement('table');
+
+for (let i = 1; i <= 8; i++) {
+  const tr = document.createElement('tr');
+
+  for (let j = 1; j <= 8; j++) {
+    const td = document.createElement('td');
+    td.textContent = `i, j`;
+    tr.append(td);
+  }
+
+  table.append(tr);
+}
 
 //* =============================================
 
@@ -1034,55 +1124,3 @@ const colors = [
 // №4
 
 // Даны текстареа, инпут и кнопка. В текстареа вводится текст со словами. В инпут вводится слово. По нажатию на кнопку выведите на экран, сколько раз встречается это слово в веденном тексте.
-
-//! ============================================
-
-// 	"Вставляє цей HTML в список": {
-//     "prefix": "js arrey HTML в список",
-//     "body": [
-//       "function itemTemplate(item) {",
-//       "  return `<li>\\${item}</li>`;",
-//       "}",
-//       "",
-//       "function itemsTemplate(arr) {",
-//       "  return arr.map(itemTemplate).join('');",
-//       "}",
-//       "",
-//       "button.addEventListener('click', () => {",
-//       "ul.innerHTML = itemsTemplate(arr);",
-//       "});",
-//     ],
-//     "description": "Create UL list from array with templates"
-//   },
-
-//! ============================================
-
-// По клику на кнопку создание HTML таблици с заданной шириной и высотой.
-//   btn.addEventListener('click', () => {
-//     const rows = 4;      // высота (кол-во строк)
-//     const cols = 5;      // ширина (кол-во колонок)
-
-//     const table = document.createElement('table');
-//     table.style.borderCollapse = 'collapse';
-
-//     for (let i = 0; i < rows; i++) {
-//         const tr = document.createElement('tr');
-
-//         for (let j = 0; j < cols; j++) {
-//             const td = document.createElement('td');
-//             td.textContent = `${i + 1}-${j + 1}`;
-//             td.style.border = '1px solid black';
-//             td.style.padding = '5px';
-//             td.style.width = '50px';
-//             td.style.height = '50px';
-
-//             tr.append(td);
-//         }
-
-//         table.append(tr);
-//     }
-
-//     div.append(table);
-// });
-
-//! ============================================
