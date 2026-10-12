@@ -1097,30 +1097,91 @@ const colors = [
 //? №2
 //? Сделайте вручную HTML таблицу 8 на 8. По нажатию на кнопку покрасьте каждую четную ячейку в белый цвет, а нечетную - в черный.
 
+// const main = document.querySelector('main');
+// const table = document.createElement('table');
+// table.innerHTML = ` <tr>
+//     <td></td><td></td><td></td><td></td>
+//     <td></td><td></td><td></td><td></td>
+//   </tr>
+//   <tr>
+//     <td></td><td></td><td></td><td></td>
+//     <td></td><td></td><td></td><td></td>
+//   </tr>
+//   <tr>
+//     <td></td><td></td><td></td><td></td>
+//     <td></td><td></td><td></td><td></td>
+//   </tr>
+//   <tr>
+//     <td></td><td></td><td></td><td></td>
+//     <td></td><td></td><td></td><td></td>
+//   </tr>
+//   <tr>
+//     <td></td><td></td><td></td><td></td>
+//     <td></td><td></td><td></td><td></td>
+//   </tr>
+//   <tr>
+//     <td></td><td></td><td></td><td></td>
+//     <td></td><td></td><td></td><td></td>
+//   </tr>
+//   <tr>
+//     <td></td><td></td><td></td><td></td>
+//     <td></td><td></td><td></td><td></td>
+//   </tr>
+//   <tr>
+//     <td></td><td></td><td></td><td></td>
+//     <td></td><td></td><td></td><td></td>
+//   </tr>`;
+// const btn = document.createElement('button');
+// btn.textContent = 'Шахмати';
+// main.append(table, btn);
+
+// btn.addEventListener('click', () => {
+//   const arrTD = [...table.querySelectorAll('td')];
+
+//   arrTD.forEach((item, index) => {
+//     item.style.backgroundColor = index % 2 === 0 ? 'black' : 'white';
+//     item.style.width = '50px';
+//     item.style.height = '50px';
+//   });
+// });
+
+//* =============================================
+
+//? №3
+//? Напишите код, который выведет на экран таблицу умножения.
+
+// const main = document.querySelector('main');
+// const table = document.createElement('table');
+
+// for (let i = 1; i <= 10; i++) {
+//   const tr = document.createElement('tr');
+
+//   for (let j = 1; j <= 10; j++) {
+//     const td = document.createElement('td');
+//     td.textContent = i * j;
+
+//     if (i === 1 || j === 1) {
+//       td.style.backgroundColor = 'grey';
+//       td.style.fontWeight = 'bold';
+//     }
+
+//     tr.append(td);
+//   }
+
+//   table.append(tr);
+// }
+
+// main.append(table);
+//* =============================================
+
+//? №4
+//? Даны текстареа, инпут и кнопка. В текстареа вводится текст со словами. В инпут вводится слово. По нажатию на кнопку выведите на экран, сколько раз встречается это слово в веденном тексте.
+
 const main = document.querySelector('main');
+const textArea = document.createElement('textarea');
+const input = document.createElement('input');
+const btn = document.createElement('button');
+btn.textContent = 'Количество';
+main.append(textArea, input, btn);
 
-const table = document.createElement('table');
-
-for (let i = 1; i <= 8; i++) {
-  const tr = document.createElement('tr');
-
-  for (let j = 1; j <= 8; j++) {
-    const td = document.createElement('td');
-    td.textContent = `i, j`;
-    tr.append(td);
-  }
-
-  table.append(tr);
-}
-
-//* =============================================
-
-// №3
-
-// Напишите код, который выведет на экран таблицу умножения.
-
-//* =============================================
-
-// №4
-
-// Даны текстареа, инпут и кнопка. В текстареа вводится текст со словами. В инпут вводится слово. По нажатию на кнопку выведите на экран, сколько раз встречается это слово в веденном тексте.
+btn.addEventListener('click', () => {});
