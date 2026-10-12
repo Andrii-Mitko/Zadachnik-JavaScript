@@ -1177,11 +1177,20 @@ const colors = [
 //? №4
 //? Даны текстареа, инпут и кнопка. В текстареа вводится текст со словами. В инпут вводится слово. По нажатию на кнопку выведите на экран, сколько раз встречается это слово в веденном тексте.
 
-const main = document.querySelector('main');
-const textArea = document.createElement('textarea');
-const input = document.createElement('input');
-const btn = document.createElement('button');
-btn.textContent = 'Количество';
-main.append(textArea, input, btn);
+// const main = document.querySelector('main');
+// const textArea = document.createElement('textarea');
+// const input = document.createElement('input');
+// const btn = document.createElement('button');
+// btn.textContent = 'Количество';
+// const text = document.createElement('p');
+// main.append(textArea, input, btn, text);
 
-btn.addEventListener('click', () => {});
+// btn.addEventListener('click', () => {
+//   const count = textArea.value.split(' ').reduce((total, word) => {
+//     if (word === input.value) {
+//       return total + 1;
+//     }
+//     return total;
+//   }, 0);
+//   text.textContent = count;
+// });
