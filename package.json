@@ -1,21 +1,23 @@
 {
-  "name": "zadachnik-javascript",
+  "name": "individual-lessons",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "03.06",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx parcel src/index.html",
+    "push": "git add . ; git commit -m '123'; git push;"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Andrii-Mitko/Zadachnik-JavaScript.git"
+    "url": "git+https://github.com/GoITteacher/Individual-lessons.git"
   },
   "keywords": [],
-  "author": "Andrii_Mitko <andreymit123@gmail.com>",
+  "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/Andrii-Mitko/Zadachnik-JavaScript/issues"
+    "url": "https://github.com/GoITteacher/Individual-lessons/issues"
   },
-  "homepage": "https://github.com/Andrii-Mitko/Zadachnik-JavaScript#readme"
+  "homepage": "https://github.com/GoITteacher/Individual-lessons#readme",
+  "dependencies": {
+    "parcel": "^2.9.3"
+  }
 }
