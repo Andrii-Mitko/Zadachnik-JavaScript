@@ -1,7 +1,5 @@
 //? Example 1 - Майстерня коштовностей
-
 //? Напишіть метод calcTotalPrice(stoneName), який приймає назву каменю та розраховує та повертає загальну вартість каменів з таким ім'ям, ціною та кількістю із властивості stones.
-
 //? const chopShop = {
 //?   stones: [
 //?     { name: 'Emerald', price: 1300, quantity: 4 },
@@ -11,7 +9,6 @@
 //?   ],
 //?   calcTotalPrice(stoneName) {},
 //? };
-
 //? console.log(chopShop.calcTotalPrice('Emerald')); // 5200
 //? console.log(chopShop.calcTotalPrice('Diamond')); // 8100
 //? console.log(chopShop.calcTotalPrice('Sapphire')); // 9800
@@ -26,11 +23,9 @@
 //   ],
 //   calcTotalPrice(stoneName) {
 //     const stone = this.stones.find(item => item.name === stoneName);
-
 //     if (!stone) {
 //       return 0;
 //     }
-
 //     return stone.price * stone.quantity;
 //   },
 // };
@@ -42,13 +37,40 @@
 
 //* =============================================
 
-// Example 2 - Телефонна книга
-
-// Виконайте рефакторинг методів об'єкта phonebook, щоб код запрацював.
+//? Example 2 - Телефонна книга
+//? Виконайте рефакторинг методів об'єкта phonebook, щоб код запрацював.
+//? const phonebook = {
+//?   contacts: [],
+//?   add(contact) {},
+//?   generateId() {
+//?     return '_' + Math.random().toString(36).substr(2, 9);
+//?   },
+//?   getDate() {
+//?     return Date.now();
+//?   },
+//? };
+//? console.log(
+//?   phonebook.add({
+//?     name: 'Mango',
+//?     email: 'mango@mail.com',
+//?     list: 'friends',
+//?   }),
+//? );
+//? console.log(
+//?   phonebook.add({
+//?     name: 'Poly',
+//?     email: 'poly@hotmail.com',
+//?   }),
+//? );
 
 // const phonebook = {
 //   contacts: [],
-//   add(contact) {},
+//   add(contact) {
+//     contact.id = this.generateId();
+//     contact.time = this.getDate();
+//     this.contacts.push(contact);
+//     return contact;
+//   },
 //   generateId() {
 //     return '_' + Math.random().toString(36).substr(2, 9);
 //   },
@@ -73,11 +95,22 @@
 
 //* =============================================
 
-// Example 3 - Калькулятор
+//? Example 3 - Калькулятор
+//? Створіть об'єкт calculator з трьома методами:
+//? read(a, b)- приймає два значення та зберігає їх як властивості об'єкта.
+//? add() - повертає суму збережених значень.
+//? mult() - перемножує збережені значення та повертає результат.
+//? const calculator = {};
 
-// Створіть об'єкт calculator з трьома методами:
-
-// read(a, b)- приймає два значення та зберігає їх як властивості об'єкта.
-// add() - повертає суму збережених значень.
-// mult() - перемножує збережені значення та повертає результат.
-// const calculator = {};
+// const calculator = {
+//   read(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   },
+//   add() {
+//     return this.a + this.b;
+//   },
+//   mult() {
+//     return this.a * this.b;
+//   },
+// };
