@@ -67,16 +67,6 @@ td {
   overflow-y: auto;
 }
 
-.user-item {
-  background-color: tomato;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 15px;
-  width: 300px;
-  overflow-y: hidden;
-  cursor: pointer;
-}
-
 li {
   list-style-type: none;
 }
@@ -132,12 +122,17 @@ input:focus {
   outline: none;
 }
 
-.task {
+.item {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  overflow-y: hidden;
+  cursor: pointer;
   width: 400px;
   border: 1px solid rgb(49, 49, 49);
 }
 
-.task-desc {
+.item-desc {
   height: 150px;
   overflow-y: auto;
 }
@@ -154,22 +149,12 @@ input:focus {
   border: 2px solid rgb(163, 68, 68);
 }
 
-#userId {
-}
-.reawd {
+/*----------------------------*/
+
+.active-item {
+  border: 1px solid red;
 }
 
-body {
-}
-
-body ul {
-}
-
-body > ul {
-}
-
-[src="hello.url"] {
-}
-
-ul > li {
+li.disabled {
+  opacity: 0.3;
 }
