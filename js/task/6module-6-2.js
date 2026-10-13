@@ -1,37 +1,154 @@
-//*  ===================================================================================================
+//*  ==================================================================================
 
 //? 1
 //? Клас Calculator: Реалізуйте клас Calculator, який матиме методи для
 //? Основні математичні операції: add, subtract, multiply, і divide. Кожен
 //? метод прийматиме два числа і повертатиме результат відповідної операції.
 
-class Calculator {
-  constructor(num1, num2) {
-    this.num1 = num1;
-    this.num2 = num2;
-  }
-  add() {}
-  subtract() {}
-  multiply() {}
-  divide() {}
-}
+// class Calculator {
+//   constructor(num1, num2) {
+//     this.num1 = num1;
+//     this.num2 = num2;
+//   }
+//   add() {
+//     return this.num1 + this.num2;
+//   }
+//   subtract() {
+//     return this.num1 - this.num2;
+//   }
+//   multiply() {
+//     return this.num1 * this.num2;
+//   }
+//   divide() {
+//     return this.num1 / this.num2;
+//   }
+// }
+// const calculator = new Calculator(10, 2);
+// console.log(calculator.add());
+// console.log(calculator.subtract());
+// console.log(calculator.multiply());
+// console.log(calculator.divide());
 
-//*  ===================================================================================================
+//*  ==================================================================================
 
-// 2
-// Клас ContactBook: Створіть клас Contact для подання контакту з полями name, email та phone. Потім реалізуйте клас ContactBook, який зберігатиме список контактів та надавати методи для додавання, видалення та пошуку контактів.
+//? 2
+//? Клас ContactBook: Створіть клас Contact для подання контакту з полями name, email та phone. Потім реалізуйте клас ContactBook, який зберігатиме список контактів та надавати методи для додавання, видалення та пошуку контактів.
 
-//!  ================================================================================================================
+// class Contact {
+//   constructor(name, email, phone) {
+//     this.name = name;
+//     this.email = email;
+//     this.phone = phone;
+//   }
+// }
+
+// class ContactBook {
+//   constructor() {
+//     this.contacts = [];
+//   }
+
+//   addContact(contact) {
+//     this.contacts.push(contact);
+//   }
+
+//   removeContact(name) {
+//     const index = this.contacts.findIndex(contact => contact.name === name);
+
+//     if (index !== -1) {
+//       this.contacts.splice(index, 1);
+//       return true;
+//     }
+
+//     return false;
+//   }
+
+//   searchContact(name) {
+//     return this.contacts.find(contact => contact.name === name);
+//   }
+// }
+
+// const book = new ContactBook();
+
+// const contact1 = new Contact('Андрій', 'andrii@gmail.com', '0991234567');
+
+// const contact2 = new Contact('Олена', 'olena@gmail.com', '0671234567');
+
+// book.addContact(contact1);
+// book.addContact(contact2);
+
+// console.log(book.contacts);
+// console.log(book.searchContact('Андрій'));
+
+// book.removeContact('Андрій');
+
+// console.log(book.contacts);
+
+//*  ==================================================================================
 
 //? 3
-// Клас Rectangle: Напишіть клас Rectangle, який представлятиме прямокутник з методами для обчислення його площі та периметра. Конструктор клас повинен приймати довжини двох сторін.
+//? Клас Rectangle: Напишіть клас Rectangle, який представлятиме прямокутник з методами для обчислення його площі та периметра. Конструктор клас повинен приймати довжини двох сторін.
 
-//!  ================================================================================================================
+// class Rectangle {
+//   constructor(length, width) {
+//     this.length = length;
+//     this.width = width;
+//   }
+//   area() {
+//     return this.length * this.width;
+//   }
+//   perimeter() {
+//     return (this.length + this.width) * 2;
+//   }
+// }
+
+// const rectangle = new Rectangle(10, 5);
+// console.log(rectangle.area());
+// console.log(rectangle.perimeter());
+
+//*  ==================================================================================
 
 //? 4
-// Клас ToDoList: Створіть клас Task для представлення задач з полями title, description та completed. Потім реалізуйте клас ToDoList, який зберігатиме список задач та методи для додавання нових завдань, позначки задачі як виконаної та виведення списку завдань.
+//? Клас ToDoList: Створіть клас Task для представлення задач з полями title, description та completed. Потім реалізуйте клас ToDoList, який зберігатиме список задач та методи для додавання нових завдань, позначки задачі як виконаної та виведення списку завдань.
 
-//!  ================================================================================================================
+// class Task {
+//   constructor(title, description, completed) {
+//     this.title = title;
+//     this.description = description;
+//     this.completed = false;
+//   }
+// }
+
+// class ToDoList {
+//   constructor() {
+//     this.tasks = [];
+//   }
+//   addTask(task) {
+//     this.tasks.push(task);
+//   }
+//   taskCompleted(title) {
+//     const task = this.tasks.find(task => task.title === title);
+//     if (!task) return;
+//     task.completed = true;
+//     return task;
+//   }
+//   tasksList() {
+//     return this.tasks;
+//   }
+// }
+
+// const todo = new ToDoList();
+
+// const task1 = new Task('Вивчити JavaScript', 'Розібрати класи');
+// const task2 = new Task('Вивчити масиви', 'Повторити метод find');
+
+// todo.addTask(task1);
+// todo.addTask(task2);
+
+// todo.taskCompleted('Вивчити JavaScript');
+
+// console.log(todo.tasksList());
+
+//*  ==================================================================================
 
 //? 5
 // Клас BankAccount: Реалізуйте клас BankAccount, який представлятиме банківський рахунок із методами для депозиту, зняття коштів та перевірки балансу. Врахуйте обробку можливих помилок (наприклад, недостатньо коштів).
