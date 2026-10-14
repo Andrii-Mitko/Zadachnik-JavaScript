@@ -140,35 +140,132 @@
 
 // const task1 = new Task('Вивчити JavaScript', 'Розібрати класи');
 // const task2 = new Task('Вивчити масиви', 'Повторити метод find');
-
-// todo.addTask(task1);
-// todo.addTask(task2);
-
-// todo.taskCompleted('Вивчити JavaScript');
-
 // console.log(todo.tasksList());
 
 //*  ==================================================================================
 
 //? 5
-// Клас BankAccount: Реалізуйте клас BankAccount, який представлятиме банківський рахунок із методами для депозиту, зняття коштів та перевірки балансу. Врахуйте обробку можливих помилок (наприклад, недостатньо коштів).
+//? Клас BankAccount: Реалізуйте клас BankAccount, який представлятиме банківський рахунок із методами для депозиту, зняття коштів та перевірки балансу. Врахуйте обробку можливих помилок (наприклад, недостатньо коштів).
 
-//!  ================================================================================================================
+// class BankAccount {
+//   constructor(balance) {
+//     this.balance = balance;
+//   }
+
+//   balanceCheck() {
+//     return this.balance;
+//   }
+
+//   deposit(amount) {
+//     if (amount <= 0) {
+//       throw new Error('Сума депозиту має бути більшою за нуль');
+//     }
+
+//     this.balance += amount;
+//     return this.balance;
+//   }
+
+//   withdrawal(amount) {
+//     if (amount <= 0) {
+//       throw new Error('Сума зняття має бути більшою за нуль');
+//     }
+
+//     if (amount > this.balance) {
+//       throw new Error('Недостатньо коштів на рахунку');
+//     }
+
+//     this.balance -= amount;
+//     return this.balance;
+//   }
+// }
+
+// const account = new BankAccount(2000);
+
+// console.log(account.balanceCheck()); // 1000
+
+// console.log(account.deposit(500)); // 1500
+
+// console.log(account.withdrawal(300)); // 1200
+
+// console.log(account.balanceCheck()); // 1200
+
+// // Спроба зняти більше, ніж є на рахунку:
+// try {
+//   account.withdrawal(2000);
+// } catch (error) {
+//   console.log(error.message);
+//   // Недостатньо коштів на рахунку
+// }
+
+//*  ==================================================================================
 
 //? 6
-// Клас LibraryCatalog: Створіть клас Book для представлення книги з полями title, author та ISBN. Потім реалізуйте клас LibraryCatalog, який буде зберігати список книг у бібліотеці та надавати методи для додавання нових книг, пошуку книг за автором та ISBN, а також виведення списку всіх книг.
+//? Клас LibraryCatalog: Створіть клас Book для представлення книги з полями title, author та ISBN. Потім реалізуйте клас LibraryCatalog, який буде зберігати список книг у бібліотеці та надавати методи для додавання нових книг, пошуку книг за автором та ISBN, а також виведення списку всіх книг.
 
-//!  ================================================================================================================
+// class Book {
+//   constructor(title, author, ISBN) {
+//     this.title = title;
+//     this.author = author;
+//     this.ISBN = ISBN;
+//   }
+// }
+
+// class LibraryCatalog {
+//   constructor() {
+//     this.books = [];
+//   }
+//   addBook(book) {
+//     this.books.push(book);
+//     return 'Книгу додано!';
+//   }
+//   searchBook(author, ISBN) {
+//     const book = this.books.find(
+//       book => book.author === author && book.ISBN === ISBN,
+//     );
+//     if (!book) {
+//       return 'Такої книги не існує';
+//     }
+//     return book;
+//   }
+//   bookList() {
+//     return this.books;
+//   }
+// }
+
+// const book = new Book('Кобзар', 'Тарас Шевченко', '15-15');
+
+// const catalog = new LibraryCatalog();
+
+// console.log(catalog.addBook(book));
+
+// console.log(catalog.searchBook('Тарас Шевченко', '15-15'));
+
+// console.log(catalog.bookList());
+
+//*  ==================================================================================
 
 //? 7
-// Клас TemperatureConverter: Напишіть клас TemperatureConverter, який буде мати методи для конвертації температур між градусами Цельсія та Фаренгейта.
+//? Клас TemperatureConverter: Напишіть клас TemperatureConverter, який буде мати методи для конвертації температур між градусами Цельсія та Фаренгейта.
 
-//!  ================================================================================================================
+// class TemperatureConverter {
+//   static celsiusToFahrenheit(celsius) {
+//     return (celsius * 9) / 5 + 32;
+//   }
+
+//   static fahrenheitToCelsius(fahrenheit) {
+//     return ((fahrenheit - 32) * 5) / 9;
+//   }
+// }
+
+// console.log(TemperatureConverter.celsiusToFahrenheit(100)); // 212
+// console.log(TemperatureConverter.fahrenheitToCelsius(32)); // 0
+
+//*  ==================================================================================
 
 //? 8
-// Клас ShoppingCart: Реалізуйте клас Product для представлення товару з полями name, price та quantity. Потім створіть клас ShoppingCart, який зберігатиме список товарів та надавати методи для додавання товарів, підрахунку загальної вартості та виведення списку товарів.
+//? Клас ShoppingCart: Реалізуйте клас Product для представлення товару з полями name, price та quantity. Потім створіть клас ShoppingCart, який зберігатиме список товарів та надавати методи для додавання товарів, підрахунку загальної вартості та виведення списку товарів.
 
-//!  ================================================================================================================
+//*  ==================================================================================
 
 //? 9
 // Клас SocialNetworkUser: Створіть клас SocialNetworkUser, який представляє користувача соціальної мережі з полями username, friends (список друзів) та методами для додавання та видалення друзів, а також виведення списку друзів.
