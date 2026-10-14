@@ -265,12 +265,81 @@
 //? 8
 //? Клас ShoppingCart: Реалізуйте клас Product для представлення товару з полями name, price та quantity. Потім створіть клас ShoppingCart, який зберігатиме список товарів та надавати методи для додавання товарів, підрахунку загальної вартості та виведення списку товарів.
 
+// class Product {
+//   constructor(name, price, quantity) {
+//     this.name = name;
+//     this.price = price;
+//     this.quantity = quantity;
+//   }
+// }
+
+// class ShoppingCart {
+//   constructor() {
+//     this.products = [];
+//   }
+//   addProduct(product) {
+//     this.products.push(product);
+//   }
+//   costProduct(product) {
+//     const cost = product.price * product.quantity;
+//     return cost;
+//   }
+//   costProductAll() {
+//     const cost = this.products.reduce(
+//       (z, product) => z + product.price * product.quantity,
+//       0,
+//     );
+//     return cost;
+//   }
+//   listProduct() {
+//     return this.products;
+//   }
+// }
+
+// const product = new Product('Банан', 78, 25);
+
+// const shoppingCart = new ShoppingCart();
+// shoppingCart.addProduct(product);
+// console.log(shoppingCart.costProduct(product));
+// console.log(shoppingCart.costProductAll());
+// console.log(shoppingCart.listProduct());
+
 //*  ==================================================================================
 
 //? 9
-// Клас SocialNetworkUser: Створіть клас SocialNetworkUser, який представляє користувача соціальної мережі з полями username, friends (список друзів) та методами для додавання та видалення друзів, а також виведення списку друзів.
+//? Клас SocialNetworkUser: Створіть клас SocialNetworkUser, який представляє користувача соціальної мережі з полями username, friends (список друзів) та методами для додавання та видалення друзів, а також виведення списку друзів.
 
-//!  ================================================================================================================
+// class SocialNetworkUser {
+//   constructor(username, friends = []) {
+//     this.username = username;
+//     this.friends = friends;
+//   }
+//   addFriend(friend) {
+//     if (this.friends.includes(friend)) {
+//       return `Друг ${friend} вже є у списку`;
+//     }
+//     this.friends.push(friend);
+//     return `Друг ${friend} добавлен`;
+//   }
+//   deletionFriend(friend) {
+//     const index = this.friends.indexOf(friend);
+//     if (index < 0) {
+//       return `Друга ${friend} не існує`;
+//     }
+//     this.friends.splice(index, 1);
+//     return `Друга ${friend} видалено`;
+//   }
+//   listFriends() {
+//     return this.friends;
+//   }
+// }
+
+// const user = new SocialNetworkUser('Андрій', ['Валя', 'Ніка']);
+// console.log(user.addFriend('Масік'));
+// console.log(user.deletionFriend('Валя'));
+// console.log(user.listFriends());
+
+//*  ==================================================================================
 
 //? 10
 // Клас MusicPlayer: Реалізуйте клас Song для представлення пісні з полями title, артист і тривалість. Потім створіть клас MusicPlayer, який зберігатиме список пісень та надавати методи для додавання нових пісень, відтворення, паузи та перемикання між піснями.
