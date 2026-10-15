@@ -342,12 +342,97 @@
 //*  ==================================================================================
 
 //? 10
-// Клас MusicPlayer: Реалізуйте клас Song для представлення пісні з полями title, артист і тривалість. Потім створіть клас MusicPlayer, який зберігатиме список пісень та надавати методи для додавання нових пісень, відтворення, паузи та перемикання між піснями.
+//? Клас MusicPlayer: Реалізуйте клас Song для представлення пісні з полями title, артист і тривалість. Потім створіть клас MusicPlayer, який зберігатиме список пісень та надавати методи для додавання нових пісень, відтворення, паузи та перемикання між піснями.
+
+class Song {
+  constructor(title, artist, duration) {
+    this.title = title;
+    this.artist = artist;
+    this.duration = duration;
+  }
+}
+
+class MusicPlayer {
+  constructor() {
+    this.songs = [];
+    this.currentSongIndex = 0;
+    this.isPlaying = false;
+  }
+
+  addSong(song) {
+    if (this.songs.includes(song)) {
+      return 'Така пісня вже є';
+    }
+
+    this.songs.push(song);
+    return 'Пісню додано!';
+  }
+
+  play() {
+    if (this.songs.length === 0) {
+      return 'Список пісень порожній';
+    }
+
+    this.isPlaying = true;
+    const song = this.songs[this.currentSongIndex];
+
+    return `Відтворюється: ${song.title} — ${song.artist}`;
+  }
+
+  pause() {
+    if (!this.isPlaying) {
+      return 'Музика вже на паузі';
+    }
+
+    this.isPlaying = false;
+    return 'Відтворення призупинено';
+  }
+
+  nextSong() {
+    if (this.songs.length === 0) {
+      return 'Список пісень порожній';
+    }
+
+    this.currentSongIndex = (this.currentSongIndex + 1) % this.songs.length;
+
+    this.isPlaying = true;
+    return this.play();
+  }
+
+  previousSong() {
+    if (this.songs.length === 0) {
+      return 'Список пісень порожній';
+    }
+
+    this.currentSongIndex =
+      (this.currentSongIndex - 1 + this.songs.length) % this.songs.length;
+
+    this.isPlaying = true;
+    return this.play();
+  }
+}
+
+const musicPlayer = new MusicPlayer();
+
+const song1 = new Song('Батарейка', 'Жуки', 138);
+const song2 = new Song('Обійми', 'Океан Ельзи', 240);
+const song3 = new Song('Старі фотографії', 'Скрябін', 210);
+
+console.log(musicPlayer.addSong(song1));
+console.log(musicPlayer.addSong(song2));
+console.log(musicPlayer.addSong(song3));
+
+console.log(musicPlayer.play());
+console.log(musicPlayer.pause());
+console.log(musicPlayer.play());
+
+console.log(musicPlayer.nextSong());
+console.log(musicPlayer.previousSong());
 
 //!  ================================================================================================================
 
 //? 11
-// Реалізуйте клас MyString, який буде мати наступні методи: метод reverse(), який параметром приймає рядок, а повертає її в перевернутому вигляді, метод ucFirst(), який параметром приймає рядок, а повертає цей же рядок, зробивши його першу літеру заголовком і метод ucWords, який приймає рядок і робить заголовною першу літеру кожного слова цього рядка.
+//? Реалізуйте клас MyString, який буде мати наступні методи: метод reverse(), який параметром приймає рядок, а повертає її в перевернутому вигляді, метод ucFirst(), який параметром приймає рядок, а повертає цей же рядок, зробивши його першу літеру заголовком і метод ucWords, який приймає рядок і робить заголовною першу літеру кожного слова цього рядка.
 
 //!  ================================================================================================================
 
