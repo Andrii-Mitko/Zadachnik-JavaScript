@@ -44,7 +44,7 @@ button {
   margin: 20px;
   transition:
     background-color 150ms ease,
-    transform 150ms ease;
+    transform 300ms ease;
 }
 
 button:hover {
