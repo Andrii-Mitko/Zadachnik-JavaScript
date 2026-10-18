@@ -886,6 +886,60 @@
 //? console.log('Triangle area:', triangle.calculateArea()); // Output: Triangle area: 20
 //? Завдання полягає у створенні ієрархії класів з використанням успадкування, реалізації методу calculateArea() для кожного підкласу та демонстрації розрахунків площ різних постатей.
 
+// class Shape {
+//   constructor(x, y) {
+//     this.x = x;
+//     this.y = y;
+//   }
+
+//   calculateArea() {
+//     return 0;
+//   }
+// }
+
+// class Circle extends Shape {
+//   constructor(x, y, radius) {
+//     super(x, y);
+//     this.radius = radius;
+//   }
+
+//   calculateArea() {
+//     return Math.PI * this.radius ** 2;
+//   }
+// }
+
+// class Rectangle extends Shape {
+//   constructor(x, y, width, height) {
+//     super(x, y);
+//     this.width = width;
+//     this.height = height;
+//   }
+
+//   calculateArea() {
+//     return this.width * this.height;
+//   }
+// }
+
+// class Triangle extends Shape {
+//   constructor(x, y, base, height) {
+//     super(x, y);
+//     this.base = base;
+//     this.height = height;
+//   }
+
+//   calculateArea() {
+//     return (this.base * this.height) / 2;
+//   }
+// }
+
+// const circle = new Circle(0, 0, 5);
+// const rectangle = new Rectangle(0, 0, 4, 6);
+// const triangle = new Triangle(0, 0, 8, 5);
+
+// console.log('Circle area:', circle.calculateArea());
+// console.log('Rectangle area:', rectangle.calculateArea());
+// console.log('Triangle area:', triangle.calculateArea());
+
 //* =======================================================================
 
 //? 17
@@ -913,3 +967,64 @@
 //? console.log(laptop.productDescription());
 //? console.log(headphones.productDescription());
 //? Завдання полягає у створенні ієрархії класів з використанням успадкування, додаванні характеристик для кожного підкласу, реалізації методу productDescription() та демонстрації описів різних типів продуктів.
+
+// // Базовий клас
+// class Product {
+//   constructor(brand, model, price) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+
+//   productDescription() {
+//     return `${this.brand} ${this.model}, ціна: $${this.price}`;
+//   }
+// }
+
+// // Підклас смартфонів
+// class Smartphone extends Product {
+//   constructor(brand, model, price, screenResolution) {
+//     super(brand, model, price);
+//     this.screenResolution = screenResolution;
+//   }
+
+//   productDescription() {
+//     return `${super.productDescription()}, роздільна здатність екрана: ${this.screenResolution}`;
+//   }
+// }
+
+// // Підклас ноутбуків
+// class Laptop extends Product {
+//   constructor(brand, model, price, processor) {
+//     super(brand, model, price);
+//     this.processor = processor;
+//   }
+
+//   productDescription() {
+//     return `${super.productDescription()}, процесор: ${this.processor}`;
+//   }
+// }
+
+// // Підклас навушників
+// class Headphones extends Product {
+//   constructor(brand, model, price, connectionType) {
+//     super(brand, model, price);
+//     this.connectionType = connectionType;
+//   }
+
+//   productDescription() {
+//     return `${super.productDescription()}, підключення: ${this.connectionType}`;
+//   }
+// }
+
+// // Створення об'єктів
+// const smartphone = new Smartphone('Apple', 'iPhone 13', 999, '1920x1080');
+
+// const laptop = new Laptop('Dell', 'XPS 15', 1499, 'Intel Core i7');
+
+// const headphones = new Headphones('Sony', 'WH-1000XM4', 349, 'Bluetooth');
+
+// // Виведення описів товарів
+// console.log(smartphone.productDescription());
+// console.log(laptop.productDescription());
+// console.log(headphones.productDescription());
