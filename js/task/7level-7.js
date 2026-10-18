@@ -166,21 +166,60 @@
 
 //* =======================================================================
 
-// №1
+//? №1
+//? Дан список ul с числами, инпут и кнопка. В инпут вводится число. По клику на кнопку покрасьте в красный цвет li, содержащее введенное число.
 
-// Дан список ul с числами, инпут и кнопка. В инпут вводится число. По клику на кнопку покрасьте в красный цвет li, содержащее введенное число.
+// const div = document.querySelector('.div');
+// const ul = document.createElement('ul');
+// ul.innerHTML = `<li>2</li><li>5</li><li>8</li><li>6</li><li>12</li><li>42</li><li>72</li><li>26</li><li>28</li><li>88</li>`;
+// const input = document.createElement('input');
+// input.type = 'number';
+// const btn = document.createElement('button');
+// btn.textContent = 'color red';
+// div.append(ul, input, btn);
+
+// btn.addEventListener('click', () => {
+//   if (input.value === '') return;
+//   const num = Number(input.value);
+//   const arr = [...document.querySelectorAll('li')];
+//   const index = arr.findIndex(li => Number(li.textContent) === num);
+//     if (index === -1) return;
+//   arr[index].style.backgroundColor = 'red';
+// });
 
 //* =======================================================================
 
-// №2
+//? №2
+//? Дан инпут. В него вводится год. Выведите даты всех пятниц 13-е заданного года в виде списка ul.
 
-// Дан инпут. В него вводится год. Выведите даты всех пятниц 13-е заданного года в виде списка ul.
+// const div = document.querySelector('.div');
+// const input = document.createElement('input');
+// input.type = 'number';
+// const ul = document.createElement('ul');
+// div.append(input, ul);
+
+// input.addEventListener('input', () => {
+//   ul.innerHTML = '';
+
+//   const year = Number(input.value);
+
+//   if (!input.value || year < 1 || !Number.isInteger(year)) return;
+
+//   for (let month = 0; month < 12; month++) {
+//     const date = new Date(year, month, 13);
+
+//     if (date.getDay() === 5) {
+//       const li = document.createElement('li');
+//       li.textContent = date.toLocaleDateString('uk-UA');
+//       ul.append(li);
+//     }
+//   }
+// });
 
 //* =======================================================================
 
-// №3
-
-// Даны чекбоксы, с помощью которых у юзера спрашиваются языки, которые он знает. Дан также абзац. По мере выбора чекбоксов юзером выводите в абзац выбранные языки через запятую.
+//? №3
+//? Даны чекбоксы, с помощью которых у юзера спрашиваются языки, которые он знает. Дан также абзац. По мере выбора чекбоксов юзером выводите в абзац выбранные языки через запятую.
 
 //* =======================================================================
 
