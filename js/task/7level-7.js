@@ -221,40 +221,81 @@
 //? №3
 //? Даны чекбоксы, с помощью которых у юзера спрашиваются языки, которые он знает. Дан также абзац. По мере выбора чекбоксов юзером выводите в абзац выбранные языки через запятую.
 
+// const div = document.querySelector('.div');
+// const ul = document.createElement('ul');
+// ul.innerHTML = `
+// <li><input type="checkbox" />JavaScript</li>
+// <li><input type="checkbox" />TypeScript</li>
+// <li><input type="checkbox" />Python</li>
+// <li><input type="checkbox" />Java</li>
+// <li><input type="checkbox" />C#</li>
+// <li><input type="checkbox" />C++</li>
+// <li><input type="checkbox" />PHP</li>
+// <li><input type="checkbox" />Go</li>
+// <li><input type="checkbox" />Kotlin</li>
+// <li><input type="checkbox" />Swift</li>
+// <li><input type="checkbox" />SQL</li>
+// <li><input type="checkbox" />Rust</li>
+// `;
+// const text = document.createElement('p');
+// div.append(ul, text);
+
+// ul.addEventListener('change', e => {
+//   if (e.target.tagName !== 'INPUT') return;
+//   const arr = [...document.querySelectorAll('li input')];
+//   const arrText = arr
+//     .filter(item => item.checked === true)
+//     .map(item => item.parentElement.textContent);
+
+//   text.textContent = arrText.join(', ');
+// });
+
 //* =======================================================================
 
-// №4
+//? №4
+//? Напишите программу, которая сформирует следующий массив:
+//? [
+//? 	['x'],
+//? 	['x', 'x'],
+//? 	['x', 'x', 'x'],
+//? 	['x', 'x', 'x', 'x'],
+//? 	['x', 'x', 'x', 'x', 'x'],
+//? ]
 
-// Напишите программу, которая сформирует следующий массив:
+// function xxx() {
+//   const arr = [];
+//   let count = 0;
 
-// [
-// 	['x'],
-// 	['x', 'x'],
-// 	['x', 'x', 'x'],
-// 	['x', 'x', 'x', 'x'],
-// 	['x', 'x', 'x', 'x', 'x'],
-// ]
+//   for (let i = 0; i < 5; i++) {
+//     const arrX = [];
+//     count++;
+//     for (let j = 0; j < count; j++) {
+//       arrX.push('x');
+//     }
+//     arr.push(arrX);
+//   }
+
+//   return arr;
+// }
+// console.log(xxx());
 
 //* =======================================================================
 
-// №5
-
-// Дан следующая верстка:
-
-// <p>111</p>
-// <p>222</p>
-// <p>333</p>
-// <p>444</p>
-// <p>555</p>
-// Получите содержимое текстов абзацев в виде массива:
-
-// [
-// 	'111',
-// 	'222',
-// 	'333',
-// 	'444',
-// 	'555',
-// ]
+//? №5
+//? Дан следующая верстка:
+//? <p>111</p>
+//? <p>222</p>
+//? <p>333</p>
+//? <p>444</p>
+//? <p>555</p>
+//? Получите содержимое текстов абзацев в виде массива:
+//? [
+//? 	'111',
+//? 	'222',
+//? 	'333',
+//? 	'444',
+//? 	'555',
+//? ]
 
 //* =======================================================================
 

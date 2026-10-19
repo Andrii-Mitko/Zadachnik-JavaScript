@@ -89,6 +89,15 @@ input:focus {
   box-shadow: 0 0 0 3px rgb(96 165 250 / 20%);
 }
 
+input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  margin: 10px;
+  accent-color: #2563eb;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
 p {
   min-height: 24px;
   margin: 20px;
