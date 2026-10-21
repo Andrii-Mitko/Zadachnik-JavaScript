@@ -504,42 +504,70 @@
 //? №5
 //? Дан инпут, абзац и кнопка. В инпут вводится число. По нажатию на кнопку сделайте так, чтобы в абзаце начал тикать обратный отсчет от введенного в инпут числа до нуля.
 
-const div = document.querySelector('.div');
-const input = document.createElement('input');
-input.type = 'number';
-const text = document.createElement('p');
-const btn = document.createElement('button');
-btn.textContent = 'Старт';
-div.append(input, text, btn);
+// const div = document.querySelector('.div');
+// const input = document.createElement('input');
+// input.type = 'number';
+// input.min = '0';
 
-btn.addEventListener('click', () => {
-  let num = input.value;
-  text.textContent = num;
-  setInterval(() => {
-    num--;
-    text.textContent = num;
-  }, 1000);
-});
+// const text = document.createElement('p');
+// const btn = document.createElement('button');
+// btn.textContent = 'Старт';
+
+// div.append(input, text, btn);
+
+// let timer;
+
+// btn.addEventListener('click', () => {
+//   clearInterval(timer);
+
+//   let num = Number(input.value);
+
+//   if (input.value.trim() === '' || num < 0 || !Number.isInteger(num)) {
+//     return;
+//   }
+
+//   text.textContent = num;
+
+//   timer = setInterval(() => {
+//     if (num <= 0) {
+//       clearInterval(timer);
+//       return;
+//     }
+
+//     num--;
+//     text.textContent = num;
+//   }, 1000);
+// });
 
 //* =======================================================================
 
-// №6
+//? №6
+//? Напишите программу, которая сформирует следующий массив:
+//? [
+//? 	[1],
+//? 	[1, 2],
+//? 	[1, 2, 3],
+//? 	[1, 2, 3, 4, 5],
+//? 	[1, 2, 3, 4, 5, 6],
+//? ]
 
-// Напишите программу, которая сформирует следующий массив:
+// const arr = [];
 
-// [
-// 	[1],
-// 	[1, 2],
-// 	[1, 2, 3],
-// 	[1, 2, 3, 4, 5],
-// 	[1, 2, 3, 4, 5, 6],
-// ]
+// for (let i = 1; i <= 6; i++) {
+//   const arr1 = [];
+//   for (let j = 1; j <= i; j++) {
+//     arr1.push(j);
+//   }
+//   arr.push(arr1);
+// }
 
-//* =======================================================================
+// console.log(arr);
 
-// Уровень 7.5 задачника JavaScript
+//! =======================================================================
 
-//* =======================================================================
+//; Уровень 7.5 задачника JavaScript
+
+//! =======================================================================
 
 // №1
 
