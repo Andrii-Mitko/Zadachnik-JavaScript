@@ -444,17 +444,82 @@
 //? №3
 //? Дан инпут и кнопка. В него вводится число из четного количества цифр. По клику на кнопку проверьте, что число представляет собой счастливый билет, то есть сумма половины цифр равна сумме второй половине цифр.
 
+// const div = document.querySelector('.div');
+// const input = document.createElement('input');
+// input.type = 'number';
+// const btn = document.createElement('button');
+// btn.textContent = 'Щасливий білет';
+// const text = document.createElement('p');
+// div.append(input, btn, text);
+
+// btn.addEventListener('click', () => {
+//   const arr = input.value.split('');
+//   if (arr.length % 2 !== 0 || arr.length === 0) {
+//     return (text.textContent = 'Число повинно містити парну кількість цифр');
+//   }
+//   const num1 = arr
+//     .slice(0, arr.length / 2)
+//     .reduce((z, num) => z + Number(num), 0);
+//   const num2 = arr.slice(arr.length / 2).reduce((z, num) => z + Number(num), 0);
+//   if (num1 !== num2) {
+//     return (text.textContent = 'Це число не є щасливим квитком');
+//   }
+//   return (text.textContent = 'Це число є щасливим квитком!');
+// });
+
 //* =======================================================================
 
-// №4
+//? №4
+//? Дан инпут. В него вводится текст. Сделайте так, чтобы в инпут нельзя было ввести больше десяти символов. При превышении количества, символы просто не должны вводиться.
 
-// Дан инпут. В него вводится текст. Сделайте так, чтобы в инпут нельзя было ввести больше десяти символов. При превышении количества, символы просто не должны вводиться.
+//* Варіант №1
+// const div = document.querySelector('.div');
+// const input = document.createElement('input');
+// div.append(input);
+
+// input.addEventListener('input', () => {
+//   if (input.value.split('').length > 9) {
+//     input.disabled = true;
+//   }
+// });
+
+//* Варіант №2
+// const div = document.querySelector('.div');
+// const input = document.createElement('input');
+// div.append(input);
+
+// input.addEventListener('input', () => {
+//   if (input.value.length > 10) {
+//     input.value = input.value.slice(0, 10);
+//   }
+// });
+
+//* Варіант №3
+// const input = document.createElement('input');
+// input.maxLength = 10;
+// div.append(input);
 
 //* =======================================================================
 
-// №5
+//? №5
+//? Дан инпут, абзац и кнопка. В инпут вводится число. По нажатию на кнопку сделайте так, чтобы в абзаце начал тикать обратный отсчет от введенного в инпут числа до нуля.
 
-// Дан инпут, абзац и кнопка. В инпут вводится число. По нажатию на кнопку сделайте так, чтобы в абзаце начал тикать обратный отсчет от введенного в инпут числа до нуля.
+const div = document.querySelector('.div');
+const input = document.createElement('input');
+input.type = 'number';
+const text = document.createElement('p');
+const btn = document.createElement('button');
+btn.textContent = 'Старт';
+div.append(input, text, btn);
+
+btn.addEventListener('click', () => {
+  let num = input.value;
+  text.textContent = num;
+  setInterval(() => {
+    num--;
+    text.textContent = num;
+  }, 1000);
+});
 
 //* =======================================================================
 
