@@ -588,11 +588,38 @@
 //? №2
 //? Даны кнопки и дивы. Каждая кнопка соответствует своему диву. Сделайте так, чтобы по первому клику на кнопку открывался ее див, а по второму клику - скрывался.
 
+// const div = document.querySelector('.div');
+// const btn1 = document.createElement('button');
+// btn1.textContent = 'div1';
+// const btn2 = document.createElement('button');
+// btn2.textContent = 'div2';
+// const btn3 = document.createElement('button');
+// btn3.textContent = 'div3';
+// const div1 = document.createElement('div');
+// div1.textContent = 'div1';
+// const div2 = document.createElement('div');
+// div2.textContent = 'div2';
+// const div3 = document.createElement('div');
+// div3.textContent = 'div3';
+// div.append(btn1, btn2, btn3);
+
+// div.addEventListener('click', e => {
+//   if (e.target.tagName !== 'BUTTON') return;
+//   if (e.target === btn1) {
+//     [...div.children].includes(div1) ? div1.remove() : div.append(div1);
+//   }
+//   if (e.target === btn2) {
+//     [...div.children].includes(div2) ? div2.remove() : div.append(div2);
+//   }
+//   if (e.target === btn3) {
+//     [...div.children].includes(div3) ? div3.remove() : div.append(div3);
+//   }
+// });
+
 //* =======================================================================
 
-// №3
-
-// Сделайте функцию, которая будет принимать строку на русском языке, а возвращать ее транслит.
+//? №3
+//? Сделайте функцию, которая будет принимать строку на русском языке, а возвращать ее транслит.
 
 //* =======================================================================
 
