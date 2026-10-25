@@ -185,6 +185,26 @@ select option {
   background-color: #1e293b;
 }
 
+a {
+  color: #60a5fa;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color 150ms ease,
+    text-decoration-color 150ms ease;
+}
+
+a:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 /* Планшет */
 @media (min-width: 768px) {
   main {
