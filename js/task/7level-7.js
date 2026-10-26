@@ -1202,34 +1202,158 @@
 // }
 // console.log(funcX());
 
-//* =======================================================================
+//! =======================================================================
 
 //; Уровень 7.10 задачника JavaScript
 
+//! =======================================================================
+
+//? №1
+//? Напишите программу, которая сформирует следующую строку:
+//? '-x-xx-xxx-xx-x-'
+
+//= Варіант №1
+
+// function funcX() {
+//   let str = '';
+//   let count = '';
+
+//   for (let i = 1; i <= 5; i++) {
+//     if (i < 4) {
+//       count += 'x';
+//       str += `-${count}`;
+//     }
+//     if (i >= 4) {
+//       count = count.slice(0, count.length - 1);
+//       str += `-${count}`;
+//     }
+//   }
+
+//   return (str += '-');
+// }
+
+// console.log(funcX());
+
+//= Варіант №2
+
+// function funcX() {
+//   let str = '';
+//   let count = 0;
+
+//   for (let i = 1; i <= 5; i++) {
+//     if (i < 4) {
+//       count++;
+//       str += `-${'x'.repeat(count)}`;
+//     }
+//     if (i >= 4) {
+//       count--;
+//       str += `-${'x'.repeat(count)}`;
+//     }
+//   }
+
+//   return (str += '-');
+// }
+
+// console.log(funcX());
+
 //* =======================================================================
 
-// №1
-// Напишите программу, которая сформирует следующую строку:
-// '-x-xx-xxx-xx-x-'
+//? №2
+//? Напишите программу, которая сформирует следующую строку:
+//? '11 12 13 21 22 23 31 32 33'
+
+// function funcX() {
+//   let str = '';
+
+//   for (let i = 10; i <= 30; i += 10) {
+//     for (let j = 1; j <= 3; j++) {
+//       str += `${i + j} `;
+//     }
+//   }
+//   return str.trim();
+// }
+// console.log(funcX());
 
 //* =======================================================================
 
-// №2
+//? №3
+//? Даны дивы с названиями продуктов и ценами. Дан также абзац. Сделайте так, чтобы кликами можно было выбрать несколько продуктов и их суммарная стоимость при этом писалась бы в абзац.
 
-// Напишите программу, которая сформирует следующую строку:
+// const div = document.querySelector('.div');
+// div.innerHTML = `
+//   <div class="product">
+//     <h3>Хліб</h3>
+//     <p> 25 грн</p>
+//   </div>
 
-// '11 12 13 21 22 23 31 32 33'
+//   <div class="product">
+//     <h3>Молоко</h3>
+//     <p> 45 грн</p>
+//   </div>
+
+//   <div class="product">
+//     <h3>Сир</h3>
+//     <p> 120 грн</p>
+//   </div>
+
+//   <div class="product">
+//     <h3>Яблука</h3>
+//     <p> 35 грн</p>
+//   </div>
+
+//   <div class="product">
+//     <h3>Картопля</h3>
+//     <p> 30 грн</p>
+//   </div>
+
+//   <div class="product">
+//     <h3>Яйця</h3>
+//     <p> 70 грн</p>
+//   </div>
+// `;
+// const textResult = document.createElement('h4');
+// div.append(textResult);
+// let result = 0;
+// div.addEventListener('click', e => {
+//   if (e.target.tagName !== 'H3') return;
+//   const price = parseInt(e.target.nextElementSibling.textContent);
+//   result += price;
+//   textResult.textContent = `${result} грн`;
+// });
 
 //* =======================================================================
 
-// №3
+//? №4
+//? Дана таблица прямоугольного размера с нечетным количеством рядов и колонок.Дана кнопка.По клику на кнопку выделите каким - нибудь цветом центральную ячейку.
 
-// Даны дивы с названиями продуктов и ценами. Дан также абзац. Сделайте так, чтобы кликами можно было выбрать несколько продуктов и их суммарная стоимость при этом писалась бы в абзац.
+// const table = document.createElement('table');
 
-//* =======================================================================
+// for (let i = 1; i <= 5; i++) {
+//   const tr = document.createElement('tr');
 
-// №4
+//   for (let j = 1; j <= 9; j++) {
+//     const td = document.createElement('td');
+//     td.textContent = `${i}- ${j}`;
+//     tr.append(td);
+//   }
 
-// Дана таблица прямоугольного размера с нечетным количеством рядов и колонок.Дана кнопка.По клику на кнопку выделите каким - нибудь цветом центральную ячейку.
+//   table.append(tr);
+// }
+// const btn = document.createElement('button');
+// btn.textContent = 'Центр';
+// const div = document.querySelector('.div');
+// div.append(table, btn);
+
+// function getRandomHexColor() {
+//   const hex = Math.floor(Math.random() * 0xffffff).toString(16);
+//   return '#' + hex.padStart(6, '0');
+// }
+
+// btn.addEventListener('click', () => {
+//   const color = getRandomHexColor();
+//   const row = (table.rows.length - 1) / 2;
+//   const cell = (table.rows[0].cells.length - 1) / 2;
+//   table.rows[row].cells[cell].style.backgroundColor = color;
+// });
 
 //* =======================================================================
