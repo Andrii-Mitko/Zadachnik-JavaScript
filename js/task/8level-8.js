@@ -326,69 +326,141 @@
 
 //* =======================================================================
 
-// №3
-// Дан список ul и инпут. По мере ввода текста в инпут оставляйте видимыми только те li, текст которых начинается на текст, введенный в инпут.
+//? №3
+//? Дан список ul и инпут. По мере ввода текста в инпут оставляйте видимыми только те li, текст которых начинается на текст, введенный в инпут.
 
-//* =======================================================================
+// const ul = document.createElement('ul');
+// ul.innerHTML = `
+//   <li>Яблоко</li>
+//   <li>Абрикос</li>
+//   <li>Апельсин</li>
+//   <li>Ананас</li>
+//   <li>Банан</li>
+//   <li>Брусника</li>
+//   <li>Виноград</li>
+//   <li>Вишня</li>
+//   <li>Груша</li>
+//   <li>Гранат</li>
+//   <li>Дыня</li>
+//   <li>Персик</li>
+//   <li>Слива</li>
+//   <li>Черешня</li>
+// `;
+// const input = document.createElement('input');
+// const div = document.querySelector('.div');
+// div.append(ul, input);
 
-// №4
-// Выведите на экран следующую пирамидку:
-// 1
-// 22
-// 333
-// 4444
-// 55555
-// 666666
-// 7777777
-// 88888888
-// 999999999
+// input.addEventListener('input', filt);
+// function filt(e) {
+//   const value = e.target.value.trim().toLowerCase();
 
-//* =======================================================================
-
-// №5
-// Дан список городов и их стран, хранящийся в следующей структуре:
-// let data = [
-// 	{
-// 		country: 'country1',
-// 		city:    'city11',
-// 	},
-// 	{
-// 		country: 'country2',
-// 		city:    'city21',
-// 	},
-// 	{
-// 		country: 'country3',
-// 		city:    'city31',
-// 	},
-// 	{
-// 		country: 'country1',
-// 		city:    'city12',
-// 	},
-// 	{
-// 		country: 'country1',
-// 		city:    'city13',
-// 	},
-// 	{
-// 		country: 'country2',
-// 		city:    'city22',
-// 	},
-// 	{
-// 		country: 'country3',
-// 		city:    'city31',
-// 	},
-// ]
-// Напишите код, которой переделает структуру данных вот в такую:
-// {
-// 	'country1': [
-// 		'city11', 'city12', 'city13',
-// 	],
-// 	'country2': [
-// 		'city21', 'city22'
-// 	],
-// 	'country3': [
-// 		'city31', 'city32'
-// 	],
+//   ul.querySelectorAll('li').forEach(item => {
+//     item.style.display = item.textContent.toLowerCase().startsWith(value)
+//       ? ''
+//       : 'none';
+//   });
 // }
+
+//* =======================================================================
+
+//? №4
+//? Выведите на экран следующую пирамидку:
+//? 1
+//? 22
+//? 333
+//? 4444
+//? 55555
+//? 666666
+//? 7777777
+//? 88888888
+//? 999999999
+
+// const ul = document.createElement('ul');
+// for (let i = 1; i < 10; i++) {
+//   const li = document.createElement('li');
+//   li.textContent = String(i).repeat(i);
+//   ul.append(li);
+// }
+// const div = document.querySelector('.div');
+// div.append(ul);
+
+//* =======================================================================
+
+//? №5
+//? Дан список городов и их стран, хранящийся в следующей структуре:
+//? let data = [
+//? 	{
+//? 		country: 'country1',
+//? 		city:    'city11',
+//? 	},
+//? 	{
+//? 		country: 'country2',
+//? 		city:    'city21',
+//? 	},
+//? 	{
+//? 		country: 'country3',
+//? 		city:    'city31',
+//? 	},
+//? 	{
+//? 		country: 'country1',
+//? 		city:    'city12',
+//? 	},
+//? 	{
+//? 		country: 'country1',
+//? 		city:    'city13',
+//? 	},
+//? 	{
+//? 		country: 'country2',
+//? 		city:    'city22',
+//? 	},
+//? 	{
+//? 		country: 'country3',
+//? 		city:    'city31',
+//? 	},
+//? ]
+//? Напишите код, которой переделает структуру данных вот в такую:
+//? {
+//? 	'country1': [
+//? 		'city11', 'city12', 'city13',
+//? 	],
+//? 	'country2': [
+//? 		'city21', 'city22'
+//? 	],
+//? 	'country3': [
+//? 		'city31', 'city32'
+//? 	],
+//? }
+
+let data = [
+  {
+    country: 'country1',
+    city: 'city11',
+  },
+  {
+    country: 'country2',
+    city: 'city21',
+  },
+  {
+    country: 'country3',
+    city: 'city31',
+  },
+  {
+    country: 'country1',
+    city: 'city12',
+  },
+  {
+    country: 'country1',
+    city: 'city13',
+  },
+  {
+    country: 'country2',
+    city: 'city22',
+  },
+  {
+    country: 'country3',
+    city: 'city31',
+  },
+];
 
 //* =======================================================================
 
