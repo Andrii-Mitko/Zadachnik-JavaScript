@@ -614,15 +614,186 @@
 //? №2
 //? Даны три селекта. В первом селекте выведите дни месяца от 1 до 31, во втором - названия месяцев года, а в третьем - года за предыдущие и следующие 10 лет.
 
+// const labelDate = document.createElement('label');
+// labelDate.textContent = 'Обрати дату';
+// const selectData = document.createElement('select');
+// for (let i = 1; i <= 31; i++) {
+//   const option = document.createElement('option');
+//   option.value = i;
+//   option.textContent = i;
+//   selectData.append(option);
+// }
+// labelDate.append(selectData);
+
+// const labelMonth = document.createElement('label');
+// labelMonth.textContent = 'Обрати місяць';
+// const selectMonth = document.createElement('select');
+// for (let i = 1; i <= 12; i++) {
+//   const month = new Date(2026, i - 1).toLocaleString('uk-UA', {
+//     month: 'long',
+//   });
+//   const option = document.createElement('option');
+//   option.value = i;
+//   option.textContent = month;
+//   selectMonth.append(option);
+// }
+// labelMonth.append(selectMonth);
+
+// const labelYear = document.createElement('label');
+// labelYear.textContent = 'Обрати рік';
+// const selectYear = document.createElement('select');
+// for (
+//   let i = new Date().getFullYear() - 10;
+//   i <= new Date().getFullYear() + 10;
+//   i++
+// ) {
+//   const option = document.createElement('option');
+//   option.value = i;
+//   option.textContent = i;
+//   selectYear.append(option);
+// }
+// labelYear.append(selectYear);
+
+// const div = document.querySelector('.div');
+// div.append(labelDate, labelMonth, labelYear);
+
 //* =======================================================================
 
-// №3
-// Модифицируйте предыдущую задачу так, чтобы по умолчанию в селектах была выбрана текущая дата.
+//? №3
+//? Модифицируйте предыдущую задачу так, чтобы по умолчанию в селектах была выбрана текущая дата.
+
+// const labelDate = document.createElement('label');
+// labelDate.textContent = 'Обрати дату';
+// const selectData = document.createElement('select');
+
+// for (let i = 1; i <= 31; i++) {
+//   const option = document.createElement('option');
+//   option.value = i;
+//   option.textContent = i;
+//   selectData.append(option);
+// }
+// selectData.value = new Date().getDate();
+// labelDate.append(selectData);
+
+// const labelMonth = document.createElement('label');
+// labelMonth.textContent = 'Обрати місяць';
+// const selectMonth = document.createElement('select');
+
+// for (let i = 1; i <= 12; i++) {
+//   const month = new Date(new Date().getFullYear(), i - 1).toLocaleString(
+//     'uk-UA',
+//     {
+//       month: 'long',
+//     },
+//   );
+//   const option = document.createElement('option');
+//   option.value = i;
+//   option.textContent = month;
+//   selectMonth.append(option);
+// }
+// selectMonth.value = new Date().getMonth() + 1;
+// labelMonth.append(selectMonth);
+
+// const labelYear = document.createElement('label');
+// labelYear.textContent = 'Обрати рік';
+// const selectYear = document.createElement('select');
+
+// for (
+//   let i = new Date().getFullYear() - 10;
+//   i <= new Date().getFullYear() + 10;
+//   i++
+// ) {
+//   const option = document.createElement('option');
+//   option.value = i;
+//   option.textContent = i;
+//   selectYear.append(option);
+// }
+// selectYear.value = new Date().getFullYear();
+// labelYear.append(selectYear);
+
+// const div = document.querySelector('.div');
+// div.append(labelDate, labelMonth, labelYear);
 
 //* =======================================================================
 
-// №4
-// Модифицируйте предыдущую задачу так, чтобы в первом селекте количество дней соответствовало выбранному месяцу и году.
+//? №4
+//? Модифицируйте предыдущую задачу так, чтобы в первом селекте количество дней соответствовало выбранному месяцу и году.
+
+// const labelDate = document.createElement('label');
+// labelDate.textContent = 'Обрати дату';
+// const selectData = document.createElement('select');
+
+// for (let i = 1; i <= 31; i++) {
+//   const option = document.createElement('option');
+//   option.value = i;
+//   option.textContent = i;
+//   selectData.append(option);
+// }
+// selectData.value = new Date().getDate();
+// labelDate.append(selectData);
+
+// const labelMonth = document.createElement('label');
+// labelMonth.textContent = 'Обрати місяць';
+// const selectMonth = document.createElement('select');
+
+// for (let i = 1; i <= 12; i++) {
+//   const month = new Date(new Date().getFullYear(), i - 1).toLocaleString(
+//     'uk-UA',
+//     {
+//       month: 'long',
+//     },
+//   );
+//   const option = document.createElement('option');
+//   option.value = i;
+//   option.textContent = month;
+//   selectMonth.append(option);
+// }
+// selectMonth.value = new Date().getMonth() + 1;
+// labelMonth.append(selectMonth);
+
+// const labelYear = document.createElement('label');
+// labelYear.textContent = 'Обрати рік';
+// const selectYear = document.createElement('select');
+
+// for (
+//   let i = new Date().getFullYear() - 10;
+//   i <= new Date().getFullYear() + 10;
+//   i++
+// ) {
+//   const option = document.createElement('option');
+//   option.value = i;
+//   option.textContent = i;
+//   selectYear.append(option);
+// }
+// selectYear.value = new Date().getFullYear();
+// labelYear.append(selectYear);
+
+// const div = document.querySelector('.div');
+// div.append(labelDate, labelMonth, labelYear);
+
+// function updateDays() {
+//   const year = Number(selectYear.value);
+//   const month = Number(selectMonth.value);
+//   const currentDay = Number(selectData.value);
+//   // Определяем количество дней в месяце
+//   const daysInMonth = new Date(year, month, 0).getDate();
+//   // Очищаем список дней
+//   selectData.innerHTML = '';
+//   // Создаём новые option
+//   for (let i = 1; i <= daysInMonth; i++) {
+//     const option = document.createElement('option');
+//     option.value = i;
+//     option.textContent = i;
+//     selectData.append(option);
+//   }
+//   // Сохраняем выбранный день, если он существует
+//   selectData.value = Math.min(currentDay, daysInMonth);
+// }
+
+// selectMonth.addEventListener('change', updateDays);
+// selectYear.addEventListener('change', updateDays);
+
+// updateDays();
 
 //* =======================================================================
 
