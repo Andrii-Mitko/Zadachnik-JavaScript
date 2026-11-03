@@ -896,15 +896,34 @@
 //? №3
 //? Дано меню со ссылками. Покрасьте в красный цвет ту ссылку, адрес которой совпадает с URL из адресной строки браузера.
 
+// const div = document.querySelector('.div');
+// const urls = [
+//   'https://example.com/',
+//   'https://google.com/',
+//   'https://github.com/',
+// ];
+
+// urls.forEach(url => {
+//   const link = document.createElement('a');
+//   link.href = url;
+//   link.textContent = url;
+
+//   if (link.href === window.location.href) {
+//     link.style.color = 'red';
+//   }
+
+//   div.append(link, document.createElement('br'));
+// });
+
 //* =======================================================================
 
-// №4
-// Выведите на экран следующую пирамидку:
-// xxxxx
-// xxxx
-// xxx
-// xx
-// x
+//? №4
+//? Выведите на экран следующую пирамидку:
+//? xxxxx
+//? xxxx
+//? xxx
+//? xx
+//? x
 
 //* =======================================================================
 
