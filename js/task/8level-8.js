@@ -821,18 +821,80 @@
 
 //! =======================================================================
 
-// №1
-// Дан абзац с текстом и кнопка. По клику на кнопку покрасьте каждый символ в случайный цвет так, чтобы у соседних символов были разные цвета.
+//? №1
+//? Дан абзац с текстом и кнопка. По клику на кнопку покрасьте каждый символ в случайный цвет так, чтобы у соседних символов были разные цвета.
+
+// const text = document.createElement('p');
+// text.textContent = 'Дан абзац с текстом ';
+// const button = document.createElement('button');
+// button.textContent = 'Тисни тут';
+// button.addEventListener('click', colorFunc);
+// const div = document.querySelector('.div');
+// div.append(text, button);
+
+// function getRandomHexColor() {
+//   const hex = Math.floor(Math.random() * 0xffffff).toString(16);
+//   return '#' + hex.padStart(6, '0');
+// }
+
+// function colorFunc() {
+//   const letters = text.textContent.split('');
+//   text.textContent = '';
+
+//   let previousColor = '';
+
+//   letters.forEach(letter => {
+//     const span = document.createElement('span');
+//     let color = getRandomHexColor();
+
+//     while (color === previousColor) {
+//       color = getRandomHexColor();
+//     }
+
+//     span.textContent = letter;
+//     span.style.color = color;
+
+//     text.append(span);
+//     previousColor = color;
+//   });
+// }
+//* =======================================================================
+
+//? №2
+//? Дан абзац со словами и инпут. В инпут вводится слово. По клику на кнопку найдите это слово в абзаце и покрасьте его в красный цвет.
+
+// const text = document.createElement('p');
+// text.textContent = 'Дан абзац со словами';
+// const input = document.createElement('input');
+// const button = document.createElement('button');
+// button.textContent = 'Тисни тут';
+// button.addEventListener('click', btnClick);
+
+// const div = document.querySelector('.div');
+// div.append(text, input, button);
+
+// function btnClick() {
+//   const value = input.value.trim();
+
+//   if (value === '') return;
+
+//   const arr = text.textContent.split(' ');
+//   text.textContent = '';
+//   arr.forEach(item => {
+//     const span = document.createElement('span');
+//     span.textContent = item;
+//     if (item === value) {
+//       span.style.color = 'red';
+//     }
+//     text.append(span, ' ');
+//   });
+//   input.value = '';
+// }
 
 //* =======================================================================
 
-// №2
-// Дан абзац со словами и инпут. В инпут вводится слово. По клику на кнопку найдите это слово в абзаце и покрасьте его в красный цвет.
-
-//* =======================================================================
-
-// №3
-// Дано меню со ссылками. Покрасьте в красный цвет ту ссылку, адрес которой совпадает с URL из адресной строки браузера.
+//? №3
+//? Дано меню со ссылками. Покрасьте в красный цвет ту ссылку, адрес которой совпадает с URL из адресной строки браузера.
 
 //* =======================================================================
 
