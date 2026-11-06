@@ -925,9 +925,18 @@
 //? xx
 //? x
 
+// const div = document.querySelector('.div');
+// const ul = document.createElement('ul');
+// for (let i = 5; i >= 1; i--) {
+//   const li = document.createElement('li');
+//   li.textContent = 'x'.repeat(i);
+//   ul.append(li);
+// }
+// div.append(ul);
+
 //* =======================================================================
 
-// №5
+//? №5
 // Дан список событий за определенные даты, хранящийся в следующей структуре:
 // let events = [
 // 	{
