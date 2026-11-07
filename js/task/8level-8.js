@@ -1039,17 +1039,59 @@
 //! =======================================================================
 
 //? №1
-// Дано слово. Перемешайте буквы этого слова в случайном порядке.
+//? Дано слово. Перемешайте буквы этого слова в случайном порядке.
+
+// const word = 'слово'.split('');
+// const arr = [];
+// function random() {
+//   return Math.floor(Math.random() * word.length);
+// }
+// while (arr.length < word.length) {
+//   let num = random();
+//   if (!arr.includes(num)) arr.push(num);
+// }
+
+// const result = arr.map(item => word[item]);
+// console.log(result.join(''));
 
 //* =======================================================================
 
-// №2
-// Дан инпут, кнопка и список ul. В инпут вводится число. По клику на кнопку выведите список всех возможных вариантов разложения числа на два множителя.
+//? №2
+//? Дан инпут, кнопка и список ul. В инпут вводится число. По клику на кнопку выведите список всех возможных вариантов разложения числа на два множителя.
+
+// const div = document.querySelector('.div');
+// const input = document.createElement('input');
+// input.type = 'number';
+// const btn = document.createElement('button');
+// btn.textContent = 'Множники';
+// const ul = document.createElement('ul');
+// div.append(input, btn, ul);
+
+// btn.addEventListener('click', btnClick);
+
+// function btnClick() {
+//   const inputNum = Number(input.value);
+
+//   ul.innerHTML = '';
+
+//   if (!input.value.trim() || inputNum < 1) return;
+
+//   for (let i = 1; i <= inputNum; i++) {
+//     if (inputNum % i === 0) {
+//       const j = inputNum / i;
+
+//       const li = document.createElement('li');
+//       li.textContent = `${i} * ${j}`;
+
+//       ul.append(li);
+//     }
+//   }
+// }
 
 //* =======================================================================
 
-// №3
-// На странице через абсолютное позиционирование расположены дивы, могущие накладываться друг на друга. По клику на любой див сделайте так, чтобы он стал поверх остальных.
+//? №3
+//? На странице через абсолютное позиционирование расположены дивы, могущие накладываться друг на друга. По клику на любой див сделайте так, чтобы он стал поверх остальных.
 
 //* =======================================================================
 
