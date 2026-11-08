@@ -1059,104 +1059,174 @@
 //? №2
 //? Дан инпут, кнопка и список ul. В инпут вводится число. По клику на кнопку выведите список всех возможных вариантов разложения числа на два множителя.
 
-const div = document.querySelector('.div');
-const input = document.createElement('input');
-input.type = 'number';
-const btn = document.createElement('button');
-btn.textContent = 'Множина';
-const ul = document.createElement('ul');
-div.append(input, btn, ul);
+// const div = document.querySelector('.div');
+// const input = document.createElement('input');
+// input.type = 'number';
+// const btn = document.createElement('button');
+// btn.textContent = 'Множина';
+// const ul = document.createElement('ul');
+// div.append(input, btn, ul);
 
-btn.addEventListener('click', btnClick);
-function btnClick() {
-  ul.innerHTML = '';
+// btn.addEventListener('click', btnClick);
+// function btnClick() {
+//   ul.innerHTML = '';
 
-  const inputNum = Number(input.value);
-  if (input.value.trim === '' || inputNum === 0) return;
+//   const inputNum = Number(input.value);
+//   if (input.value.trim === '' || inputNum === 0) return;
 
-  for (let i = 1; i <= inputNum; i++) {
-    if (inputNum % i === 0) {
-      const j = inputNum / i;
-      const li = document.createElement('li');
-      li.textContent = `${i} * ${j}`;
-      ul.append(li);
-    }
-  }
-}
+//   for (let i = 1; i <= inputNum; i++) {
+//     if (inputNum % i === 0) {
+//       const j = inputNum / i;
+//       const li = document.createElement('li');
+//       li.textContent = `${i} * ${j}`;
+//       ul.append(li);
+//     }
+//   }
+// }
 
 //* =======================================================================
 
 //? №3
 //? На странице через абсолютное позиционирование расположены дивы, могущие накладываться друг на друга. По клику на любой див сделайте так, чтобы он стал поверх остальных.
 
-//* =======================================================================
+// const divMain = document.querySelector('.div');
+// divMain.style.position = 'relative';
+// const div1 = document.createElement('div');
+// div1.style.position = 'absolute';
+// div1.style.backgroundColor = 'red';
+// div1.style.top = '10px';
+// div1.style.left = '10px';
+// div1.style.zIndex = '100';
+// div1.style.width = '100px';
+// div1.style.height = '100px';
+// const div2 = document.createElement('div');
+// div2.style.position = 'absolute';
+// div2.style.backgroundColor = 'green';
+// div2.style.top = '40px';
+// div2.style.left = '40px';
+// div2.style.zIndex = '200';
+// div2.style.width = '100px';
+// div2.style.height = '100px';
+// const div3 = document.createElement('div');
+// div3.style.position = 'absolute';
+// div3.style.backgroundColor = 'blue';
+// div3.style.top = '80px';
+// div3.style.left = '80px';
+// div3.style.zIndex = '300';
+// div3.style.width = '100px';
+// div3.style.height = '100px';
+// divMain.append(div1, div2, div3);
 
-// №4
-// Выведите на экран следующую пирамидку:
-// 999999999
-// 88888888
-// 7777777
-// 666666
-// 55555
-// 4444
-// 333
-// 22
-// 1
-
-//* =======================================================================
-
-// №5
-// Дан список событий за определенные даты, хранящийся в следующей структуре:
-// let events = {
-// 	'2019-12-29': ['name1', 'name3', 'name5', 'name7'],
-// 	'2019-12-30': ['name4', 'name8', 'name9'],
-// 	'2019-12-31': ['name2', 'name6'],
+// divMain.addEventListener('click', divMainClick);
+// function divMainClick(event) {
+//   const ev = event.target;
+//   if (ev.tagName !== 'DIV') return;
+//   const arr = [...divMain.querySelectorAll('div')];
+//   arr.forEach(div => {
+//     div === ev ? (div.style.zIndex = '300') : (div.style.zIndex = '200');
+//   });
 // }
-// Напишите код, которой переделает структуру данных вот в такую:
-// let events = [
-// 	{
-// 		date:  '2019-12-29'
-// 		event: 'name1'
-// 	},
-// 	{
-// 		date:  '2019-12-31'
-// 		event: 'name2'
-// 	},
-// 	{
-// 		date:  '2019-12-29'
-// 		event: 'name3'
-// 	},
-// 	{
-// 		date:  '2019-12-30'
-// 		event: 'name4'
-// 	},
-// 	{
-// 		date:  '2019-12-29'
-// 		event: 'name5'
-// 	},
-// 	{
-// 		date:  '2019-12-31'
-// 		event: 'name6'
-// 	},
-// 	{
-// 		date:  '2019-12-29'
-// 		event: 'name7'
-// 	},
-// 	{
-// 		date:  '2019-12-30'
-// 		event: 'name8'
-// 	},
-// 	{
-// 		date:  '2019-12-30'
-// 		event: 'name9'
-// 	},
-// ]
 
 //* =======================================================================
 
-// Уровень 8.8 задачника JavaScript
+//? №4
+//? Выведите на экран следующую пирамидку:
+//? 999999999
+//? 88888888
+//? 7777777
+//? 666666
+//? 55555
+//? 4444
+//? 333
+//? 22
+//? 1
+
+// const div = document.querySelector('.div');
+// const ul = document.createElement('ul');
+// div.append(ul);
+
+// for (let i = 9; i >= 1; i--) {
+//   const li = document.createElement('li');
+//   li.textContent = String(i).repeat(i);
+//   ul.append(li);
+// }
 
 //* =======================================================================
+
+//? №5
+//? Дан список событий за определенные даты, хранящийся в следующей структуре:
+//? let events = {
+//? 	'2019-12-29': ['name1', 'name3', 'name5', 'name7'],
+//? 	'2019-12-30': ['name4', 'name8', 'name9'],
+//? 	'2019-12-31': ['name2', 'name6'],
+//? }
+//? Напишите код, которой переделает структуру данных вот в такую:
+//? let events = [
+//? 	{
+//? 		date:  '2019-12-29'
+//? 		event: 'name1'
+//? 	},
+//? 	{
+//? 		date:  '2019-12-31'
+//? 		event: 'name2'
+//? 	},
+//? 	{
+//? 		date:  '2019-12-29'
+//? 		event: 'name3'
+//? 	},
+//? 	{
+//? 		date:  '2019-12-30'
+//? 		event: 'name4'
+//? 	},
+//? 	{
+//? 		date:  '2019-12-29'
+//? 		event: 'name5'
+//? 	},
+//? 	{
+//? 		date:  '2019-12-31'
+//? 		event: 'name6'
+//? 	},
+//? 	{
+//? 		date:  '2019-12-29'
+//? 		event: 'name7'
+//? 	},
+//? 	{
+//? 		date:  '2019-12-30'
+//? 		event: 'name8'
+//? 	},
+//? 	{
+//? 		date:  '2019-12-30'
+//? 		event: 'name9'
+//? 	},
+//? ]
+
+// let events = {
+//   '2019-12-29': ['name1', 'name3', 'name5', 'name7'],
+//   '2019-12-30': ['name4', 'name8', 'name9'],
+//   '2019-12-31': ['name2', 'name6'],
+// };
+
+// let res = [];
+
+// for (const key in events) {
+//   for (const item of events[key]) {
+//     res.push({
+//       date: key,
+//       event: item,
+//     });
+//   }
+// }
+
+// const sorted = res.toSorted((a, b) => a.event.localeCompare(b.event));
+// events = sorted;
+
+// console.log(events);
+
+//! =======================================================================
+
+//; Уровень 8.8 задачника JavaScript
+
+//! =======================================================================
 
 // №1
 // Даны два селекта. В первом селекте выводятся страны. Сделайте так, чтобы во втором селекте выводились города выбранной страны.
