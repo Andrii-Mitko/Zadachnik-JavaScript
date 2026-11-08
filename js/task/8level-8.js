@@ -1059,34 +1059,30 @@
 //? №2
 //? Дан инпут, кнопка и список ul. В инпут вводится число. По клику на кнопку выведите список всех возможных вариантов разложения числа на два множителя.
 
-// const div = document.querySelector('.div');
-// const input = document.createElement('input');
-// input.type = 'number';
-// const btn = document.createElement('button');
-// btn.textContent = 'Множники';
-// const ul = document.createElement('ul');
-// div.append(input, btn, ul);
+const div = document.querySelector('.div');
+const input = document.createElement('input');
+input.type = 'number';
+const btn = document.createElement('button');
+btn.textContent = 'Множина';
+const ul = document.createElement('ul');
+div.append(input, btn, ul);
 
-// btn.addEventListener('click', btnClick);
+btn.addEventListener('click', btnClick);
+function btnClick() {
+  ul.innerHTML = '';
 
-// function btnClick() {
-//   const inputNum = Number(input.value);
+  const inputNum = Number(input.value);
+  if (input.value.trim === '' || inputNum === 0) return;
 
-//   ul.innerHTML = '';
-
-//   if (!input.value.trim() || inputNum < 1) return;
-
-//   for (let i = 1; i <= inputNum; i++) {
-//     if (inputNum % i === 0) {
-//       const j = inputNum / i;
-
-//       const li = document.createElement('li');
-//       li.textContent = `${i} * ${j}`;
-
-//       ul.append(li);
-//     }
-//   }
-// }
+  for (let i = 1; i <= inputNum; i++) {
+    if (inputNum % i === 0) {
+      const j = inputNum / i;
+      const li = document.createElement('li');
+      li.textContent = `${i} * ${j}`;
+      ul.append(li);
+    }
+  }
+}
 
 //* =======================================================================
 
