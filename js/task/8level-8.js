@@ -1228,8 +1228,26 @@
 
 //! =======================================================================
 
-// №1
-// Даны два селекта. В первом селекте выводятся страны. Сделайте так, чтобы во втором селекте выводились города выбранной страны.
+//? №1
+//? Даны два селекта. В первом селекте выводятся страны. Сделайте так, чтобы во втором селекте выводились города выбранной страны.
+
+const div = document.querySelector('.div');
+const labelCity = document.createElement('label');
+labelCity.htmlFor = 'city';
+labelCity.textContent = 'Оберіть місто:';
+const selectCity = document.createElement('select');
+selectCity.id = 'city';
+selectCity.name = 'city';
+
+const select2 = document.createElement('select');
+labelCity.htmlFor = 'city';
+labelCity.textContent = 'Оберіть місто:';
+const selectCity = document.createElement('select');
+selectCity.id = 'city';
+selectCity.name = 'city';
+
+labelCity.append(selectCity);
+div.append(labelCity, select2);
 
 //* =======================================================================
 
