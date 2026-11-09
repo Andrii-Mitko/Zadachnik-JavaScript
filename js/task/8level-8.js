@@ -1231,23 +1231,55 @@
 //? №1
 //? Даны два селекта. В первом селекте выводятся страны. Сделайте так, чтобы во втором селекте выводились города выбранной страны.
 
-const div = document.querySelector('.div');
-const labelCity = document.createElement('label');
-labelCity.htmlFor = 'city';
-labelCity.textContent = 'Оберіть місто:';
-const selectCity = document.createElement('select');
-selectCity.id = 'city';
-selectCity.name = 'city';
+// const countries = {
+//   Україна: ['Київ', 'Одеса', 'Львів', 'Харків'],
+//   Польща: ['Варшава', 'Краків', 'Вроцлав'],
+//   Німеччина: ['Берлін', 'Мюнхен', 'Гамбург'],
+//   Франція: ['Париж', 'Ліон', 'Марсель'],
+// };
 
-const select2 = document.createElement('select');
-labelCity.htmlFor = 'city';
-labelCity.textContent = 'Оберіть місто:';
-const selectCity = document.createElement('select');
-selectCity.id = 'city';
-selectCity.name = 'city';
+// const div = document.querySelector('.div');
 
-labelCity.append(selectCity);
-div.append(labelCity, select2);
+// const labelCountries = document.createElement('label');
+// labelCountries.htmlFor = 'Countries';
+// labelCountries.textContent = 'Оберіть країну:';
+// const selectCountries = document.createElement('select');
+// selectCountries.id = 'Countries';
+// selectCountries.name = 'Countries';
+// selectCountries.innerHTML = `
+//   <option>...</option>
+//   <option>Україна</option>
+//   <option>Польща</option>
+//   <option>Німеччина</option>
+//   <option>Франція</option>
+// `;
+// labelCountries.append(selectCountries);
+
+// const labelCity = document.createElement('label');
+// labelCity.htmlFor = 'city';
+// labelCity.textContent = 'Оберіть місто:';
+// const selectCity = document.createElement('select');
+// selectCity.id = 'city';
+// selectCity.name = 'city';
+// labelCity.append(selectCity);
+
+// div.append(labelCountries, labelCity);
+
+// selectCountries.addEventListener('change', () => {
+//   const country = selectCountries.value;
+
+//   selectCity.innerHTML = '<option value="">Оберіть місто</option>';
+
+//   if (!country) return;
+
+//   countries[country].forEach(city => {
+//     const option = document.createElement('option');
+//     option.value = city;
+//     option.textContent = city;
+
+//     selectCity.append(option);
+//   });
+// });
 
 //* =======================================================================
 
