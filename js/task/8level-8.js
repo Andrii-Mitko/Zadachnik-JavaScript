@@ -1283,12 +1283,39 @@
 
 //* =======================================================================
 
-// №2
-// Даны инпут и кнопка. В инпут вводится число. По клику на кнопку, проверьте, является ли это число совершенным.
+//? №2
+//? Даны инпут и кнопка. В инпут вводится число. По клику на кнопку, проверьте, является ли это число совершенным.
+
+// const input = document.createElement('input');
+// input.type = 'number';
+// const btn = document.createElement('button');
+// btn.textContent = 'Calculate';
+// const text = document.createElement('p');
+// const div = document.querySelector('.div');
+// div.append(input, btn, text);
+
+// btn.addEventListener('click', inputClick);
+
+// function inputClick() {
+//   text.textContent = '';
+//   const value = Number(input.value);
+//   if (input.value.trim() === '' || value < 1) return;
+//   const arr = [];
+//   for (let i = 1; i < value; i++) {
+//     if (value % i === 0) {
+//       arr.push(i);
+//     }
+//   }
+//   const result = arr.reduce((z, num) => z + num, 0);
+
+//   result === value
+//     ? (text.textContent = 'Це досконале число!')
+//     : (text.textContent = 'Це не досконале число!');
+// }
 
 //* =======================================================================
 
-// №3
+//? №3
 // Дан список событий за определенные месяцы, хранящийся в следующей структуре:
 // let events = [
 // 	{
