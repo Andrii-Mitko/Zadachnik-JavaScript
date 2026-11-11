@@ -1448,12 +1448,77 @@
 
 //! =======================================================================
 
-// №1
-// Дано меню со ссылками. Сделайте так, чтобы по клику на ссылку меню под ней выпадало подменю.
+//? №1
+//? Дано меню со ссылками. Сделайте так, чтобы по клику на ссылку меню под ней выпадало подменю.
+
+// const div = document.querySelector('.div');
+// const menu = document.createElement('ul');
+// menu.style.flexDirection = 'row';
+// const menuItems = [
+//   { text: 'Головна', href: '#home' },
+//   { text: 'Про нас', href: '#about' },
+//   { text: 'Послуги', href: '#services' },
+//   { text: 'Портфоліо', href: '#portfolio' },
+//   { text: 'Контакти', href: '#contacts' },
+// ];
+
+// menuItems.forEach(item => {
+//   const li = document.createElement('li');
+//   const a = document.createElement('a');
+
+//   a.textContent = item.text;
+//   a.href = item.href;
+
+//   li.append(a);
+//   menu.append(li);
+// });
+// div.append(menu);
+
+// const data = {
+//   home: ['Головна 1', 'Головна 2', 'Головна 3'],
+//   about: ['Про нас 1', 'Про нас 2', 'Про нас 3'],
+//   services: ['Послуга 1', 'Послуга 2', 'Послуга 3'],
+//   portfolio: ['Проєкт 1', 'Проєкт 2', 'Проєкт 3'],
+//   contacts: ['Телефон', 'Email', 'Адреса'],
+// };
+
+// menu.addEventListener('click', menuClick);
+
+// function menuClick(event) {
+//   if (event.target.tagName !== 'A') return;
+
+//   event.preventDefault();
+
+//   // Получаем ключ из href
+//   const key = event.target.getAttribute('href').slice(1);
+
+//   // Проверяем, существует ли подменю
+//   const existingSubmenu = event.target.nextElementSibling;
+
+//   if (existingSubmenu) {
+//     existingSubmenu.remove();
+//     return;
+//   }
+
+//   // Получаем данные для подменю
+//   const submenuItems = data[key];
+
+//   // Создаём подменю
+//   const submenu = document.createElement('ul');
+
+//   submenuItems.forEach(item => {
+//     const li = document.createElement('li');
+//     li.textContent = item;
+//     submenu.append(li);
+//   });
+
+//   // Добавляем подменю после ссылки
+//   event.target.after(submenu);
+// }
 
 //* =======================================================================
 
-// №2
+//? №2
 // Дан абзац со словами и кнопка. По клику на кнопку покрасьте каждое слово в случайный цвет так, чтобы у соседних абзацев были разные цвета.
 
 //* =======================================================================
