@@ -1519,16 +1519,71 @@
 //* =======================================================================
 
 //? №2
-// Дан абзац со словами и кнопка. По клику на кнопку покрасьте каждое слово в случайный цвет так, чтобы у соседних абзацев были разные цвета.
+//? Дан абзац со словами и кнопка. По клику на кнопку покрасьте каждое слово в случайный цвет так, чтобы у соседних абзацев были разные цвета.
+
+// const div = document.querySelector('.div');
+// const text = document.createElement('p');
+// text.textContent = 'абзац со словами';
+// const btn = document.createElement('button');
+// btn.textContent = 'Color';
+// div.append(text, btn);
+
+// btn.addEventListener('click', btnClick);
+
+// function getRandomHexColor() {
+//   const hex = Math.floor(Math.random() * 0xffffff).toString(16);
+//   return '#' + hex.padStart(6, '0');
+// }
+
+// function btnClick() {
+//   const arr = text.textContent.split(' ');
+//   text.textContent = '';
+
+//   let previousColor = '';
+
+//   arr.forEach(item => {
+//     const span = document.createElement('span');
+//     span.textContent = item;
+
+//     let color = getRandomHexColor();
+
+//     while (color === previousColor) {
+//       color = getRandomHexColor();
+//     }
+
+//     span.style.color = color;
+//     previousColor = color;
+
+//     text.append(span, ' ');
+//   });
+// }
 
 //* =======================================================================
 
-// №3
-// Дан див. У этого дива есть крестик закрытия. Сделайте так, чтобы по клику на крестик, либо на любое место страницы вне дива, этот див прятался.
+//? №3
+//? Дан див. У этого дива есть крестик закрытия. Сделайте так, чтобы по клику на крестик, либо на любое место страницы вне дива, этот див прятался.
+
+// const main = document.querySelector('.div');
+// const div = document.createElement('div');
+// div.style.height = '400px';
+// div.style.width = '800px';
+// div.style.backgroundColor = 'red';
+// const btn = document.createElement('button');
+// btn.textContent = 'X';
+// btn.style.marginLeft = 'auto';
+// div.append(btn);
+// main.append(div);
+
+// main.addEventListener('click', mainClick);
+// function mainClick(e) {
+//   if (e.target === btn || !div.contains(e.target)) {
+//     div.hidden = true;
+//   }
+// }
 
 //* =======================================================================
 
-// №4
+//? №4
 // Дан текстареа и ul. В текстареа вводится текст. Сделайте так, чтобы по нажатию Shift + Enter каждая строка текста добавилась в список в виде отдельного тега li.
 
 //* =======================================================================
