@@ -1656,26 +1656,89 @@
 //? №1
 //? Даны два инпута и кнопка. В инпуты вводятся числа. По клику на кнопку, проверьте, являются ли эти числа дружественными или нет.
 
-const div = document.querySelector('.div');
+// const div = document.querySelector('.div');
+// const input1 = document.createElement('input');
+// input1.type = 'number';
+// const input2 = document.createElement('input');
+// input2.type = 'number';
+// const btn = document.createElement('button');
+// btn.textContent = 'Check';
+// const text = document.createElement('p');
+// text.textContent = '';
+// div.append(input1, input2, btn, text);
+
+// btn.addEventListener('click', btnClick);
+
+// function btnClick() {
+//   const num1 = Number(input1.value);
+//   const num2 = Number(input2.value);
+//   input1.value = '';
+//   input2.value = '';
+//   if (num1 === 0 || num2 === 0) return;
+//   let num11 = 0;
+//   for (let i = 1; i < num1; i++) {
+//     if (num1 % i === 0) {
+//       num11 += i;
+//     }
+//   }
+//   let num22 = 0;
+//   for (let i = 1; i < num2; i++) {
+//     if (num2 % i === 0) {
+//       num22 += i;
+//     }
+//   }
+
+//   num11 === num2 && num22 === num1
+//     ? (text.textContent = 'Ці числа є дружніми')
+//     : (text.textContent = 'Ці числа не є дружніми');
+// }
 
 //* =======================================================================
 
-// №2
-// Дан некоторый массив:
-// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-// Дана переменная:
+//? №2
+//? Дан некоторый массив:
+//? [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+//? Дана переменная:
+//? let n = 3;
+//? Превратите этот массив в двухмерный, по n элементов в подмассиве.
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 // let n = 3;
-// Превратите этот массив в двухмерный, по n элементов в подмассиве.
+// const result = [];
+// for (let i = 0; i < arr.length; i += n) {
+//   result.push([arr[i], arr[i + 1], arr[i + 2]]);
+// }
+// console.log(result);
 
 //* =======================================================================
 
-// №3
-// Дан массив:
-// [
-// 	[1, 2, 3, 4, 5],
-// 	[1, 2, 3],
-// 	[1, 2],
-// ]
-// Добавьте в каждый подмассив столько пустых строк, чтобы количество элементов в каждом подмассиве стало равно количеству элементов в самом длинном подмассиве.
+//? №3
+//? Дан массив:
+//? [
+//? 	[1, 2, 3, 4, 5],
+//? 	[1, 2, 3],
+//? 	[1, 2],
+//? ]
+//? Добавьте в каждый подмассив столько пустых строк, чтобы количество элементов в каждом подмассиве стало равно количеству элементов в самом длинном подмассиве.
+
+// const arr = [
+//   [1, 2, 3, 4, 5],
+//   [1, 2, 3],
+//   [1, 2],
+// ];
+
+// const length = Math.max(...arr.map(num => num.length));
+// const result = [];
+// arr.forEach(item => {
+//   if (item.length !== length) {
+//     let m = length - item.length;
+//     for (let i = 1; i <= m; i++) {
+//       item.push('');
+//     }
+//   }
+//   result.push(item);
+// });
+
+// console.log(result);
 
 //* =======================================================================
