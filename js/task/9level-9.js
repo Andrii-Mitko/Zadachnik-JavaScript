@@ -30,29 +30,35 @@
 //? Удалите из строки все указанные в переменной символы. В нашем случае должно получится следующее:
 //? 'cd cd'
 
-let str = 'abcde abcde';
-let del = 'abe';
-const div = document.querySelector('.div');
-const text = document.createElement('p');
-text.textContent = str;
-const btn = document.createElement('button');
-btn.textContent = 'Delete' + ' ' + del;
-div.append(text, btn);
+// let str = 'abcde abcde';
+// let del = 'abe';
+// const div = document.querySelector('.div');
+// const text = document.createElement('p');
+// text.textContent = str;
+// const btn = document.createElement('button');
+// btn.textContent = 'Delete' + ' ' + del;
+// div.append(text, btn);
 
-btn.addEventListener('click', btnClick);
-function btnClick() {
-  str = str
-    .split('')
-    .filter(item => (item === del[0]) | (item === del[1]) | (item === del[2]));
-  console.log(str);
-}
+// btn.addEventListener('click', btnClick);
+// function btnClick() {
+//   str = str
+//     .split('')
+//     .filter(item => item !== del[0] && item !== del[1] && item !== del[2])
+//     .join('');
+
+//   text.textContent = str;
+// }
+
+//! ==========================================================================
+
+//; Уровень 9.2 задачника JavaScript
+
+//! ==========================================================================
+
+//? №1
+//? Дан список ul и кнопка. По нажатию на кнопку перемешайте пункты списка в случайном порядке.
 
 //==========================================================================
-
-// Уровень 9.2 задачника JavaScript
-// №1
-
-// Дан список ul и кнопка. По нажатию на кнопку перемешайте пункты списка в случайном порядке.
 
 // №2
 
