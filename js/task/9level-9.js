@@ -58,11 +58,51 @@
 //? №1
 //? Дан список ul и кнопка. По нажатию на кнопку перемешайте пункты списка в случайном порядке.
 
+// const div = document.querySelector('.div');
+// const ul = document.createElement('ul');
+// ul.innerHTML = `
+//   <li>HTML</li>
+//   <li>CSS</li>
+//   <li>JavaScript</li>
+//   <li>React</li>
+//   <li>Next.js</li>
+//   <li>Node.js</li>
+// `;
+// const btn = document.createElement('button');
+// btn.textContent = 'Тисни тут';
+// div.append(ul, btn);
+
+// btn.addEventListener('click', btnClick);
+// function btnClick() {
+//   const arr = [...ul.querySelectorAll('li')].map(li => li.textContent);
+//   if (arr.length !== 0) ul.innerHTML = '';
+//   function arrIndex() {
+//     const arrInd = [];
+
+//     while (arrInd.length < arr.length) {
+//       const randomNumber = Math.floor(Math.random() * arr.length);
+
+//       if (!arrInd.includes(randomNumber)) {
+//         arrInd.push(randomNumber);
+//       }
+//     }
+
+//     return arrInd;
+//   }
+//   const arrNum = arrIndex();
+//   arrNum.forEach(index => {
+//     const li = document.createElement('li');
+//     li.textContent = arr[index];
+//     ul.append(li);
+//   });
+// }
+
 //==========================================================================
 
-// №2
+//? №2
+//? Два числа делятся друг на друга, в результате получается периодическая дробь. Напишите код, который определит период этой дроби.
 
-// Два числа делятся друг на друга, в результате получается периодическая дробь. Напишите код, который определит период этой дроби.
+//==========================================================================
 
 // №3
 
