@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Andrii-Mitko/Zadachnik-JavaScript/issues"
   },
-  "homepage": "https://github.com/Andrii-Mitko/Zadachnik-JavaScript#readme"
+  "homepage": "https://github.com/Andrii-Mitko/Zadachnik-JavaScript#readme",
+  "dependencies": {
+    "modern-normalize": "^3.0.1"
+  }
 }
