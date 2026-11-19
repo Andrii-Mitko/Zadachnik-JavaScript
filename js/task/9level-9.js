@@ -102,23 +102,107 @@
 //? №2
 //? Два числа делятся друг на друга, в результате получается периодическая дробь. Напишите код, который определит период этой дроби.
 
-const div = document.querySelector('.div');
-const 
+// const div = document.querySelector('.div');
+// const title = document.createElement('h2');
+// title.textContent = 'Визначити період дробу.';
+// const input1 = document.createElement('input');
+// input1.type = 'number';
+// input1.placeholder = 'Чисельник';
+// const input2 = document.createElement('input');
+// input2.type = 'number';
+// input2.placeholder = 'Знаменник';
+// const btn = document.createElement('button');
+// btn.textContent = 'Тисни тут';
+// div.append(title, input1, input2, btn);
+
+// btn.addEventListener('click', btnClick);
+// function btnClick() {
+//   const num1 = Math.abs(Number(input1.value));
+//   const num2 = Math.abs(Number(input2.value));
+//   if (!num1 || !num2 || !Number.isInteger(num1) || !Number.isInteger(num2)) {
+//     return;
+//   }
+
+//   let remainder = num1 % num2;
+
+//   const remainders = [];
+//   let fraction = '';
+
+//   while (remainder !== 0 && !remainders.includes(remainder)) {
+//     remainders.push(remainder);
+
+//     remainder *= 10;
+
+//     const digit = Math.floor(remainder / num2);
+//     fraction += digit;
+
+//     remainder %= num2;
+//   }
+
+//   const text = document.createElement('p');
+
+//   if (remainder === 0) {
+//     text.textContent = `Дробь конечная: ${num1 / num2}`;
+//   } else {
+//     const periodStart = remainders.indexOf(remainder);
+//     const period = fraction.slice(periodStart);
+
+//     text.textContent = `Период: ${period}. Длина: ${period.length}`;
+//   }
+
+//   div.append(text);
+// }
 
 //==========================================================================
 
-// №3
+//? №3
+//? Дан инпут, абзац и кнопка. В инпут вводится целое число. По нажатию на кнопку выведите в абзац разложение этого числа на простые множители.
 
-// Дан инпут, абзац и кнопка. В инпут вводится целое число. По нажатию на кнопку выведите в абзац разложение этого числа на простые множители.
+// const div = document.querySelector('.div');
+// const title = document.createElement('h2');
+// title.textContent = 'Розклад числа на прості множники';
+// const input = document.createElement('input');
+// input.type = 'number';
+// input.id = 'number';
+// input.placeholder = 'Ціле число';
+// const text = document.createElement('p');
+// const btn = document.createElement('button');
+// btn.textContent = 'Тисни тут';
+// div.append(title, input, text, btn);
 
-// №4
+// btn.addEventListener('click', btnClick);
+// function btnClick() {
+//   let num = Number(input.value);
+//   const arr = [];
 
-// Даны два инпута и кнопка.По клику на кнопку выведите список список ul всех простых чисел из промежутка, заданном значениями инпутов.
+//   if (!Number.isInteger(num) || num < 2) return;
+
+//   for (let i = 2; i <= num; i++) {
+//     while (num % i === 0) {
+//       arr.push(i);
+//       num /= i;
+//     }
+//   }
+
+//   text.textContent = arr.join(' * ');
+// }
+
+//==========================================================================
+
+//? №4
+//? Даны два инпута и кнопка.По клику на кнопку выведите список список ul всех простых чисел из промежутка, заданном значениями инпутов.
+
+//==========================================================================
 
 // Уровень 9.3 задачника JavaScript
+
+//==========================================================================
+
 // №1
 
 // Дан массив со словами. Получите из этого массива случайное слово, начинающееся на заданную букву.
+
+//==========================================================================
 
 // №2
 
