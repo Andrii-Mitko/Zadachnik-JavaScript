@@ -192,21 +192,149 @@
 //? №4
 //? Даны два инпута и кнопка.По клику на кнопку выведите список список ul всех простых чисел из промежутка, заданном значениями инпутов.
 
+// const div = document.querySelector('.div');
+
+// const input1 = document.createElement('input');
+// input1.type = 'number';
+// input1.id = 'input1';
+
+// const input2 = document.createElement('input');
+// input2.type = 'number';
+// input2.id = 'input2';
+
+// const btn = document.createElement('button');
+// btn.textContent = 'Тисни тут';
+
+// div.append(input1, input2, btn);
+
+// const ul = document.createElement('ul');
+
+// btn.addEventListener('click', btnClick);
+
+// function btnClick() {
+//   const num1 = Number(input1.value);
+//   const num2 = Number(input2.value);
+
+//   ul.innerHTML = '';
+
+//   if (input1.value === '' || input2.value === '') return;
+
+//   const min = Math.min(num1, num2);
+//   const max = Math.max(num1, num2);
+
+//   for (let i = min + 1; i < max; i++) {
+//     if (i < 2) continue;
+
+//     const arr = [];
+
+//     for (let j = 2; j < i; j++) {
+//       if (i % j === 0) {
+//         arr.push(j);
+//       }
+//     }
+
+//     if (arr.length === 0) {
+//       const li = document.createElement('li');
+//       li.textContent = String(i);
+//       ul.append(li);
+//     }
+//   }
+
+//   div.append(ul);
+// }
+
+//! ==========================================================================
+
+//; Уровень 9.3 задачника JavaScript
+
+//! ==========================================================================
+
+//? №1
+//? Дан массив со словами. Получите из этого массива случайное слово, начинающееся на заданную букву.
+
+// const words = [
+//   'JavaScript',
+//   'TypeScript',
+//   'HTML',
+//   'CSS',
+//   'React',
+//   'Next.js',
+//   'Node.js',
+//   'Express',
+//   'MongoDB',
+//   'Mongoose',
+//   'Frontend',
+//   'Backend',
+//   'Developer',
+//   'Programming',
+//   'Function',
+//   'Variable',
+//   'Array',
+//   'Object',
+//   'String',
+//   'Number',
+//   'Boolean',
+//   'Promise',
+//   'Callback',
+//   'Event',
+//   'Element',
+//   'Document',
+//   'Browser',
+//   'Website',
+//   'Application',
+//   'Component',
+//   'Interface',
+//   'Database',
+//   'Server',
+//   'Client',
+//   'Request',
+//   'Response',
+//   'Algorithm',
+//   'Method',
+//   'Property',
+//   'Condition',
+//   'Loop',
+//   'Iteration',
+//   'Functionality',
+//   'Debugging',
+//   'Testing',
+//   'Deployment',
+//   'Repository',
+//   'Branch',
+//   'Commit',
+//   'Terminal',
+// ];
+
+// const div = document.querySelector('.div');
+// const input = document.createElement('input');
+// input.id = 'word';
+// input.placeholder = 'Введіть першу літеру';
+// const text = document.createElement('p');
+// div.append(input, text);
+
+// input.addEventListener('input', inputInput);
+
+// function inputInput() {
+//   if (input.value.trim() === '') return;
+//   if (input.value.length !== 1) {
+//     return (text.textContent = 'Потрібно ввести одну літеру.');
+//   }
+//   const lit = input.value.toUpperCase();
+//   let randomWord = words[Math.floor(Math.random() * words.length)];
+//   if (words.some(item => item[0] === lit)) {
+//     while (lit !== randomWord.slice(0, 1)) {
+//       randomWord = words[Math.floor(Math.random() * words.length)];
+//     }
+//   }
+//   text.textContent = randomWord;
+// }
+
 //==========================================================================
 
-// Уровень 9.3 задачника JavaScript
+//? №2
+//? Пусть у нас есть дата 22.02.2017. В этой дате 4 двойки. Найдите все даты с 4-мя двойками в текущем столетии.
 
 //==========================================================================
-
-// №1
-
-// Дан массив со словами. Получите из этого массива случайное слово, начинающееся на заданную букву.
-
-//==========================================================================
-
-// №2
-
-// Пусть у нас есть дата 22.02.2017. В этой дате 4 двойки. Найдите все даты с 4-мя двойками в текущем столетии.
 
 // №3
 
